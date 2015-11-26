@@ -1,0 +1,14 @@
+<!-- header -->
+<header class="header">
+	<div class="header__in">
+		<div class="logo">
+			<div class="icon icon-logo"></div> 
+		</div> 
+		<!-- menu -->
+		<menu class="menu">
+			{% for item in menu %}
+			  <a href="#">{{item.name}}</a>
+			{% endfor %}
+		</menu>
+	</div>
+</header>

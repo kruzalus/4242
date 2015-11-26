@@ -12,6 +12,10 @@ var gulp = require('gulp'),
     consolidate = require("gulp-consolidate"),
     rimraf = require('rimraf'),
     mqpacker = require("css-mqpacker"),
+    twig_compile = require('gulp-twig-compile'),
+    data = require('gulp-data'),
+    path = require('path'),
+    fs = require('fs'),
     reload = browserSync.reload;
 
 // @TODO: move all paths to these variables
@@ -205,6 +209,34 @@ gulp.task('browser-sync', function() {
     });
 });
 
+gulp.task('twig', function() {
+    var twig = require('gulp-twig');
+    gulp.src('./src/twig/**/[^_]*.twig')
+        .pipe(data(function(file, cb) {
+            var jsonFileUrl = './src/twig/data/' + path.basename(file.path, '.twig') + '.json';
+            var templData = null;
+            // return require('./src/twig/data/' + path.basename(file.path, '.twig') + '.json');
+            readJSON(jsonFileUrl, function(data) {
+                cb(null, data);
+            });
+        }))
+        .pipe(twig())
+        .pipe(gulp.dest('./site/'))
+});
+
+function readJSON(url, cb) {
+   var jsonData;
+   fs.readFile(url, 'utf8', function(err, data) {
+       if (err) {
+           console.log(err);
+           return;
+       }
+       jsonData = JSON.parse(data);
+       if (typeof cb === 'function') cb(jsonData);
+       return jsonData;
+   });
+};
+
 gulp.task('watch', function() {
     gulp.watch(src.sass + '/**/*', ['sass']);
     gulp.watch('src/js/*', ['js']);
@@ -212,9 +244,10 @@ gulp.task('watch', function() {
     gulp.watch('src/fonts/*', ['copy']);
     gulp.watch('src/img/svg/*', ['font']);
     gulp.watch(['src/*.html', 'src/partials/*.html'], ['html']);
+    gulp.watch('src/twig/**/*.twig', ['twig']);
     gulp.watch(src.img + '/icons/*.png', ['sprite']);
 });
 
 
 gulp.task('default', ['browser-sync', 'watch'], function() {});
-gulp.task('build', ['html','font','sprite','copy','js','sass'], function() {});
+gulp.task('build', ['html','font','sprite','copy','js','sass','twig'], function() {});

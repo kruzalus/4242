@@ -1,0 +1,32 @@
+{
+	"title": "Index page",
+	"people": [
+		{
+			"name": "Vasja",
+			"age": 20
+		},
+		{
+			"name": "Petya",
+			"age": 40
+		},
+		{
+			"name": "ваня",
+			"age": 32
+		},
+		{
+			"name": "bob",
+			"age": 32
+		}
+	],
+	"menu": [
+		{
+			"name": "Кошельки и карты"
+		},
+		{
+			"name": "Оплатить"
+		},
+		{
+			"name": "Перевести"
+		}
+	]
+}
