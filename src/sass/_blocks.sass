@@ -1,0 +1,165 @@
+// wind 
+.wind
+	overflow: hidden
+	box-shadow: 0 0 5px rgba($gray, .1)
+	border-radius: 2px
+	background: $white
+	& + .wind
+		margin-top: 20px
+	&__top
+		position: relative
+		padding: 10px
+		color: $white
+		line-height: 1.45
+		background: $gray
+		.btn
+			position: absolute
+			top: 0
+			right: 0
+
+// item 
+.item
+	padding: 8px 10px
+	border-top: 1px solid $bord_item
+	display: block
+	+clr
+	&:first-child
+		border-top: none
+	&__in
+		+clr
+	&__left
+		float: left
+		max-width: 140px
+	&__right
+		float: right
+		text-align: right
+		max-width: 140px
+	&__stat
+		margin-top: 7px
+		padding-bottom: 2px
+		text-align: center
+	.sum
+		& + .sum
+			margin-top: 3px
+a.item
+	color: $black
+
+// purse 
+// .purse
+
+// sum 
+.sum
+	&.is-queue
+		color: $c_sum_queue
+		.sum__curr
+			color: $c_sum_queue
+	&__bal
+		vertical-align: top
+		display: inline-block
+	&__res
+		color: $c_sum_res
+	&__curr
+		color: $c_sum_cur
+
+// stat
+.stat
+	padding: 0 7px
+	line-height: 1.4
+	vertical-align: top
+	border-radius: 1px
+	border: 1px solid $bord_stat
+	display: inline-block
+
+// btn
+.btn
+	padding: 13px 20px
+	color: $white
+	+rl
+	font-size: 14px
+	line-height: 1
+	transition: background .2s
+	background: $green
+	display: inline-block
+	&:hover
+		background: darken($green, 20%)
+	&:active
+		background: darken($green, 30%)
+	&_blue
+		background: $d_blue
+		&:hover
+			background: darken($d_blue, 20%)
+		&:active
+			background: darken($d_blue, 30%)
+
+
+.btn-text
+	position: relative
+	left: 50%
+	transform: translate(-50%,0)
+	color: $c_btn_text
+	display: inline-block
+	&:hover
+		span
+			border-color: $c_btn_text
+	span
+		line-height: 1.3
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+		display: inline-block
+
+// card
+.card
+	&__numb,
+	&__img
+		display: inline-block
+	&__numb
+		vertical-align: top
+	&__img
+		position: relative
+		max-width: 33px
+		font-size: 0
+		img
+			width: 100%
+			display: block
+
+// slider
+.slider
+	position: relative
+	color: $white
+	background: $blue
+	&__close
+		position: absolute
+		top: 13px
+		right: 10px
+		color: $white
+		font-size: 20px
+		z-index: 1
+		opacity: .5
+		transition: opacity .2s
+		background: transparent
+		&:hover
+			opacity: 1
+	&__slide
+		width: 100%
+	&__in
+		padding: 10px 10px 15px
+	&__title
+		margin-bottom: 20px
+	&__img
+		max-height: 150px
+		font-size: 0
+		text-align: center
+		img
+			display: inline-block
+			height: 100%
+	&__text
+		margin-top: 20px
+	.btn
+		width: 100%
+		text-align: center
+
+.arrows
+	position: relative
+	.arrow
+		position: relative
+		z-index: 30

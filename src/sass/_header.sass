@@ -8,10 +8,53 @@
 // logo
 .logo
 	float: left
-	width: 87px
+	padding-left: 5px
+	width: 70px
 	line-height: 50px
-	text-align: center
 	display: inline-block
 	vertical-align: top
 	.icon
 		vertical-align: middle
+
+// menu
+.menu
+	float: left
+	font-size: 0
+	a
+		padding: 0 18px
+		color: $white
+		height: 50px
+		line-height: 50px
+		font-size: 14px
+		transition: background .2s
+		border-right: 1px solid $bord_head
+		display: inline-block
+		&:hover,
+		&.is-active
+			background: $l_gray
+		&:first-child
+			border-left: 1px solid $bord_head
+
+// user
+.user
+	float: right
+	transition: background .2s
+	&:hover,
+	&.is-active
+		background: $l_gray
+	&__in
+		position: relative
+		height: 50px
+		color: $white
+		line-height: 50px
+		border-left: 1px solid $bord_head
+		display: block
+	&__name
+		padding: 0 15px 0 35px
+		display: block
+	.icon
+		position: absolute
+		left: 12px
+		top: 50%
+		margin-top: calc(-19px/2)
+		font-size: 19px

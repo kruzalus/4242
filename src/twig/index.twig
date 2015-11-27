@@ -1,13 +1,175 @@
 {% extends "./includes/_layout.twig" %}
 
 {% block content %}
-  <!-- out --> 
-  <div class="out">
+	<!-- out --> 
+	<div class="out">
 
-    {% include "./includes/_header.twig" %}
+		{% include "./includes/_header.twig" %}
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- l-col1 -->
+				<div class="l-col1">
+					<!-- wind -->
+					<div class="wind">
+						<div class="wind__top">
+							<span>Кошельки</span>
+							<button class="btn btn_greeen" type="button">Пополнить</button>
+						</div>
+						<div class="wind__in">
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__in">
+									<div class="item__left">
+										<span class="purse">123 456 789</span>
+									</div>
+									<div class="item__right">
+										<div class="sum">
+											<div class="sum__bal">10 000</div>
+											<span class="sum__curr">₽</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__in">
+									<div class="item__left">
+										<span class="purse">123 456 790</span>
+									</div>
+									<div class="item__right">
+										<div class="sum">
+											<div class="sum__bal">25<span class="sum__res">.02</span></div>
+											<span class="sum__curr">$</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__in">
+									<div class="item__left">
+										<span class="purse">123 456 791</span>
+									</div>
+									<div class="item__right">
+										<div class="sum">
+											<div class="sum__bal">15 000<span class="sum__res">.00</span></div>
+											<span class="sum__curr">₽</span>
+										</div>
+										<div class="sum is-queue">
+											В очереди: <span>10 000.43</span> 
+											<span class="sum__curr">₽</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__in">
+									<div class="item__left">
+										<span class="purse">123 456 792</span>
+									</div>
+									<div class="item__right">
+										<div class="sum">
+											<div class="sum__bal">60 000<span class="sum__res">.00</span></div>
+											<span class="sum__curr">₽</span>
+										</div>
+										<div class="sum is-queue">
+											В очереди: <span class="sum__bal">45 368.94</span> 
+											<span class="sum__curr">₽</span>
+										</div>
+									</div>
+								</div>
+								<div class="item__stat">
+									<div class="stat">Кошелек заблокирован</div>
+								</div>
+							</a>
+							<!-- item -->
+							<div class="item">
+								<a href="#" class="btn-text">+ <span>Добавить новый</span></a>
+							</div>
+						</div>
+					</div>
+					<!-- wind -->
+					<div class="wind">
+						<div class="wind__top">Карты</div>
+						<div class="wind__in">
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__left">Альфа Банк</div>
+								<div class="item__right">
+									<div class="card">
+										<div class="card__numb">**** 4561</div>
+										<div class="card__img">
+											<img src="img/svg/mc.svg" alt="img">
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__left">Российский Национальный Коммерческий Банк</div>
+								<div class="item__right">
+									<div class="card">
+										<div class="card__numb">**** 9988</div>
+										<div class="card__img">
+											<img src="img/svg/visa.svg" alt="img">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- center -->
+				<div class="center">
+					
+				</div>
+				<!-- l-col2 -->
+				<div class="l-col2">
+					<!-- slider -->
+					<div class="slider">
+						<button class="slider__close js-slider-close" type="button"><i class="icon icon-uniF9"></i></button>
+						<div class="arrows"></div>
+						<div class="slider__wrap js-slider">
+							<div class="slider__slide">
+								<div class="slider__in">
+									<div class="slider__title">Хорошие новости!</div>
+									<div class="slider__img">
+										<img src="img/svg/robot.svg" alt="img">
+									</div>
+									<div class="slider__text">Теперь с помощью Robowallet можно оплачивать счета за коммунальные услуги. А выплату абонентской платы за связь автоматизировать!</div>
+								</div>
+								<a href="#" class="btn btn_blue">Попробовать сейчас</a>
+							</div>
+							<div class="slider__slide">
+								<div class="slider__in">
+									<div class="slider__title">2 Хорошие новости!</div>
+									<div class="slider__img">
+										<img src="img/svg/robot.svg" alt="img">
+									</div>
+									<div class="slider__text">Теперь с помощью Robowallet можно оплачивать счета за коммунальные услуги. А выплату абонентской платы за связь автоматизировать!</div>
+								</div>
+								<a href="#" class="btn btn_blue">Попробовать сейчас</a>
+							</div>
+							<div class="slider__slide">
+								<div class="slider__in">
+									<div class="slider__title">3 Хорошие новости!</div>
+									<div class="slider__img">
+										<img src="img/svg/robot.svg" alt="img">
+									</div>
+									<div class="slider__text">Теперь с помощью Robowallet можно оплачивать счета за коммунальные услуги. А выплату абонентской платы за связь автоматизировать!</div>
+								</div>
+								<a href="#" class="btn btn_blue">Попробовать сейчас</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  </div>
+	</div>
  
-  {% include "./includes/_footer.twig" %}
+	{% include "./includes/_footer.twig" %}
 
 {% endblock %}

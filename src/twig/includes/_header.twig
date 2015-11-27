@@ -2,13 +2,24 @@
 <header class="header">
 	<div class="header__in">
 		<div class="logo">
-			<div class="icon icon-logo"></div> 
+			<i class="icon icon-logo"></i> 
 		</div> 
 		<!-- menu -->
 		<menu class="menu">
 			{% for item in menu %}
-			  <a href="#">{{item.name}}</a>
+				{% if loop.first %}
+					<a href="#" class="is-active">{{item.name}}</a>
+				{% else %}
+					<a href="#">{{item.name}}</a>
+				{% endif %}
 			{% endfor %}
 		</menu>
+		<!-- user -->
+		<div class="user">
+			<a href="#" class="user__in">
+				<i class="icon icon-uni50"></i>
+				<span class="user__name">{{user_mame}}</span>
+			</a>
+		</div>
 	</div>
 </header>

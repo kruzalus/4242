@@ -47,19 +47,24 @@
 // p
 // 	+jpg(bla)
 
++font("Roboto Light", Roboto-Light)
+=rl
+	font-family: "Roboto Light", Arial, sans-serif
 
 .in
 	margin: 0 auto
-	max-width: 1180px
+	padding: 0 10px
+	max-width: 1200px
 	+clr
 %in
 	@extend .in
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
-	line-height: 1.4
+	+rl
+	font-size: 14px
+	line-height: 1.7
+	font-size: 14px
+	background: $bg_body
 
-
-// common blocks
-
+a
+	text-decoration: none
