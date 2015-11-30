@@ -1,9 +1,21 @@
+// out
+.out
+	padding-bottom: 50px
+	height: 100%
+	height: auto
+	min-height: 100%
+
 // wind 
 .wind
 	overflow: hidden
-	box-shadow: 0 0 5px rgba($gray, .1)
+	box-shadow: 0 0 6px rgba($gray, .15)
 	border-radius: 2px
 	background: $white
+	&.is-gray
+		.wind__top
+			color: $c_wind_gray
+			border-bottom: 1px solid $bord_item
+			background: $bg_wing_gray
 	& + .wind
 		margin-top: 20px
 	&__top
@@ -16,6 +28,10 @@
 			position: absolute
 			top: 0
 			right: 0
+		.tags
+			margin-left: 15px
+			vertical-align: top
+			display: inline-block
 
 // item 
 .item
@@ -29,11 +45,11 @@
 		+clr
 	&__left
 		float: left
-		max-width: 140px
+		max-width: 134px
 	&__right
 		float: right
 		text-align: right
-		max-width: 140px
+		max-width: 146px
 	&__stat
 		margin-top: 7px
 		padding-bottom: 2px
@@ -126,13 +142,16 @@ a.item
 .slider
 	position: relative
 	color: $white
+	overflow: hidden
+	border-radius: 2px 2px 0 0
 	background: $blue
 	&__close
 		position: absolute
-		top: 13px
+		top: 12px
 		right: 10px
 		color: $white
 		font-size: 20px
+		line-height: 1
 		z-index: 1
 		opacity: .5
 		transition: opacity .2s
@@ -142,9 +161,9 @@ a.item
 	&__slide
 		width: 100%
 	&__in
-		padding: 10px 10px 15px
+		padding: 10px 10px 20px
 	&__title
-		margin-bottom: 20px
+		margin-bottom: 17px
 	&__img
 		max-height: 150px
 		font-size: 0
@@ -154,12 +173,230 @@ a.item
 			height: 100%
 	&__text
 		margin-top: 20px
+		line-height: 1.45
 	.btn
 		width: 100%
 		text-align: center
 
+// arrows
 .arrows
-	position: relative
-	.arrow
+	position: absolute
+	top: 13px
+	right: 35px
+	line-height: 1
+	z-index: 1
+	white-space: nowrap
+	+clr
+	.slick-dots
 		position: relative
-		z-index: 30
+		float: left
+		margin: 0 2px
+		line-height: 15px
+		li
+			vertical-align: middle
+			&.slick-active
+				button
+					opacity: 1
+		button
+			opacity: .25
+			background: $bg_dots
+
+// arrow
+.arrow
+	position: relative
+	color: $white
+	font-size: 16px
+	z-index: 30
+	&.is-next
+		float: right
+	&.is-prev
+		float: left
+
+// translations
+.translations
+	position: relative
+	&__reg
+		position: absolute
+		top: 4px
+		right: -2px
+		color: $c_reg
+		opacity: .3
+		transition: opacity .2s
+		background: transparent
+		&:hover,
+		&.is-active
+			opacity: 1
+		.icon
+			font-size: 16px
+			display: block
+	&__wrap
+		color: $black
+		display: block
+		+clr
+	&__img
+		float: left
+		margin-right: 10px
+		width: 60px
+		height: 60px
+		img
+			display: block
+	&__in
+		overflow: hidden
+	&__operator
+		margin-top: 10px
+		span
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
+	&__numb
+		color: $c_numb
+a.translations__wrap
+	&:hover
+		.translations__operator
+			span
+				border-color: $c_numb
+// invoice
+.invoice
+	position: relative
+	line-height: 60px
+	+clr
+	&__img
+		float: left
+		margin-right: 30px
+		width: 60px
+		line-height: 1
+		img
+			display: block
+	&__name
+		float: left
+		width: calc(68% - 90px)
+	&__name,
+	.time,
+	.price
+		span,
+		.time__in
+			line-height: 1.4
+			vertical-align: middle
+			display: inline-block
+	.time
+		float: right
+		width: 13.5%
+	.price
+		float: right
+		padding-left: 5px
+		width: 17%
+		text-align: right
+
+// time
+.time
+	font-size: 12px
+	color: $c_time
+	.icon
+		margin-right: 3px
+		font-size: 20px
+		vertical-align: middle
+
+// price
+.price
+	sub
+		font-size: 12px
+
+// tags
+.tags
+	font-size: 0
+	li
+		margin-left: 15px
+		font-size: 14px
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	a
+		color: $c_tags
+		transition: border-color .2s
+		border-bottom: 1px dotted $c_tags
+		&:hover
+			border-color: transparent
+
+// search
+.search
+	position: relative
+	&__btn
+		position: absolute
+		top: 3px
+		left: 0
+		opacity: .7
+		color: $c_btn_text
+		line-height: 1
+		transition: opacity .2s
+		background: transparent
+		&:hover
+			opacity: 1
+	.icon
+		font-size: 20px
+	input
+		padding: 0 10px 0 28px
+		height: 19px
+		width: 100%
+		font-size: 14px
+		color: $c_search
+		overflow: hidden
+		+rl
+		&:focus
+			&::placeholder
+				transform: translate(0,-20px)
+				opacity: 0
+		&::placeholder
+			color: $c_search
+			line-height: 18px
+			transition: opacity .2s, transform .2s
+
+// operation
+.operation
+	padding: 5px 0
+	+clr
+	&__date
+		width: 16%
+		color: $c_time
+		text-align: center
+		font-size: 12px
+		line-height: 50px
+	&__inl
+		line-height: 1.4
+		vertical-align: middle
+		display: inline-block
+	&__img
+		margin-right: 35px
+		width: 50px
+		img
+			display: block
+	&__what
+		width: calc(61% - 85px)
+	&__numb
+		color: $c_numb
+		font-size: 11px
+	&__name
+		line-height: 1.4
+	&__ind
+		width: 20px
+		color: $c_oper_ico
+		line-height: 50px
+		.icon
+			font-size: 20px
+			vertical-align: middle
+	&__price
+		width: calc(22% - 20px)
+		line-height: 50px
+		text-align: right
+		.price
+			vertical-align: middle
+			display: inline-block
+	&__date,
+	&__img,
+	&__what
+		float: left
+	&__price,
+	&__ind
+		float: right
+	.is-green
+		color: $l_gray
+	.is-red
+		color: $red

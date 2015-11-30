@@ -1,0 +1,50 @@
+// footer
+.footer
+	margin-top: -50px
+	padding: 13px 0
+	color: $c_foot
+	text-align: center
+	border-top: 1px solid $bord_foot
+	&__in
+		@extend %in
+
+// copy
+.copy
+	float: left
+
+// cont
+.cont
+	margin-right: 22px
+	vertical-align: top
+	color: $c_cont
+	display: inline-block
+	&__text,
+	&__item
+		vertical-align: top
+		display: inline-block
+		.icon
+			margin-right: 10px
+			font-size: 20px
+			vertical-align: middle
+		a
+			color: $c_mail
+			line-height: 1.4
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
+			display: inline-block
+			&:hover
+				border-color: $c_mail
+	&__text
+		margin-right: 122px
+	&__item
+		margin-left: 72px
+
+// lang
+.lang
+	float: right
+	color: $c_foot
+	line-height: 1.4
+	transition: border-color .2s
+	border-bottom: 1px solid transparent
+	&:hover
+		border-color: $c_foot
