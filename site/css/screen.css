@@ -442,11 +442,11 @@ a { text-decoration: none; }
 
 .menu { float: left; font-size: 0; }
 .menu a { padding: 0 18px; color: #fff; height: 50px; line-height: 50px; font-size: 14px; -webkit-transition: background 0.2s; transition: background 0.2s; border-right: 1px solid #38474f; display: inline-block; }
-.menu a:hover, .menu a.is-active { background: #aed480; }
+.menu a:hover, .menu a.is-active { background: #546e7a; }
 .menu a:first-child { border-left: 1px solid #38474f; }
 
 .user { float: right; -webkit-transition: background 0.2s; transition: background 0.2s; }
-.user:hover, .user.is-active { background: #aed480; }
+.user:hover, .user.is-active { background: #546e7a; }
 .user__in { position: relative; height: 50px; color: #fff; line-height: 50px; border-left: 1px solid #38474f; display: block; }
 .user__name { padding: 0 15px 0 35px; display: block; }
 .user .icon { position: absolute; left: 12px; top: 50%; margin-top: -webkit-calc(-19px/2); margin-top: calc(-19px/2); font-size: 19px; }
@@ -597,7 +597,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .operation__price .price { vertical-align: middle; display: inline-block; }
 .operation__date, .operation__img, .operation__what { float: left; }
 .operation__price, .operation__ind { float: right; }
-.operation .is-green { color: #aed480; }
+.operation .is-green { color: #546e7a; }
 .operation .is-red { color: #cf6849; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
