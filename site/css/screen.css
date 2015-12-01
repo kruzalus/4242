@@ -597,7 +597,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .operation__price .price { vertical-align: middle; display: inline-block; }
 .operation__date, .operation__img, .operation__what { float: left; }
 .operation__price, .operation__ind { float: right; }
-.operation .is-green { color: #546e7a; }
+.operation .is-green { color: #a8d277; }
 .operation .is-red { color: #cf6849; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
