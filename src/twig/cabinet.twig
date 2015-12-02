@@ -1,0 +1,131 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header.twig" %}
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- l-col1 -->
+				<div class="l-col1">
+					{% include "./includes/_nav.twig" %}
+				</div>
+				<!-- center -->
+				<div class="center">
+					<!-- wind -->
+					<div class="wind is-gray">
+						<div class="wind__top">Статус пользователя</div>
+						<div class="wind__in">
+							<!-- status -->
+							<div class="status">
+								<div class="status__img">
+									<img src="img/svg/anonim.svg" alt="img">
+								</div>
+								<div class="status__title"><i class="icon is-green icon-uniD9"></i> Анонимный</div>
+								<div class="status__row">
+									<div class="status__left">
+										Максимальный баланс
+									</div>
+									<div class="status__right">
+										<div class="price">15 000 ₽</div>
+									</div>
+								</div>
+								<div class="status__row">
+									<div class="status__left">
+										Максимальный оборот
+									</div>
+									<div class="status__right">
+										<div class="price">40 000 ₽</div>
+									</div>
+								</div>
+								<div class="status__row">
+									<div class="status__left">
+										Платежи иностранным компаниям
+									</div>
+									<div class="status__right">
+										<i class="icon icon-uni32"></i>
+									</div>
+								</div>
+								<div class="status__row">
+									<div class="status__left">
+										Переводы другим пользователям
+									</div>
+									<div class="status__right">
+										<i class="icon icon-uni32"></i>
+									</div>
+								</div>
+								<div class="status__row">
+									<div class="status__left">
+										Вывод средств
+									</div>
+									<div class="status__right">
+										<i class="icon icon-uni32"></i>
+									</div>
+								</div>
+								<div class="status__but">
+									<a href="#" class="btn btn_white">Ваш текущий статус</a>
+								</div>
+							</div>
+							<!-- status -->
+							<div class="status">
+								<div class="status__img">
+									<img src="img/svg/personal.svg" alt="img">
+								</div>
+								<div class="status__title">Персональный</div>
+								<div class="status__row">
+									<div class="status__left">
+										Максимальный баланс
+									</div>
+									<div class="status__right">
+										<div class="price">60 000 ₽</div>
+									</div>
+								</div>
+								<div class="status__row">
+									<div class="status__left">
+										Максимальный оборот
+									</div>
+									<div class="status__right">
+										<div class="price">200 000 ₽</div>
+									</div>
+								</div>
+								<div class="status__row">
+									<div class="status__left">
+										Платежи иностранным компаниям
+									</div>
+									<div class="status__right">
+										<i class="icon is-green icon-uniD9"></i>
+									</div>
+								</div>
+								<div class="status__row">
+									<div class="status__left">
+										Переводы другим пользователям
+									</div>
+									<div class="status__right">
+										<i class="icon is-green icon-uniD9"></i>
+									</div>
+								</div>
+								<div class="status__row">
+									<div class="status__left">
+										Вывод средств
+									</div>
+									<div class="status__right">
+										<i class="icon is-green icon-uniD9"></i>
+									</div>
+								</div>
+								<div class="status__but">
+									<a href="#" class="btn btn_blue">Получить статус</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}

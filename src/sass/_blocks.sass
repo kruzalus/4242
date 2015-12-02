@@ -400,3 +400,54 @@ a.translations__wrap
 		color: $l_green
 	.is-red
 		color: $red
+
+// nav
+.nav
+	line-height: 1.45
+	box-shadow: 0 0 6px rgba($gray, .15)
+	border-radius: 2px
+	background: $white
+	&__item
+		position: relative
+		transition: background .2s
+		border-top: 1px solid $bord_nav
+		&:hover,
+		&.is-active
+			background: $bg_nav-act
+			&:before
+				+arr(10,40,$bg_nav-act,r)
+			a
+				color: $white
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 100%
+			transition: border-color .2s
+			+arr(10,40,transparent,r)
+		&:first-child
+			border-top: none
+	a
+		padding: 10px
+		color: $c_nav
+		transition: color .2s
+	&__item,
+	a
+		display: block
+
+// status
+.status
+	&__img
+		height: 150px
+		font-size: 0
+		text-align: center
+		img
+			height: 100%
+	&__title
+		text-align: center
+	&__row
+		+clr
+	&__left
+		float: left
+	&__right
+		float: right

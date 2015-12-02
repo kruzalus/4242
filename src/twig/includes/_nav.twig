@@ -1,0 +1,10 @@
+<!-- nav -->
+<nav class="nav">
+	{% for item in nav %}
+		{% if loop.first %}
+			<li class="nav__item is-active"><a href="#">{{item.name}}</a></li>
+		{% else %}
+			<li class="nav__item"><a href="#">{{item.name}}</a></li>
+		{% endif %}
+	{% endfor %}
+</nav> 

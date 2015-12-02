@@ -213,7 +213,7 @@ gulp.task('twig', function() {
     var twig = require('gulp-twig');
     gulp.src('./src/twig/**/[^_]*.twig')
         .pipe(data(function(file, cb) {
-            var jsonFileUrl = './src/twig/data/' + path.basename(file.path, '.twig') + '.json';
+            var jsonFileUrl = './src/twig/data/data.json';
             var templData = null;
             // return require('./src/twig/data/' + path.basename(file.path, '.twig') + '.json');
             readJSON(jsonFileUrl, function(data) {
