@@ -16,6 +16,13 @@
 			color: $c_wind_gray
 			border-bottom: 1px solid $bord_item
 			background: $bg_wing_gray
+	&.is-yellow
+		box-shadow: none
+		border: 1px solid $l_yellow
+		.wind__top
+			color: $c_wind_gray
+			+rr
+			background: $l_yellow
 	& + .wind
 		margin-top: 20px
 	&__top
@@ -145,8 +152,10 @@ a.item
 	font-size: 14px
 	+rl
 	border: 1px solid $bord_form
+	transition: border-color .2s
 	display: block
 	&:focus
+		border-color: $bord_act_input
 		&::placeholder
 			transform: translate(0,-20px)
 			opacity: 0
@@ -521,10 +530,16 @@ a.translations__wrap
 	.btn
 		min-width: 180px
 	&__row
+		position: relative
 		margin-top: 20px
 		+clr
 		&:first-child
 			margin-top: 0
+		.tooltip
+			position: absolute
+			left: 50%
+			bottom: 100%
+			transform: translate(-50%,0)
 	&__label
 		float: left
 		padding-right: 10px
@@ -532,6 +547,7 @@ a.translations__wrap
 		line-height: 38px
 		label,
 		span
+			line-height: 1.4
 			vertical-align: middle
 			display: inline-block
 		label
@@ -546,3 +562,31 @@ a.translations__wrap
 		width: 80px
 		&:first-child
 			margin-left: 0
+
+// tooltip
+.tooltip
+	padding: 8px 22px
+	+rr
+	color: $white
+	box-shadow : 0px 4px 5px rgba(38, 50, 56, 0.5)
+	background: $bg_tooltip
+	display: none
+	&.is-active
+		display: inline-block
+
+// inf
+.inf
+	padding: 10px 5px
+	line-height: 1.45
+	&__row
+		position: relative
+		margin-top: 20px
+		padding-left: 22px
+		&:first-child
+			margin-top: 0
+	.icon
+		position: absolute
+		top: 0
+		left: 0
+		color: $yellow
+		font-size: 20px
