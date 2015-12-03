@@ -127,6 +127,12 @@ a.item
 		&:active
 			color: $white
 			background: darken($d_blue, 20%)
+	&_gray
+		background: $bg_btn_gray
+		&:hover
+			background: darken($bg_btn_gray, 20%)
+		&:active
+			background: darken($bg_btn_gray, 30%)
 
 
 .btn-text
@@ -162,6 +168,13 @@ a.item
 	&::placeholder
 		color: $c_form
 		transition: opacity .2s, transform .2s
+
+// title
+.title
+	padding-bottom: 15px
+	+rl
+	font-size: 18px
+	border-bottom: 1px solid $bord_gray
 
 // card
 .card
@@ -359,19 +372,9 @@ a.translations__wrap
 // search
 .search
 	position: relative
-	&__btn
-		position: absolute
-		top: 3px
-		left: 0
-		opacity: .7
-		color: $c_btn_text
-		line-height: 1
-		transition: opacity .2s
-		background: transparent
-		&:hover
-			opacity: 1
-	.icon
-		font-size: 20px
+	&.is-white
+		background: $white
+		border-bottom: 1px solid $bord_form
 	input
 		padding: 0 10px 0 28px
 		height: 19px
@@ -388,6 +391,48 @@ a.translations__wrap
 			color: $c_search
 			line-height: 18px
 			transition: opacity .2s, transform .2s
+	&__btn
+		position: absolute
+		top: 3px
+		left: 0
+		opacity: .7
+		color: $c_btn_text
+		line-height: 1
+		transition: opacity .2s
+		background: transparent
+		&:hover
+			opacity: 1
+	&__in
+		padding: 13px 10px 14px 28px
+		@extend %in
+		input
+			padding-left: 52px
+		.search__btn
+			color: $black
+			opacity: .75
+			&:hover
+				opacity: 1
+	&__form
+		position: relative
+		overflow: hidden
+	.icon
+		font-size: 20px
+	.location
+		float: right
+
+// location
+.location
+	color: $c_loc
+	+rt
+	&:hover
+		.location__text
+			border-color: transparent
+	.icon
+		margin-right: 7px
+		vertical-align: middle
+	&__text
+		transition: border-color .2s
+		border-bottom: 1px dotted $c_loc
 
 // operation
 .operation
@@ -590,3 +635,109 @@ a.translations__wrap
 		left: 0
 		color: $yellow
 		font-size: 20px
+
+// breadcrumbs
+.breadcrumbs
+	margin-bottom: 30px
+	color: $c_blue
+	line-height: 1.45
+	li
+		position: relative
+		margin-left: 10px
+		padding-left: 14px
+		vertical-align: top
+		display: inline-block
+		&:before
+			position: absolute
+			content: '›'
+			top: 50%
+			left: 0
+			margin-top: -7px
+			color: $c_arr_breadc
+			line-height: 12px
+			font-size: 20px
+		&:first-child
+			margin-left: 0
+			padding-left: 0
+			&:before
+				display: none
+	a
+		color: $c_blue
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+		&:hover
+			border-color: $c_blue
+
+// categories
+.categories
+	margin-top: 19px
+	font-size: 0
+	+clr
+	&__item
+		margin: 0 2% 2% 0
+		padding: 10px
+		width: 23.5%
+		font-size: 14px
+		line-height: 60px
+		vertical-align: top
+		box-shadow: 0 0 6px rgba($gray, .15)
+		border-radius : 2px
+		background: $white
+		display: inline-block
+		+clr
+		&:nth-child(4n+4)
+			margin-right: 0
+	&__img
+		float: left
+		margin-right: 10px
+		height: 60px
+		img
+			display: block
+			height: 100%
+	&__name
+		line-height: 1.45
+		vertical-align: middle
+		display: inline-block
+
+// alt
+.alt
+	position: relative
+	margin: 95px auto 0
+	max-width: 580px
+	color: $white
+	line-height: 1.45
+	background: $bg_alt
+	border-radius: 2px
+	&__close
+		position: absolute
+		top: 20px
+		right: 20px
+		line-height: 1
+		font-size: 20px
+		color: $c_alt_close
+		transition: color .2s
+		background: transparent
+		&:hover
+			color: darken($c_alt_close, 20%)
+	&__in
+		padding: 20px 20px 10px
+	&__wrap
+		+clr
+	&__img
+		float: left
+		margin-right: 20px
+		height: 150px
+		img
+			height: 100%
+			display: block
+	&__text
+		overflow: hidden
+	&__title
+		margin-bottom: 25px
+		+rl
+	&__input
+		margin-top: 20px
+		.input
+			text-align: center
+	.btn
+		width: 100%

@@ -1,0 +1,93 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header.twig" %}
+		<!-- search -->
+		<div class="search is-white">
+			<div class="search__in">
+				<a href="#" class="location">
+					<span class="icon icon-uni24"></span>
+					<span class="location__text">в Москве</span>
+				</a>
+				<div class="search__form">
+					<form action="">
+						<input type="text" placeholder="Поиск по услугам и компаниям">
+						<button class="search__btn" type="button">
+							<i class="icon icon-uni4B"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- breadcrumbs -->
+				<ul class="breadcrumbs">
+					<li><a href="#">Все категории</a></li>
+				</ul>
+				<!-- title -->
+				<h3 class="title">Телефония</h3>
+				<!-- categories -->
+				<div class="categories">
+					<div class="categories__in">
+						<div class="categories__item">
+							<div class="categories__img"><img src="img/svg/beeline2.svg" alt="img"></div>
+							<div class="categories__name">Билайн</div>
+						</div>
+						<div class="categories__item">
+							<div class="categories__img"><img src="img/svg/megaphone.svg" alt="img"></div>
+							<div class="categories__name">Мегафон</div>
+						</div>
+						<div class="categories__item">
+							<div class="categories__img"><img src="img/svg/mts.svg" alt="img"></div>
+							<div class="categories__name">МТС</div>
+						</div>
+						<div class="categories__item">
+							<div class="categories__img"><img src="img/svg/rostelecom.svg" alt="img"></div>
+							<div class="categories__name">Ростелеком</div>
+						</div>
+						<div class="categories__item">
+							<div class="categories__img"><img src="img/svg/tele2.svg" alt="img"></div>
+							<div class="categories__name">Tele2</div>
+						</div>
+						<div class="categories__item">
+							<div class="categories__img"><img src="img/svg/yota.svg" alt="img"></div>
+							<div class="categories__name">Yota</div>
+						</div>
+						<div class="categories__item">
+							<div class="categories__img"><img src="img/svg/xyz-operator.svg" alt="img"></div>
+							<div class="categories__name">XYZ Operator</div>
+						</div>
+					</div>
+				</div>
+				<!-- alt -->
+				<div class="alt">
+					<form action="">
+						<button class="alt__close" type="button"><i class="icon icon-uniF9"></i></button>
+						<div class="alt__in">
+							<div class="alt__wrap">
+								<div class="alt__img">
+									<img src="img/svg/alt_robot.svg" alt="img">
+								</div>
+								<div class="alt__text">
+									<div class="alt__title">Не нашли своего оператора?</div>
+									<p>Нам правда очень жаль... Помогите улучшить качество сервисов Robowallet: сообщите нам название поставщика услуг или компании, которые, по вашему мнению должны появиться в каталоге.</p>
+								</div>
+							</div>
+							<div class="alt__input"><input type="text" class="input" placeholder="Напишите здесь название компании, которую искали, но так и не нашли."></div>
+						</div>
+						<button class="btn btn_gray" type="submit">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}
