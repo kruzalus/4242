@@ -28,6 +28,9 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 @font-face { font-family: "icomoon"; src: url("fonts/icomoon.eot?veqfhj"); src: url("fonts/icomoon.eot?veqfhj#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?veqfhj") format("truetype"), url("fonts/icomoon.woff?veqfhj") format("woff"), url("fonts/icomoon.svg?veqfhj#icomoon") format("svg"); font-weight: normal; font-style: normal; }
 [class^="icon-"], [class*=" icon-"] { font-family: "icomoon" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
+.icon.is-red { color: #ff5722; }
+.icon.is-green { color: #8bc34a; }
+
 .icon-prev:before { content: ""; }
 
 .icon-reg:before { content: ""; }
@@ -474,6 +477,9 @@ a { text-decoration: none; }
 .wind__top { position: relative; padding: 10px; color: #fff; line-height: 1.45; background: #546d79; }
 .wind__top .btn { position: absolute; top: 0; right: 0; }
 .wind__top .tags { margin-left: 15px; vertical-align: top; display: inline-block; }
+.wind__in { *zoom: 1; }
+.wind__in:after { content: " "; display: table; clear: both; }
+.wind__in .status { float: left; width: 50%; }
 
 .item { padding: 8px 10px; border-top: 1px solid #edeff1; display: block; *zoom: 1; }
 .item:after { content: " "; display: table; clear: both; }
@@ -495,16 +501,29 @@ a.item { color: #263238; }
 
 .stat { padding: 0 7px; line-height: 1.4; vertical-align: top; -webkit-border-radius: 1px; border-radius: 1px; border: 1px solid #546e7a; display: inline-block; }
 
-.btn { padding: 13px 20px; color: #fff; font-family: "Roboto Light", Arial, sans-serif; font-size: 14px; line-height: 1; -webkit-transition: background 0.2s; transition: background 0.2s; background: #9ccc65; display: inline-block; }
+.btn { padding: 13px 20px; color: #fff; font-family: "Roboto Light", Arial, sans-serif; font-size: 14px; line-height: 1; -webkit-transition: background 0.2s, color 0.2s; transition: background 0.2s, color 0.2s; background: #9ccc65; display: inline-block; }
 .btn:hover { background: #699833; }
 .btn:active { background: #4f7226; }
 .btn_blue { background: #42a5f5; }
 .btn_blue:hover { background: #0b72c6; }
 .btn_blue:active { background: #085796; }
+.btn_white { color: #263238; background: #fff; }
+.btn_white:hover { color: #fff; background: #42a5f5; }
+.btn_white:active { color: #fff; background: #0b72c6; }
 
 .btn-text { position: relative; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); color: #607d8b; display: inline-block; }
 .btn-text:hover span { border-color: #607d8b; }
 .btn-text span { line-height: 1.3; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; display: inline-block; }
+
+.input { padding: 0 8px; height: 40px; width: 100%; font-size: 14px; font-family: "Roboto Light", Arial, sans-serif; border: 1px solid #cfd8dc; display: block; }
+.input:focus::-webkit-input-placeholder { -webkit-transform: translate(0, -20px); transform: translate(0, -20px); opacity: 0; }
+.input:focus::-moz-placeholder { transform: translate(0, -20px); opacity: 0; }
+.input:focus:-ms-input-placeholder { -ms-transform: translate(0, -20px); transform: translate(0, -20px); opacity: 0; }
+.input:focus::placeholder { -webkit-transform: translate(0, -20px); -ms-transform: translate(0, -20px); transform: translate(0, -20px); opacity: 0; }
+.input::-webkit-input-placeholder { color: #b0bec5; -webkit-transition: opacity 0.2s, -webkit-transform 0.2s; transition: opacity 0.2s, transform 0.2s; }
+.input::-moz-placeholder { color: #b0bec5; transition: opacity 0.2s, transform 0.2s; }
+.input:-ms-input-placeholder { color: #b0bec5; transition: opacity 0.2s, transform 0.2s; }
+.input::placeholder { color: #b0bec5; -webkit-transition: opacity 0.2s, -webkit-transform 0.2s; transition: opacity 0.2s, transform 0.2s; }
 
 .card__numb, .card__img { display: inline-block; }
 .card__numb { vertical-align: top; }
@@ -610,13 +629,38 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .nav a { padding: 10px; color: #2196f3; -webkit-transition: color 0.2s; transition: color 0.2s; }
 .nav__item, .nav a { display: block; }
 
+.status { padding-top: 39px; border-left: 1px solid #eceff1; }
+.status:first-child { border-left: none; }
+.status .icon { font-size: 16px; }
 .status__img { height: 150px; font-size: 0; text-align: center; }
 .status__img img { height: 100%; }
-.status__title { text-align: center; }
-.status__row { *zoom: 1; }
+.status__in { padding: 15px 18px 10px; }
+.status__title { margin-bottom: 15px; text-align: center; font-size: 14px; font-family: "Roboto Light", Arial, sans-serif; }
+.status__title .icon { vertical-align: middle; }
+.status__row { line-height: 1.45; *zoom: 1; }
 .status__row:after { content: " "; display: table; clear: both; }
-.status__left { float: left; }
+.status__left { float: left; color: #607d8b; }
 .status__right { float: right; }
+.status__but { border-top: 1px solid #eceff1; }
+.status__but .btn { text-align: center; width: 100%; }
+
+.save__in { padding: 20px; *zoom: 1; }
+.save__in:after { content: " "; display: table; clear: both; }
+.save__input { overflow: hidden; }
+.save .btn { float: right; margin-left: 20px; min-width: 160px; }
+
+.form { padding: 20px; }
+.form .btn { min-width: 180px; }
+.form__row { margin-top: 20px; *zoom: 1; }
+.form__row:after { content: " "; display: table; clear: both; }
+.form__row:first-child { margin-top: 0; }
+.form__label { float: left; padding-right: 10px; width: 180px; line-height: 38px; }
+.form__label label, .form__label span { vertical-align: middle; display: inline-block; }
+.form__label label { cursor: pointer; }
+.form__right { float: right; width: -webkit-calc(100% - 180px); width: calc(100% - 180px); *zoom: 1; }
+.form__right:after { content: " "; display: table; clear: both; }
+.form__col { margin-left: 20px; float: left; width: 80px; }
+.form__col:first-child { margin-left: 0; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1200px){

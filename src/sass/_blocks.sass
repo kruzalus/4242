@@ -32,6 +32,11 @@
 			margin-left: 15px
 			vertical-align: top
 			display: inline-block
+	&__in
+		+clr
+		.status
+			float: left
+			width: 50%
 
 // item 
 .item
@@ -93,7 +98,7 @@ a.item
 	+rl
 	font-size: 14px
 	line-height: 1
-	transition: background .2s
+	transition: background .2s, color .2s
 	background: $green
 	display: inline-block
 	&:hover
@@ -106,6 +111,15 @@ a.item
 			background: darken($d_blue, 20%)
 		&:active
 			background: darken($d_blue, 30%)
+	&_white
+		color: $black
+		background: $white
+		&:hover
+			color: $white
+			background: $d_blue
+		&:active
+			color: $white
+			background: darken($d_blue, 20%)
 
 
 .btn-text
@@ -122,6 +136,23 @@ a.item
 		transition: border-color .2s
 		border-bottom: 1px solid transparent
 		display: inline-block
+
+// input
+.input
+	padding: 0 8px 
+	height: 40px
+	width: 100%
+	font-size: 14px
+	+rl
+	border: 1px solid $bord_form
+	display: block
+	&:focus
+		&::placeholder
+			transform: translate(0,-20px)
+			opacity: 0
+	&::placeholder
+		color: $c_form
+		transition: opacity .2s, transform .2s
 
 // card
 .card
@@ -437,17 +468,81 @@ a.translations__wrap
 
 // status
 .status
+	padding-top: 39px
+	border-left: 1px solid $bord_gray
+	&:first-child
+		border-left: none
+	.icon
+		font-size: 16px
 	&__img
 		height: 150px
 		font-size: 0
 		text-align: center
 		img
 			height: 100%
+	&__in
+		padding: 15px 18px 10px
 	&__title
+		margin-bottom: 15px
 		text-align: center
+		font-size: 14px
+		+rl
+		.icon
+			vertical-align: middle
 	&__row
+		line-height: 1.45
 		+clr
 	&__left
 		float: left
+		color: $c_wind_gray
 	&__right
 		float: right
+	&__but
+		border-top: 1px solid $bord_gray
+		.btn
+			text-align: center
+			width: 100%
+
+// save
+.save
+	&__in
+		padding: 20px
+		+clr
+	&__input
+		overflow: hidden
+	.btn
+		float: right
+		margin-left: 20px
+		min-width: 160px
+
+// form
+.form
+	padding: 20px
+	.btn
+		min-width: 180px
+	&__row
+		margin-top: 20px
+		+clr
+		&:first-child
+			margin-top: 0
+	&__label
+		float: left
+		padding-right: 10px
+		width: 180px
+		line-height: 38px
+		label,
+		span
+			vertical-align: middle
+			display: inline-block
+		label
+			cursor: pointer
+	&__right
+		float: right
+		width: calc(100% - 180px)
+		+clr
+	&__col
+		margin-left: 20px
+		float: left
+		width: 80px
+		&:first-child
+			margin-left: 0
