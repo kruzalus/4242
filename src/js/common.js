@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	
+	// slider
 	$('.js-slider').each(function(){
 		var slider 	= $(this),
 			arr 	= slider.parent().find('.arrows');
@@ -26,6 +27,13 @@ $(document).ready(function() {
 			]
 		});
 	});
+
+	// select
+	$(".js-select select").on('change', function() {
+		var text = $(this).val();
+		$(this).parents('.js-select').find('.js-input').val(text);
+	});
+
 		
 
 });

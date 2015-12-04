@@ -57,5 +57,27 @@
 			"name": "Аккаунты социальных сетей"
 		}
 	],
-	"user_mame": "verylongusername@longdomainname.org"
+	"user_mame": "verylongusername@longdomainname.org",
+	"list": [
+		{
+			"item": "Что делать, если я ошибся числом при вводе номера лицевого счёта?"
+		},
+		{
+			"item": "Когда заработает интернет?"
+		}
+	],
+	"also": [
+		{
+			"item": "Мобильный телефон"
+		},
+		{
+			"item": "Мосэнергосбыт"
+		},
+		{
+			"item": "Мосводоканал"
+		},
+		{
+			"item": "МГТС"
+		}
+	]
 }

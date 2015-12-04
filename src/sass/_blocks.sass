@@ -1,10 +1,3 @@
-// out
-.out
-	padding-bottom: 50px
-	height: 100%
-	height: auto
-	min-height: 100%
-
 // wind 
 .wind
 	overflow: hidden
@@ -105,6 +98,7 @@ a.item
 	+rl
 	font-size: 14px
 	line-height: 1
+	text-align: center
 	transition: background .2s, color .2s
 	background: $green
 	display: inline-block
@@ -169,12 +163,131 @@ a.item
 		color: $c_form
 		transition: opacity .2s, transform .2s
 
+// select
+.select
+	position: relative
+	select
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		opacity: 0
+		cursor: pointer
+		display: block
+	@media screen and (-webkit-min-device-pixel-ratio: 0)
+		select 
+			height: 40px
+			line-height: 40px
+			background: #f4f4f4
+	select::-moz-focus-inner
+		border: 0
+		padding: 0
+	@-moz-document url-prefix()
+		select 
+		padding: 15px 0!important
+	.input
+		padding-left: 45px
+	&__icon
+		position: absolute
+		width: 25px
+		top: 50%
+		left: 11px
+		transform: translate(0,-50%)
+		img
+			width: 100%
+			display: block
+
 // title
 .title
 	padding-bottom: 15px
 	+rl
 	font-size: 18px
+	line-height: 1.4
 	border-bottom: 1px solid $bord_gray
+	h1, h2, h3, h4, h5, h6
+		+rl
+		font-weight: normal
+	&__list
+		margin-top: 5px
+		color: $c_numb
+		font-size: 14px
+	&__item
+		position: relative
+		margin-left: 9px
+		padding-left: 15px
+		vertical-align: top
+		display: inline-block
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			height: 4px
+			width: 4px
+			margin-top: -2px
+			border-radius: 50%
+			background: $c_numb
+		&:first-child
+			margin-left: 0
+			padding-left: 0
+			&:before
+				display: none
+
+// title-small
+.title-small
+	font-size: 14px
+	+rl
+
+// list
+.list
+	margin-top: 20px
+	li
+		position: relative
+		margin-top: 25px
+		text-indent: 7px
+		line-height: 1.45
+		display: block
+		&:first-child
+			margin-top: 0
+		&:before
+			position: absolute
+			content: ''
+			top: 8px
+			left: 0
+			height: 4px
+			width: 4px
+			border-radius: 50%
+			background: $c_blue
+	a
+		color: $c_blue
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+		&:hover
+			border-color: $c_blue
+
+// prev
+.prev
+	position: relative
+	padding-left: 18px
+	color: $c_blue
+	transform: translate3d(0,0,0)
+	transition: color .2s
+	display: inline-block
+	&:hover
+		color: darken($c_blue, 10%)
+		&:before
+			transform: translate(-4px,0)
+			+arr(7,11,darken($c_blue, 10%),l)
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 0
+		margin-top: -6px
+		transition: transform .2s, border-color .2s
+		+arr(7,11,$c_blue,l)
 
 // card
 .card
@@ -638,7 +751,7 @@ a.translations__wrap
 
 // breadcrumbs
 .breadcrumbs
-	margin-bottom: 30px
+	margin-bottom: 27px
 	color: $c_blue
 	line-height: 1.45
 	li
@@ -741,3 +854,102 @@ a.translations__wrap
 			text-align: center
 	.btn
 		width: 100%
+
+// payment
+.payment
+	padding-top: 34px
+	&__row
+		margin-top: 20px
+		+clr
+		&:first-child
+			margin-top: 0
+	&__label
+		float: left
+		width: 200px
+		line-height: 40px
+		span,
+		label,
+		a
+			line-height: 1.4
+			vertical-align: middle
+			display: inline-block
+	&__right
+		float: right
+		position: relative
+		line-height: 40px
+		width: calc(100% - 200px)
+	&__icon
+		position: absolute
+		top: 50%
+		right: 9px
+		min-width: 22px
+		font-size: 22px
+		line-height: 1
+		color: $c_ico_pay
+		z-index: 1
+		transform: translate(0,-50%)
+		text-align: center
+		.icon-ruble
+			font-size: 14px
+	&__new
+		position: relative
+		margin: 9px 0 0 20px
+		padding-left: 28px
+		color: $c_blue
+		line-height: 1.4
+		vertical-align: top
+		display: inline-block
+		&:hover
+			span
+				border-color: $c_blue
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			margin-top: -8px
+			+svg(plus,15,15)
+		span
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
+	&__text
+		color: $c_sum_queue
+		line-height: 1.4
+		vertical-align: middle
+		display: inline-block
+		.price
+			color: $black
+	.select
+		width: 280px
+		vertical-align: top
+		display: inline-block
+	.btn
+		min-width: 280px
+
+
+// fasten
+.fasten
+	&__img
+		margin-right: 9px
+		width: 60px
+		vertical-align: top
+		display: inline-block
+		img
+			width: 100%
+			display: block
+	.fasten__link
+		position: relative
+		margin-top: 10px
+		padding-left: 25px
+		color: $c_blue
+		transition: color .2s
+		border-bottom: none
+		vertical-align: top
+		display: inline-block
+		&:hover
+			color: darken($c_blue, 20%)
+		.icon
+			position: absolute
+			left: 0
+			top: 2px
+			font-size: 16px

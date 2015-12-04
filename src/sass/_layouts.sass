@@ -1,14 +1,27 @@
 // default layout
+
+// out
+.out
+	padding-bottom: 50px
+	height: 100%
+	height: auto
+	min-height: 100%
+
+// l
 .l
 	@extend %in
 	+clr
 	&__in
 		padding: 20px 0 25px
 		+clr
+
+// l-col1
 .l-col1
 	float: left
 	margin-right: 1.65%
 	width: 23.81%
+
+// l-col2
 .l-col2
 	float: right
 	width: 23.7%
@@ -17,8 +30,35 @@
 	.slider
 		& + .wind
 			margin-top: 20px
+
+// center
 .center
 	float: left
 	width: 49.2%
 	+r(1200)
 		width: 72.9%
+
+// wrap
+.wrap
+	+clr
+
+// leftbar
+.leftbar
+	float: left
+	padding-right: 60px
+	width: 71.3%
+	border-right: 1px solid $bord_leftbar
+
+// rightbar
+.rightbar
+	float: right
+	width: 23.8%
+	line-height: 1.45
+	.title-small
+		margin: 43px 0 0
+	a
+		color: $c_blue
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+		&:hover
+			border-color: $c_blue
