@@ -202,7 +202,7 @@ a.item
 		padding: 0
 	@-moz-document url-prefix()
 		select 
-		padding: 15px 0!important
+			padding: 15px 0!important
 	.input
 		padding-left: 45px
 
@@ -212,6 +212,7 @@ a.item
 	+rl
 	font-size: 18px
 	line-height: 1.4
+	font-weight: normal
 	border-bottom: 1px solid $bord_gray
 	h1, h2, h3, h4, h5, h6
 		+rl
@@ -960,3 +961,44 @@ a.translations__wrap
 			left: 0
 			top: 2px
 			font-size: 16px
+
+// transfer
+.transfer
+	.title
+		margin: 20px 0 35px
+		padding: 0
+		border: none
+		text-align: center
+	&__in
+		font-size: 0
+		+clr
+	&__item
+		position: relative
+		padding: 10px 10px 65px
+		margin-top: -1px
+		width: 25%
+		color: $black
+		vertical-align: top
+		text-align: center
+		transition: border-color .2s, box-shadow .2s
+		border: 1px solid $bord_gray
+		display: inline-block
+		&:hover
+			z-index: 1
+			box-shadow: 0 0 6px rgba($gray, .15)
+			border-color: darken($bord_gray, 5%)
+		& + .transfer__item
+			margin-left: -1px
+		&:nth-child(4n-3)
+			margin-left: 0
+		&:nth-child(-n+4)
+			margin-top: 0
+	&__top
+		height: 200px
+		line-height: 200px
+	&__icon
+		line-height: 1
+		vertical-align: middle
+		display: inline-block
+	&__text
+		font-size: 14px

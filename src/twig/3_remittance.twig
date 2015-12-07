@@ -1,0 +1,56 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header.twig" %}
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- transfer -->
+				<div class="transfer">
+					<h3 class="title">Выберите направление перевода</h3>
+					<div class="transfer__in">
+						<a href="#" class="transfer__item">
+							<div class="transfer__top">
+								<div class="transfer__icon">
+									<img src="img/svg/between.svg" alt="img">
+								</div>
+							</div>
+							<div class="transfer__text">Между своими кошельками</div>
+						</a>
+						<a href="#" class="transfer__item">
+							<div class="transfer__top">
+								<div class="transfer__icon">
+									<img src="img/svg/other.svg" alt="img">
+								</div>
+							</div>
+							<div class="transfer__text">Другим людям</div>
+						</a>
+						<a href="#" class="transfer__item">
+							<div class="transfer__top">
+								<div class="transfer__icon">
+									<img src="img/svg/card_to_card.svg" alt="img">
+								</div>
+							</div>
+							<div class="transfer__text">С карты на карту</div>
+						</a>
+						<a href="#" class="transfer__item">
+							<div class="transfer__top">
+								<div class="transfer__icon">
+									<img src="img/svg/on_account.svg" alt="img">
+								</div>
+							</div>
+							<div class="transfer__text">На банковский счёт</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}
