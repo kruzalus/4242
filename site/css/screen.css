@@ -548,12 +548,13 @@ a.item { color: #263238; }
 .input::placeholder { color: #b0bec5; -webkit-transition: opacity 0.2s, -webkit-transform 0.2s; transition: opacity 0.2s, transform 0.2s; }
 
 .select { position: relative; }
+.select:before { position: absolute; content: ""; top: 50%; right: 10px; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 7px 5px 0 5px; border-color: #263238 transparent transparent transparent; }
+.select__icon { position: absolute; width: 25px; top: 50%; left: 11px; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); }
+.select__icon img { width: 100%; display: block; }
 .select select { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0; cursor: pointer; display: block; }
 .select select::-moz-focus-inner { border: 0; padding: 0; }
 @-moz-document url-prefix() { .select { padding: 15px 0 !important; } }
 .select .input { padding-left: 45px; }
-.select__icon { position: absolute; width: 25px; top: 50%; left: 11px; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); }
-.select__icon img { width: 100%; display: block; }
 
 .title { padding-bottom: 15px; font-family: "Roboto Light", Arial, sans-serif; font-size: 18px; line-height: 1.4; border-bottom: 1px solid #eceff1; }
 .title h1, .title h2, .title h3, .title h4, .title h5, .title h6 { font-family: "Roboto Light", Arial, sans-serif; font-weight: normal; }
@@ -572,10 +573,10 @@ a.item { color: #263238; }
 .list a { color: #2196f3; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 .list a:hover { border-color: #2196f3; }
 
-.prev { position: relative; padding-left: 18px; color: #2196f3; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: color 0.2s; transition: color 0.2s; display: inline-block; }
+.prev { position: relative; padding-left: 18px; color: #2196f3; -webkit-transition: color 0.2s; transition: color 0.2s; display: inline-block; }
 .prev:hover { color: #0c7cd5; }
 .prev:hover:before { -webkit-transform: translate(-4px, 0); -ms-transform: translate(-4px, 0); transform: translate(-4px, 0); width: 0px; height: 0px; border-style: solid; border-width: 5.5px 7px 5.5px 0; border-color: transparent #0c7cd5 transparent transparent; }
-.prev:before { position: absolute; content: ""; top: 50%; left: 0; margin-top: -6px; -webkit-transition: -webkit-transform 0.2s, border-color 0.2s; transition: transform 0.2s, border-color 0.2s; width: 0px; height: 0px; border-style: solid; border-width: 5.5px 7px 5.5px 0; border-color: transparent #2196f3 transparent transparent; }
+.prev:before { position: absolute; content: ""; top: 50%; left: 0; margin-top: -6px; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: -webkit-transform 0.2s, border-color 0.2s; transition: transform 0.2s, border-color 0.2s; width: 0px; height: 0px; border-style: solid; border-width: 5.5px 7px 5.5px 0; border-color: transparent #2196f3 transparent transparent; }
 
 .card__numb, .card__img { display: inline-block; }
 .card__numb { vertical-align: top; }

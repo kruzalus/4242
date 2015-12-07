@@ -166,6 +166,22 @@ a.item
 // select
 .select
 	position: relative
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		right: 10px
+		margin-top: -3px
+		+arr(10,7,$black,b)
+	&__icon
+		position: absolute
+		width: 25px
+		top: 50%
+		left: 11px
+		transform: translate(0,-50%)
+		img
+			width: 100%
+			display: block
 	select
 		position: absolute
 		top: 0
@@ -189,15 +205,6 @@ a.item
 		padding: 15px 0!important
 	.input
 		padding-left: 45px
-	&__icon
-		position: absolute
-		width: 25px
-		top: 50%
-		left: 11px
-		transform: translate(0,-50%)
-		img
-			width: 100%
-			display: block
 
 // title
 .title
@@ -272,7 +279,6 @@ a.item
 	position: relative
 	padding-left: 18px
 	color: $c_blue
-	transform: translate3d(0,0,0)
 	transition: color .2s
 	display: inline-block
 	&:hover
@@ -286,6 +292,7 @@ a.item
 		top: 50%
 		left: 0
 		margin-top: -6px
+		transform: translate3d(0,0,0)
 		transition: transform .2s, border-color .2s
 		+arr(7,11,$c_blue,l)
 
