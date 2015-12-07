@@ -127,6 +127,8 @@ a.item
 			background: darken($bg_btn_gray, 20%)
 		&:active
 			background: darken($bg_btn_gray, 30%)
+	&_big
+		padding: 18px 20px
 
 
 .btn-text
@@ -173,6 +175,46 @@ a.item
 		right: 10px
 		margin-top: -3px
 		+arr(10,7,$black,b)
+	&.is-from
+		margin-right: 10px
+		&:before
+			right: 0
+		.select__icon
+			left: 25px
+		.input
+			padding-left: 63px
+			border-right: none
+		.select__arr
+			right: 1px
+			z-index: 1
+			&:after
+				left: 1px
+				+arr(10,39,$white,r)
+			&:before
+				left: 1px
+	&.is-to
+		.select__icon
+			left: 45px
+		.select__arr
+			left: 0
+		.select__text
+			left: 20px
+		.input
+			padding-left: 86px
+	&__arr
+		position: absolute
+		top: 0
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			left: 0
+			top: 0
+		&:before
+			+arr(11,40,$bord_form,r)
+		&:after
+			top: 1px
+			+arr(10,39,$bg_body,r)
 	&__icon
 		position: absolute
 		width: 25px
@@ -182,6 +224,12 @@ a.item
 		img
 			width: 100%
 			display: block
+	&__text
+		position: absolute
+		top: 50%
+		left: 9px
+		line-height: 1
+		transform: translate(0,-50%)
 	select
 		position: absolute
 		top: 0
@@ -881,6 +929,10 @@ a.translations__wrap
 			line-height: 1.4
 			vertical-align: middle
 			display: inline-block
+		label
+			cursor: pointer
+		.prev
+			margin-top: 8px
 	&__right
 		float: right
 		position: relative
@@ -931,6 +983,12 @@ a.translations__wrap
 		width: 280px
 		vertical-align: top
 		display: inline-block
+		&.is-from
+			float: left
+			width: calc(50% - 10px)
+		&.is-to
+			float: right
+			width: 50%
 	.btn
 		min-width: 280px
 

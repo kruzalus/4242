@@ -27,8 +27,7 @@
 			<div class="l__in">
 				<!-- breadcrumbs -->
 				<ul class="breadcrumbs">
-					<li><a href="#">Все категории</a></li>
-					<li>Интернет</li>
+					<li><a href="#">Переводы</a></li>
 				</ul>
 				<!-- wrap -->
 				<div class="wrap">
@@ -36,59 +35,67 @@
 					<div class="leftbar">
 						<!-- title -->
 						<div class="title">
-							<h3>Билайн Интернет</h3>
+							<h3>Перевод между своими кошельками</h3>
 							<ul class="title__list">
 								<li class="title__item">15 — 15 000 ₽ можно внести</li>
-								<li class="title__item">24 ч. срок зачисления</li>
-								<li class="title__item">0 % комиссия</li>
+								<li class="title__item">Моментально — срок зачисления</li>
+								<li class="title__item">0,5 % комиссия, но не менее 50 ₽</li>
 							</ul>
 						</div>
 						<!-- payment -->
 						<div class="payment">
 							<form action="">
 								<div class="payment__row">
-									<div class="payment__label">
-										<label for="numb">Номер лицевого счета:</label>
-									</div>
-									<div class="payment__right">
-										<input type="text" class="input" id="numb" placeholder="Введите номер счета, указанный в договоре с провайдером">
-										<div class="payment__icon"><i class="icon icon-icon-info"></i></div>
-									</div>
-								</div>
-								<div class="payment__row">
-									<div class="payment__label">
-										<span>Способ оплаты:</span>
-									</div>
-									<div class="payment__right">
-										<div class="select js-select">
-											<div class="select__icon">
-												<img src="img/svg/purse.svg" alt="img">
-											</div>
-											<input type="text" value="123123123 — 10 000 ₽" class="input js-input" readonly="">
-											<select>
-												<option value="item1">item1</option>
-												<option value="item2">item2</option>
-												<option value="item3">item3</option>
-											</select>			
+									<div class="select is-from js-select">
+										<span class="select__arr"></span>
+										<div class="select__text">с</div>
+										<div class="select__icon">
+											<img src="img/svg/purse.svg" alt="img">
 										</div>
-										<a href="#" class="payment__new"><span>Новая банковская карта</span></a>
+										<input type="text" value="123123123 — 10 000 ₽" class="input js-input" readonly="">
+										<select>
+											<option value="item1">item1</option>
+											<option value="item2">item2</option>
+											<option value="item3">item3</option>
+										</select>			
+									</div>
+									<div class="select is-to js-select">
+										<span class="select__arr"></span>
+										<div class="select__text">на</div>
+										<div class="select__icon">
+											<img src="img/svg/purse.svg" alt="img">
+										</div>
+										<input type="text" class="input js-input" readonly="" placeholder="выберите кошелек">
+										<select>
+											<option value="item1">item1</option>
+											<option value="item2">item2</option>
+											<option value="item3">item3</option>
+										</select>			
 									</div>
 								</div>
 								<div class="payment__row">
 									<div class="payment__label">
-										<label for="price">Сумма:</label>
+										<label for="price">Сумма перевода:</label>
 									</div>
 									<div class="payment__right">
-										<input type="text" class="input" id="price" placeholder="Минимум — 15, максимум — 15 000">
+										<input type="text" id="price" class="input" placeholder="Минимум — 15, максимум — 15 000">
 										<div class="payment__icon"><i class="icon icon-ruble"></i></div>
 									</div>
 								</div>
 								<div class="payment__row">
 									<div class="payment__label">
-										<span>Всего к оплате:</span>
+										<span>Будет списано:</span>
 									</div>
 									<div class="payment__right">
-										<div class="payment__text"><span class="price">0,00 ₽</span>, с учётом комиссии 0%</div>
+										<div class="payment__text"><span class="price">60,00 ₽</span>, с учётом комиссии 0,5% (но не менее 50 ₽)</div>
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<span>Будет зачислено:</span>
+									</div>
+									<div class="payment__right">
+										<div class="payment__text"><span class="price">10,00 ₽</span></div>
 									</div>
 								</div>
 								<div class="payment__row">
@@ -107,12 +114,8 @@
 						<!-- fasten -->
 						<div class="fasten">
 							<div class="fasten__img">
-								<img src="img/svg/beeline3.svg" alt="img">
+								<img src="img/svg/between.svg" alt="img">
 							</div>
-							<a href="#" class="fasten__link">
-								<i class="icon icon-reg"></i>
-								<span>Закрепить на главной</span>
-							</a>
 						</div>
 						<h4 class="title-small">Частые вопросы:</h4>
 						<ul class="list">
