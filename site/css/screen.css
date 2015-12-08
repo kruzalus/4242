@@ -741,13 +741,15 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .form__row:first-child { margin-top: 0; }
 .form__row .tooltip { position: absolute; left: 50%; bottom: 100%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); }
 .form__row .forgot { margin-top: 10px; }
-.form__label { float: left; padding-right: 10px; width: 180px; line-height: 38px; }
+.form__label { float: left; padding-right: 10px; width: 190px; line-height: 38px; }
 .form__label label, .form__label span { line-height: 1.4; vertical-align: middle; display: inline-block; }
 .form__label label { cursor: pointer; }
-.form__right { float: right; width: -webkit-calc(100% - 180px); width: calc(100% - 180px); *zoom: 1; }
+.form__right { float: right; width: -webkit-calc(100% - 190px); width: calc(100% - 190px); *zoom: 1; }
 .form__right:after { content: " "; display: table; clear: both; }
 .form__col { margin-left: 20px; float: left; width: 80px; }
 .form__col:first-child { margin-left: 0; }
+.form__text { line-height: 38px; }
+.form__text span { line-height: 1.45; vertical-align: middle; display: inline-block; }
 
 .forgot { color: #2196f3; line-height: 1.4; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; display: inline-block; }
 .forgot:hover { border-color: #2196f3; }
