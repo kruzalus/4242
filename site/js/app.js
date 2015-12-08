@@ -57,6 +57,10 @@ $(document).ready(function() {
 		$(this).parents('.js-select').find('.js-input').val(text);
 	});
 
-		
+	$('.js-btn-header').on('click', function(){
+		$(this).toggleClass('is-active');
+		$('.js-header-block').toggleClass('is-open');
+	});
+
 
 });

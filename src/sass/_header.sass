@@ -4,6 +4,50 @@
 	background: $d_gray
 	&__in
 		@extend %in
+	&__btn
+		float: right
+		position: relative
+		margin-top: 12px
+		height: 25px
+		width: 35px
+		background: transparent
+		display: none
+		&:before,
+		&:after,
+		span
+			position: absolute
+			content: ''
+			left: 0
+			right: 0
+			height: 4px
+			background: $white
+		&:before
+			top: 0
+		&:after
+			bottom: 0
+		span
+			top: 10px
+		+r(960)
+			display: block
+	&__block
+		+r(960)
+			position: fixed
+			top: 50px
+			left: 0
+			right: 0
+			bottom: 0
+			visibility: hidden
+			z-index: 1
+			opacity: 0
+			transform: translate3(0,0,0)
+			will-change: opacity
+			transition: z-index .2s, opacity .2s
+			overflow: auto
+			background: rgba($gray, .8)
+		&.is-open
+			visibility: visible
+			opacity: 1
+			z-index: 100
 
 // logo
 .logo
