@@ -37,6 +37,8 @@
 		.status
 			float: left
 			width: 50%
+	&__wrap
+		padding: 20px 20px 40px
 
 // item 
 .item
@@ -704,7 +706,7 @@ a.translations__wrap
 		img
 			height: 100%
 	&__in
-		padding: 15px 18px 10px
+		padding: 15px 18px 25px
 	&__title
 		margin-bottom: 15px
 		text-align: center
@@ -713,8 +715,15 @@ a.translations__wrap
 		.icon
 			vertical-align: middle
 	&__row
+		margin-top: 15px
+		color: $c_wind_gray
+		text-align: center
 		line-height: 1.45
 		+clr
+		.price
+			display: inline-block
+			&__cur
+				color: $black
 	&__left
 		float: left
 		color: $c_wind_gray
@@ -754,6 +763,8 @@ a.translations__wrap
 			left: 50%
 			bottom: 100%
 			transform: translate(-50%,0)
+		.forgot
+			margin-top: 10px
 	&__label
 		float: left
 		padding-right: 10px
@@ -777,16 +788,30 @@ a.translations__wrap
 		&:first-child
 			margin-left: 0
 
+// forgot
+.forgot
+	color: $c_blue
+	line-height: 1.4
+	transition: border-color .2s
+	border-bottom: 1px solid transparent
+	display: inline-block
+	&:hover
+		border-color: $c_blue
+
 // tooltip
 .tooltip
-	padding: 8px 22px
 	+rr
 	color: $white
-	box-shadow : 0px 4px 5px rgba(38, 50, 56, 0.5)
-	background: $bg_tooltip
+	white-space: nowrap
+	line-height: 1.75
 	display: none
 	&.is-active
 		display: inline-block
+	&__in
+		padding: 8px 22px
+		box-shadow : 0px 4px 5px rgba(38, 50, 56, 0.5)
+		background: $bg_tooltip
+
 
 // inf
 .inf
@@ -1060,3 +1085,70 @@ a.translations__wrap
 		display: inline-block
 	&__text
 		font-size: 14px
+
+// social
+.social
+	&__in
+		margin-top: 20px
+		padding-left: 8px
+		width: 293px
+	&__item
+		position: relative
+		margin-top: 20px
+		&:first-child
+			margin-top: 0
+	&__wrap
+		color: $black
+		will-change: opacity
+		transition: opacity .2s
+		display: block
+		&:hover
+			opacity: .85
+	&__ico
+		margin-right: 20px
+		font-size: 0
+		vertical-align: top
+		display: inline-block
+		img
+			width: 50px
+	&__name
+		line-height: 50px
+		vertical-align: top
+		display: inline-block
+		span
+			line-height: 1.45
+			transform: translate3d(0,0,0)
+			vertical-align: middle
+			display: inline-block
+	&__close
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -7px
+		color: $c_soc_close
+		font-size: 0
+		transition: color .2s
+		background-color: transparent
+		&:hover
+			color: darken($c_soc_close, 20%)
+		.icon
+			font-size: 20px
+	&__add
+		margin-top: 30px	
+	&__left
+		margin-right: 10px
+		line-height: 50px
+	&__right
+		font-size: 0
+	&__left,
+	&__right
+		vertical-align: top
+		display: inline-block
+		.social__ico
+			margin: 0 0 0 20px
+			will-change: opacity
+			transition: opacity .2s
+			&:first-child
+				margin-left: 0
+			&:hover
+				opacity: .85
