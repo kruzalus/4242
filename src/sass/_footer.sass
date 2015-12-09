@@ -18,6 +18,10 @@
 	vertical-align: top
 	color: $c_cont
 	display: inline-block
+	+r(767)
+		width: 100%
+		text-align: left
+		display: block
 	&__text,
 	&__item
 		vertical-align: top
@@ -36,12 +40,35 @@
 				border-color: $c_mail
 	&__text
 		margin-right: 122px
+		+r(960)
+			margin-right: 0
+		+r(479)
+			width: 100%
+			text-align: center
 	&__item
 		margin-left: 72px
+		+r(960)
+			margin-left: 30px
+		+r(767)
+			margin-left: 10px
+		+r(479)
+			margin-left: 0
+			width: 100%
+			text-align: center
+		&.is-tel
+			a
+				color: $l_gray
+				border-bottom: none
+				+r(767)
+					color: $c_mail
+					border-bottom: 1px solid transparent
+					&:hover
+						border-color: $c_mail
 
 // lang
 .lang
 	float: right
+	margin-top: 2px
 	color: $c_foot
 	line-height: 1.4
 	transition: border-color .2s

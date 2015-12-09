@@ -6,22 +6,24 @@
 		</div>
 		<button class="header__btn js-btn-header" type="button"><span></span></button>
 		<div class="header__block js-header-block">
-			<!-- menu -->
-			<menu class="menu">
-				{% for item in menu %}
-					{% if loop.first %}
-						<a href="#" class="is-active">{{item.name}}</a>
-					{% else %}
-						<a href="#">{{item.name}}</a>
-					{% endif %}
-				{% endfor %}
-			</menu>
-			<!-- user -->
-			<div class="user">
-				<a href="#" class="user__in">
-					<i class="icon icon-uni50"></i>
-					<span class="user__name">{{user_mame}}</span>
-				</a>
+			<div class="header__wrap">
+				<!-- menu -->
+				<menu class="menu">
+					{% for item in menu %}
+						{% if loop.first %} 
+							<a href="#" class="is-active">{{item.name}}</a>
+						{% else %}
+							<a href="#">{{item.name}}</a>
+						{% endif %}
+					{% endfor %}
+				</menu>
+				<!-- user -->
+				<div class="user">
+					<a href="#" class="user__in">
+						<i class="icon icon-uni50"></i>
+						<span class="user__name">{{user_mame}}</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
