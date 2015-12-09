@@ -712,6 +712,8 @@ a.translations__wrap
 	box-shadow: 0 0 6px rgba($gray, .15)
 	border-radius: 2px
 	background: $white
+	+r(767)
+		margin: 0 10px
 	&__item
 		position: relative
 		transition: background .2s
@@ -819,6 +821,8 @@ a.translations__wrap
 		padding-right: 10px
 		width: 190px
 		line-height: 38px
+		+r(767)
+			width: 172px
 		label,
 		span
 			line-height: 1.4
@@ -830,12 +834,16 @@ a.translations__wrap
 		float: right
 		width: calc(100% - 190px)
 		+clr
+		+r(767)
+			width: calc(100% - 172px)
 	&__col
 		margin-left: 20px
 		float: left
 		width: 80px
 		&:first-child
 			margin-left: 0
+		+r(1024)
+			width: 60px
 	&__text
 		line-height: 38px
 		span
@@ -938,6 +946,20 @@ a.translations__wrap
 		+clr
 		&:nth-child(4n+4)
 			margin-right: 0
+			+r(1024)
+				margin-right: 2%
+		&:nth-child(3n+3)
+			+r(1024)
+				margin-right: 0
+			+r(767)
+				margin-right: 2%
+		&:nth-child(2n+2)
+			+r(767)
+				margin-right: 0
+		+r(1024)
+			width: 32%
+		+r(767)
+			width: 49%
 	&__img
 		float: left
 		margin-right: 10px
@@ -1069,9 +1091,11 @@ a.translations__wrap
 		&.is-from
 			float: left
 			width: calc(50% - 10px)
+			max-width: 100%
 		&.is-to
 			float: right
 			width: 50%
+			max-width: 100%
 	.btn
 		width: 100%
 		max-width: 280px
@@ -1133,8 +1157,30 @@ a.translations__wrap
 			margin-left: -1px
 		&:nth-child(4n-3)
 			margin-left: 0
+			+r(1024)
+				margin-left: -1px
+		&:nth-child(3n-2)
+			+r(1024)
+				margin-left: 0
+			+r(767)
+				margin-left: -1px
+		&:nth-child(2n-1)
+			+r(767)
+				margin-left: 0
 		&:nth-child(-n+4)
 			margin-top: 0
+			+r(1024)
+				margin-top: -1px
+		&:nth-child(-n+3)
+			margin-top: 0
+			+r(767)
+				margin-top: -1px
+		&:nth-child(-n+2)
+			margin-top: 0
+		+r(1024)
+			width: 33.3%
+		+r(767)
+			width: 50%
 	&__top
 		height: 200px
 		line-height: 200px

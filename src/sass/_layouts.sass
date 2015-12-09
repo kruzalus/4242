@@ -6,11 +6,19 @@
 	height: 100%
 	height: auto
 	min-height: 100%
+	+r(767)
+		padding-bottom: 73px
 
 // l
 .l
 	@extend %in
 	+clr
+	&_cab
+		.center
+			+r(767)
+				margin-top: 20px
+				width: 100%
+				display: block
 	&__in
 		padding: 20px 0 25px
 		+clr
