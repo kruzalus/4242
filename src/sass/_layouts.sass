@@ -55,12 +55,18 @@
 	padding-right: 60px
 	width: 71.3%
 	border-right: 1px solid $bord_leftbar
+	+r(767)
+		padding-right: 0
+		width: 100%
+		border-right: none
 
 // rightbar
 .rightbar
 	float: right
 	width: 23.8%
 	line-height: 1.45
+	+r(767)
+		display: none
 	.title-small
 		margin: 43px 0 0
 	a
