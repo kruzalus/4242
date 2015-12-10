@@ -26,7 +26,7 @@ $(document).ready(function() {
 				}
 			]
 		});
-	});
+	}); 
 
 	// select
 	$(".js-select select").on('change', function() {
@@ -45,5 +45,12 @@ $(document).ready(function() {
 		$('body').toggleClass('is-open-menu');
 	});
 
+	// card number
+	$('input[name="passport-id"]').inputmask({
+		mask: '9999 999999',
+		showMaskOnHover: false,
+		showMaskOnFocus: false,
+		placeholder: ''
+	});
 
 });

@@ -527,7 +527,8 @@ a { text-decoration: none; }
 .item__stat { margin-top: 7px; padding-bottom: 2px; text-align: center; }
 .item .sum + .sum { margin-top: 3px; }
 
-a.item { color: #263238; }
+a.item { color: #263238; -webkit-transition: background 0.2s; transition: background 0.2s; }
+a.item:hover { background: #f2f2f2; }
 
 .sum.is-queue { color: #90a4ae; }
 .sum.is-queue .sum__curr { color: #90a4ae; }
