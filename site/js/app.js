@@ -1527,6 +1527,10 @@ $(document).ready(function() {
 		});
 	}); 
 
+	$('.js-slider-close').on('click', function(){
+		$(this).parents('.js-slider-wrap').remove();
+	});
+
 	// select
 	$(".js-select select").on('change', function() {
 		var text = $(this).val();
@@ -1550,6 +1554,11 @@ $(document).ready(function() {
 		showMaskOnHover: false,
 		showMaskOnFocus: false,
 		placeholder: ''
+	});
+
+	// soc
+	$('.js-social-close').on('click', function(){
+		$(this).parents('.js-social-item').remove();
 	});
 
 });
