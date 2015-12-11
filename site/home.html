@@ -202,10 +202,35 @@
 					<div class="wind is-gray">
 						<div class="wind__top">
 							<span>История операций</span>
-							<ul class="tags">
-								<li><a href="#">всех типов</a></li>
-								<li><a href="#">за всё время</a></li>
-							</ul>
+							<!-- filter -->
+							<div class="filter">
+								<!-- drop -->
+								<div class="drop js-drop">
+									<input type="text" hidden>
+									<button class="drop__btn js-grop-btn" type="button">всех типов</button>
+									<div class="drop__block">
+										<div class="drop__title">Выберите тип:</div>
+										<ul class="drop__list">
+											<li class="drop__item">Пополнения</li>
+											<li class="drop__item">Оплаты</li>
+											<li class="drop__item">Переводов</li>
+										</ul>
+									</div>
+								</div>
+								<!-- drop -->
+								<div class="drop js-drop">
+									<input type="text" hidden>
+									<button class="drop__btn js-grop-btn" type="button">за месяц</button>
+									<div class="drop__block">
+										<div class="drop__title">Выберите тип:</div>
+										<ul class="drop__list">
+											<li class="drop__item">Пополнения</li>
+											<li class="drop__item">Оплаты</li>
+											<li class="drop__item">Переводов</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="wind__in">
 							<!-- item -->

@@ -27,6 +27,12 @@
 		},
 		{
 			"name": "Перевести"
+		},
+		{
+			"name": "Выйти"
+		},
+		{
+			"name": "<i class='icon icon-uni50'></i>verylongusername@longdomainname.org"
 		}
 	],
 	"nav": [
@@ -57,7 +63,6 @@
 			"name": "Аккаунты социальных сетей"
 		}
 	],
-	"user_mame": "verylongusername@longdomainname.org",
 	"list": [
 		{
 			"item": "Что делать, если я ошибся числом при вводе номера лицевого счёта?"

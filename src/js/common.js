@@ -51,15 +51,47 @@ $(document).ready(function() {
 
 	// card number
 	$('input[name="passport-id"]').inputmask({
-		mask: '9999 999999',
-		showMaskOnHover: false,
-		showMaskOnFocus: false,
-		placeholder: ''
+		mask 			: '9999 999999',
+		showMaskOnHover : false,
+		showMaskOnFocus : false,
+		placeholder  	: ''
 	});
 
 	// soc
 	$('.js-social-close').on('click', function(){
 		$(this).parents('.js-social-item').remove();
+	});
+
+	// flex menu
+	$('.js-flex-menu').flexMenu();
+
+	// memu prev li
+	function prevItem(){
+		var menu 		= $('.js-flex-menu'),
+			item  		= menu.find('li'),
+			itemFlex 	= menu.find('li.flexMenu-viewMore'),
+			itenMenu 	= itemFlex.find('li:nth-last-of-type(2)'),
+			itemLength 	= itemFlex.find('li').length;
+		if (itemFlex.length) {
+			itemFlex.prev('li').addClass('is-last');
+			itenMenu.css('order', itemLength);
+		}
+		else {
+			item.removeClass('is-last');
+		}
+	} prevItem();
+
+	$(window).on('resize', function() {
+		prevItem();
+	});
+
+	$(window).on('orientationchange', function() {
+		setTimeout(prevItem, 500);
+	});
+
+	$('body').on('touchstart', function(){
+		$('.flexMenu-viewMore').removeClass('actile');
+		$('.flexMenu-popup').hide();
 	});
 
 });

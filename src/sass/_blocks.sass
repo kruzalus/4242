@@ -76,7 +76,7 @@ a.item
 	color: $black
 	transition: background .2s
 	&:hover
-		background: darken($white, 5%)
+		background: $bg_item
 
 // purse 
 // .purse
@@ -1260,3 +1260,38 @@ a.translations__wrap
 				margin-left: 0
 			&:hover
 				opacity: .85
+
+// filter
+.filter
+	vertical-align: top
+	display: inline-block
+
+// drop
+.drop
+	vertical-align: top
+	display: inline-block
+	& + .drop
+		margin-left: 15px
+	&__btn
+		color: $c_tags
+		+rl
+		font-size: 14px
+		transition: border-color .2s
+		border-bottom: 1px dotted $c_tags
+		background: transparent
+		&:hover
+			border-color: transparent
+	&__block
+		position: absolute
+		top: 100%
+		left: 0
+		width: 298px
+		z-index: 3
+		box-shadow: 0 0 6px rgba($gray, .15)
+		background: #fff
+		display: none
+	&__title
+		text-align: center
+	// &__list
+	&__item
+		display: block
