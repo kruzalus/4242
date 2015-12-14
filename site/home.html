@@ -206,28 +206,33 @@
 							<div class="filter">
 								<!-- drop -->
 								<div class="drop js-drop">
-									<input type="text" hidden>
+									<input type="text" class="js-drop-input" hidden>
 									<button class="drop__btn js-grop-btn" type="button">всех типов</button>
-									<div class="drop__block">
+									<div class="drop__block js-drop-block">
 										<div class="drop__title">Выберите тип:</div>
-										<ul class="drop__list">
-											<li class="drop__item">Пополнения</li>
-											<li class="drop__item">Оплаты</li>
-											<li class="drop__item">Переводов</li>
+										<ul class="drop__list js-drop-list">
+											<li class="drop__item"><a href="#">Пополнения</a></li>
+											<li class="drop__item"><a href="#">Оплаты</a></li>
+											<li class="drop__item"><a href="#">Переводов</a></li>
 										</ul>
 									</div>
 								</div>
 								<!-- drop -->
 								<div class="drop js-drop">
-									<input type="text" hidden>
+									<input type="text" class="js-drop-input" hidden>
 									<button class="drop__btn js-grop-btn" type="button">за месяц</button>
-									<div class="drop__block">
-										<div class="drop__title">Выберите тип:</div>
-										<ul class="drop__list">
-											<li class="drop__item">Пополнения</li>
-											<li class="drop__item">Оплаты</li>
-											<li class="drop__item">Переводов</li>
+									<div class="drop__block js-drop-block">
+										<div class="drop__title">Выберите период:</div>
+										<ul class="drop__list js-drop-list">
+											<li class="drop__item"><a href="#">За месяц</a></li>
+											<li class="drop__item"><a href="#">За 3 месяца</a></li>
+											<li class="drop__item"><a href="#">За год</a></li>
+											<li class="drop__item"><a href="#">За все время</a></li>
 										</ul>
+										<div class="drop__field">
+											<input type="text" class="drop__input js-picker">
+											<a href="#" class="js-open-form">Указать период</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -246,7 +251,7 @@
 								</div>
 							</div>
 							<!-- item -->
-							<a href="#" class="item">
+							<a href="#" class="item js-accord">
 								<!-- operation -->
 								<div class="operation">
 									<div class="operation__date">
@@ -268,6 +273,9 @@
 									<div class="operation__ind is-green">
 										<i class="icon icon-uniD9"></i>
 									</div>
+								</div>
+								<div class="item__block js-accord-block">
+									
 								</div>
 							</a>
 							<!-- item -->

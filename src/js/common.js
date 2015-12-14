@@ -4,6 +4,7 @@ $(document).ready(function() {
 	$('.js-slider').each(function(){
 		var slider 	= $(this),
 			arr 	= slider.parent().find('.arrows');
+
 		slider.slick({
 			dots 			: true,
 			infinite 		: true,
@@ -42,9 +43,11 @@ $(document).ready(function() {
 	$('.js-btn-header').on('click', function(){
 		var wind 	= $(window).height(),
 			out 	= $('.out').height();
-		if(out > wind) {
+
+		if (out > wind) {
 			$('body').toggleClass('is-scroll');
 		}
+
 		$(this).toggleClass('is-active');
 		$('body').toggleClass('is-open-menu');
 	});
@@ -72,6 +75,7 @@ $(document).ready(function() {
 			itemFlex 	= menu.find('li.flexMenu-viewMore'),
 			itenMenu 	= itemFlex.find('li:nth-last-of-type(2)'),
 			itemLength 	= itemFlex.find('li').length;
+
 		if (itemFlex.length) {
 			itemFlex.prev('li').addClass('is-last');
 			itenMenu.css('order', itemLength);
@@ -92,6 +96,82 @@ $(document).ready(function() {
 	$('body').on('touchstart', function(){
 		$('.flexMenu-viewMore').removeClass('actile');
 		$('.flexMenu-popup').hide();
+	});
+
+	//  ----------- drop ----------
+	var drop 		= $('.js-drop'),
+		allBlock 	= $('.js-drop-block');
+
+	$('.js-grop-btn').on('click', function(event){
+		var this_ 		= $(this),
+			parent 		= this_.parents('.js-drop'),
+			block 		= parent.find('.js-drop-block');
+
+		if (!parent.hasClass('is-open')) {
+			drop.removeClass('is-open');
+			allBlock.slideUp(300);
+			parent.addClass('is-open');
+			block.slideDown(300);
+		}
+		else {
+			drop.removeClass('is-open');
+			allBlock.slideUp(300);
+		}
+		event.stopPropagation();
+	});
+
+	// write the text in the input list
+	$('.js-drop-list li a').on('click', function(){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-drop'),
+			input 	= parent.find('.js-drop-input'),
+			btn 	= parent.find('.js-grop-btn'),
+			text 	= this_.text();
+
+		input.val(text);
+		btn.text(text);
+
+		drop.removeClass('is-open');
+		allBlock.slideUp(300);
+		return false;
+	});
+	$('.js-picker').on('change', function(){
+		var this_ 		= $(this),
+			val			= this_.val(),
+			parent 		= this_.parents('.js-drop'),
+			inputHiden 	= parent.find('.js-drop-input'),
+			btn 		= parent.find('.js-grop-btn');
+
+		input.val(val);
+		btn.text(val);
+	});
+	$('.js-select, .js-picker').on('click', function(event){
+		event.stopPropagation();
+	});
+	$('body').on('click', function(){
+		drop.removeClass('is-open');
+		allBlock.slideUp(300);
+	});
+	// ------------ end drop -------------
+
+	// dateRangePicker
+	$('.js-picker').dateRangePicker({
+		singleMonth: true,
+		showShortcuts: false,
+		showTopbar: false,
+		getValue: function()
+		{
+			// console.log($(this).val());
+			// return $(this).val();
+			var this_ 		= $(this),
+				val			= this_.val(),
+				parent 		= this_.parents('.js-drop'),
+				inputHiden 	= parent.find('.js-drop-input'),
+				btn 		= parent.find('.js-grop-btn');
+
+			inputHiden.val(val);
+			btn.text(val);
+		}
 	});
 
 });

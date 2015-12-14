@@ -32,6 +32,8 @@
 			margin-left: 15px
 			vertical-align: top
 			display: inline-block
+		.filter
+			margin-left: 15px
 	&__in
 		+clr
 		.status
@@ -1268,6 +1270,7 @@ a.translations__wrap
 
 // drop
 .drop
+	position: relative
 	vertical-align: top
 	display: inline-block
 	& + .drop
@@ -1284,14 +1287,78 @@ a.translations__wrap
 	&__block
 		position: absolute
 		top: 100%
-		left: 0
-		width: 298px
+		left: -10px
+		margin-top: 7px
+		padding: 10px 20px 15px
+		width: 200px
 		z-index: 3
 		box-shadow: 0 0 6px rgba($gray, .15)
 		background: #fff
 		display: none
 	&__title
 		text-align: center
-	// &__list
-	&__item
+	&__item,
+	&__field
+		margin-top: 8px
 		display: block
+		a
+			color: $c_blue
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
+			&:hover
+				border-color: $c_blue
+	&__field
+		position: relative
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		z-index: 2
+		cursor: pointer
+		&:hover
+			& + a
+				border-color: $c_blue
+	// &__form
+	// 	position: absolute
+	// 	top: 100%
+	// 	left: 0
+	// 	width: 100%
+	// 	margin-top: 15px
+	// 	padding: 10px 20px 20px
+	// 	box-shadow: 0 0 6px rgba($gray, .15)
+	// 	background: #fff
+	// 	display: none
+	// 	.drop__title
+	// 		margin-bottom: 27px
+	// &__row
+	// 	margin-bottom: 22px
+	// 	+clr
+	// &__label
+	// 	width: 25px
+	// 	line-height: 32px
+	// 	& + .drop__col
+	// 		margin-left: 0
+	// &__col,
+	// &__label
+	// 	float: left
+	// &__col
+	// 	margin-left: 10px
+	// 	&:nth-child(2)
+	// 		width: 51px
+	// 	&:nth-child(3)
+	// 		width: 93px
+	// 	&:nth-child(4)
+	// 		width: 66px
+	// 	.select
+	// 		.input
+	// 			padding-left: 9px
+	// 			height: 32px
+	// 		select
+	// 			height: 32px
+	&__but
+		text-align: center
+		.btn
+			position: relative

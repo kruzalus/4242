@@ -4,4 +4,6 @@
 //= lib/jquery.inputmask.js
 //= lib/modernizr.custom.js
 //= lib/flexmenu.min.js
+//= lib/moment.min.js
+//= lib/jquery.daterangepicker.js
 //= common.js
