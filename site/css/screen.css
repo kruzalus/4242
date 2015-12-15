@@ -623,6 +623,7 @@ a.item:hover { background: #f1eccf; }
 
 .sum.is-queue { color: #90a4ae; }
 .sum.is-queue .sum__curr { color: #90a4ae; }
+.sum.is-inl { display: inline-block; }
 .sum__bal { vertical-align: top; display: inline-block; }
 .sum__res { color: #546e7a; }
 .sum__curr { color: #b0bec5; }
