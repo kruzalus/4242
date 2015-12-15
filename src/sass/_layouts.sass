@@ -32,6 +32,9 @@
 	+r(767)
 		margin-right: 0
 		width: 100%
+	&.is-mod
+		+r(768)
+			display: none
 
 // l-col2
 .l-col2
@@ -54,6 +57,18 @@
 		width: calc(100% - 246px)
 	+r(767)
 		display: none
+	&.is-mod
+		+r(768)
+			float: none
+			width: 100%
+			display: block
+		.operation
+			&__what
+				width: calc(50% - 85px)
+			&__price
+				width: calc(23% - 20px)
+		.fasten
+			margin-left: 5%
 
 // wrap
 .wrap

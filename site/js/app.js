@@ -3886,5 +3886,12 @@ $(document).ready(function() {
 			allBlock.slideUp(300);
 		}
 	});
+	function accord(){
+		var accord 	= $('.js-accord'),
+			block 	= $('.js-accord.is-active .js-accord-block');
+		if(accord.hasClass('is-active')){
+			block.show();
+		}
+	} accord();
 
 });
