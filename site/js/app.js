@@ -3824,7 +3824,8 @@ $(document).ready(function() {
 	});
 
 	// write the text in the input list
-	$('.js-drop-list li a').on('click', function(){
+	$('.js-drop-list li a').on('click', function(event){
+		event.preventDefault();
 		var this_ 	= $(this),
 			parent 	= this_.parents('.js-drop'),
 			input 	= parent.find('.js-drop-input'),
@@ -3836,17 +3837,6 @@ $(document).ready(function() {
 
 		drop.removeClass('is-open');
 		allBlock.slideUp(300);
-		return false;
-	});
-	$('.js-picker').on('change', function(){
-		var this_ 		= $(this),
-			val			= this_.val(),
-			parent 		= this_.parents('.js-drop'),
-			inputHiden 	= parent.find('.js-drop-input'),
-			btn 		= parent.find('.js-grop-btn');
-
-		input.val(val);
-		btn.text(val);
 	});
 	$('.js-select, .js-picker').on('click', function(event){
 		event.stopPropagation();
@@ -3861,19 +3851,39 @@ $(document).ready(function() {
 	$('.js-picker').dateRangePicker({
 		singleMonth: true,
 		showShortcuts: false,
-		showTopbar: false,
-		getValue: function()
-		{
-			// console.log($(this).val());
-			// return $(this).val();
-			var this_ 		= $(this),
-				val			= this_.val(),
-				parent 		= this_.parents('.js-drop'),
-				inputHiden 	= parent.find('.js-drop-input'),
-				btn 		= parent.find('.js-grop-btn');
+		showTopbar: false
+	});
+	$('.js-picker').on('datepicker-change',function(event,value) {
+		var parent 		= $(this).parents('.js-drop'),
+			inputHiden 	= parent.find('.js-drop-input'),
+			btn 		= parent.find('.js-grop-btn'),
+			val 		= value.value.replace(/to/, 'до').replace(/\-/g, '.');
 
-			inputHiden.val(val);
-			btn.text(val);
+		inputHiden.val(val);
+		btn.text(val);
+
+		drop.removeClass('is-open');
+		allBlock.slideUp(300);
+
+	});
+
+	// accord
+	$('.js-accord-but').on('click', function(){
+		var this_ 		= $(this),
+			accord		= this_.parents('.js-accord'),
+			parents		= accord.parents('.js-accordions'),
+			allAccord 	= parents.find('.js-accord'),
+			allBlock 	= parents.find('.js-accord-block');
+			block 		= accord.find('.js-accord-block');
+		if (!accord.hasClass('is-active')) {
+			allAccord.removeClass('is-active');
+			allBlock.slideUp(300);
+			accord.addClass('is-active');
+			block.slideDown(300);
+		}
+		else {
+			allAccord.removeClass('is-active');
+			allBlock.slideUp(300);
 		}
 	});
 
