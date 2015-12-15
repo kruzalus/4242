@@ -998,7 +998,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1200px){
  .l-col2{ display: none; }
- .center{ width: 74.5%; }
+ .center{ float: right; width: 73.6%; }
  .item__left{ max-width: 115px; } }
 @media only screen and (max-width: 1024px){
  .form__col{ width: 60px; }
@@ -1009,21 +1009,23 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
  .transfer__item:nth-child(3n-2){ margin-left: 0; }
  .transfer__item:nth-child(-n+4){ margin-top: -1px; }
  .transfer__item{ width: 33.3%; } }
-@media only screen and (max-width: 1000px){
- .center{ width: -webkit-calc(100% - 246px); width: calc(100% - 246px); } }
 @media only screen and (max-width: 960px){
+ .center{ width: -webkit-calc(100% - 246px); width: calc(100% - 246px); }
  .user{ float: none; -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; -webkit-box-flex: 1; -webkit-flex: 1 100%; -ms-flex: 1 100%; flex: 1 100%; text-align: right; }
  .user__in{ border: none; display: inline-block; }
  .cont__text{ margin-right: 0; }
  .cont__item{ margin-left: 30px; }
+ .item__block{ padding-left: 19%; }
  .invoice__name{ width: -webkit-calc(67% - 90px); width: calc(67% - 90px); }
  .invoice .time{ width: 15.5%; }
  .operation__date{ width: 19%; }
  .operation__img{ margin-right: 20px; } }
+@media only screen and (max-width: 768px){
+ .menu a{ padding: 0 10px; } }
 @media only screen and (max-width: 767px){
  .out{ padding-bottom: 73px; }
  .l_cab .center{ margin-top: 20px; width: 100%; display: block; }
- .l-col1{ width: 100%; }
+ .l-col1{ margin-right: 0; width: 100%; }
  .center{ display: none; }
  .leftbar{ padding-right: 0; width: 100%; border-right: none; }
  .rightbar{ display: none; }
