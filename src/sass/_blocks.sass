@@ -24,6 +24,7 @@
 		color: $white
 		line-height: 1.45
 		background: $gray
+		+clr
 		.btn
 			position: absolute
 			top: 0
@@ -41,6 +42,13 @@
 			width: 50%
 	&__wrap
 		padding: 20px 20px 40px
+	&__right
+		float: right
+		margin: -10px -10px -10px 0
+		.btn
+			position: relative
+		.drop
+			margin: 10px 25px 0 0
 
 // item 
 .item
@@ -1329,7 +1337,7 @@ a.translations__wrap
 		top: 100%
 		left: -10px
 		margin-top: 7px
-		padding: 10px 20px 15px
+		padding: 10px 15px 15px
 		width: 200px
 		z-index: 3
 		box-shadow: 0 0 6px rgba($gray, .15)
