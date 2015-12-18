@@ -1,0 +1,36 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header-no-login.twig" %}
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- breadcrumbs -->
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+				</ul>
+				<!-- registration -->
+				<div class="reg">
+					<!-- title -->
+					<div class="title title_nobord">Регистрация</div>
+					<!-- form -->
+					<form class="form">
+						<div class="form__row">
+							На Ваш email отправлены дальнейшие инструкции и ссылка для подтверждения
+						</div>
+						<div class="form__row">
+							<a href="#" class="link">Отправить еще раз</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}
