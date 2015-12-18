@@ -592,6 +592,11 @@ a { text-decoration: none; }
 .wind__right .btn { position: relative; }
 .wind__right .drop { margin: 10px 25px 0 0; }
 
+.items.is-invoice .item__block { padding: 10px 12px 12px 8px; }
+.items.is-invoice .sum__res { color: #90a4ae; }
+.items.is-invoice .select { width: 280px; }
+.items.is-invoice .btn + .btn-text { margin-left: 28px; }
+
 .item { padding: 8px 10px; border-top: 1px solid #edeff1; display: block; *zoom: 1; }
 .item:after { content: " "; display: table; clear: both; }
 .item:first-child { border-top: none; }
@@ -602,7 +607,16 @@ a { text-decoration: none; }
 .item.js-accord .js-accord-but { cursor: pointer; }
 .item__in { *zoom: 1; }
 .item__in:after { content: " "; display: table; clear: both; }
-.item__block { padding: 5px 12px 5px 16%; display: none; }
+.item__block { padding: 5px 12px 5px 16%; display: none; *zoom: 1; }
+.item__block:after { content: " "; display: table; clear: both; }
+.item__inf { float: left; width: 33.3%; }
+.item__inf.is-mod { line-height: 40px; }
+.item__inf.is-mod span { line-height: 1.45; vertical-align: middle; display: inline-block; }
+.item__check { float: right; width: 66.7%; }
+.item__row { *zoom: 1; margin-top: 8px; }
+.item__row:after { content: " "; display: table; clear: both; }
+.item__text { *zoom: 1; }
+.item__text:after { content: " "; display: table; clear: both; }
 .item__text + .item__text { margin-top: 18px; }
 .item__left { float: left; max-width: 134px; }
 .item__right { float: right; text-align: right; max-width: 146px; }
@@ -647,8 +661,10 @@ a.item:hover { background: #f1eccf; }
 .btn_gray:active { background: #46575f; }
 .btn_big { padding: 18px 20px; }
 
-.btn-text { position: relative; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); color: #607d8b; display: inline-block; }
+.btn-text { position: relative; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); color: #607d8b; font-family: "Roboto Light", Arial, sans-serif; background: transparent; display: inline-block; }
 .btn-text:hover span { border-color: #607d8b; }
+.btn-text_blue { left: auto; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); color: #2196f3; font-size: 14px; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
+.btn-text_blue:hover { border-color: #2196f3; }
 .btn-text span { line-height: 1.3; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; display: inline-block; }
 
 .input { padding: 0 8px; height: 40px; width: 100%; font-size: 14px; font-family: "Roboto Light", Arial, sans-serif; border: 1px solid #cfd8dc; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; display: block; }

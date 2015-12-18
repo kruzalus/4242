@@ -3848,23 +3848,28 @@ $(document).ready(function() {
 	// ------------ end drop -------------
 
 	// dateRangePicker
-	$('.js-picker').dateRangePicker({
-		singleMonth: true,
-		showShortcuts: false,
-		showTopbar: false
-	});
-	$('.js-picker').on('datepicker-change',function(event,value) {
-		var parent 		= $(this).parents('.js-drop'),
-			inputHiden 	= parent.find('.js-drop-input'),
-			btn 		= parent.find('.js-grop-btn'),
-			val 		= value.value.replace(/to/, 'до').replace(/\-/g, '.');
+	$('.js-picker').each(function(){
+		var picker = $(this);
+		if (picker.length){
+			picker.dateRangePicker({
+				singleMonth: true,
+				showShortcuts: false,
+				showTopbar: false
+			});
+			picker.on('datepicker-change',function(event,value) {
+				var parent 		= $(this).parents('.js-drop'),
+					inputHiden 	= parent.find('.js-drop-input'),
+					btn 		= parent.find('.js-grop-btn'),
+					val 		= value.value.replace(/to/, 'до').replace(/\-/g, '.');
 
-		inputHiden.val(val);
-		btn.text(val);
+				inputHiden.val(val);
+				btn.text(val);
 
-		drop.removeClass('is-open');
-		allBlock.slideUp(300);
+				drop.removeClass('is-open');
+				allBlock.slideUp(300);
 
+			});
+		}
 	});
 
 	// accord

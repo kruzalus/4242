@@ -134,39 +134,93 @@
 					<!-- wind -->
 					<div class="wind is-gray">
 						<div class="wind__top">Выставленные счета</div>
-						<div class="wind__in">
-							<!-- item -->
-							<a href="#" class="item">
-								<div class="invoice">
-									<div class="invoice__img"><img src="img/svg/one.svg" alt="img"></div>
-									<div class="invoice__name">
-										<span>OneTwoTrip.Ru</span>
-									</div>
-									<div class="price">
-										<span>25 000.<sub>00</sub> <sub>₽</sub></span>
-									</div>
-									<div class="time">
-										<div class="time__in">
-											<i class="icon icon-uni69"></i>
-											<span>17:22</span>
+						<div class="wind__in js-accordions">
+							<!-- items -->
+							<div class="items is-invoice">
+								<!-- item -->
+								<div class="item js-accord is-active">
+									<div class="invoice js-accord-but">
+										<div class="invoice__img"><img src="img/svg/one.svg" alt="img"></div>
+										<div class="invoice__name">
+											<span>OneTwoTrip.Ru</span>
+										</div>
+										<div class="price">
+											<span>25 000.<sub>00</sub> <sub>₽</sub></span>
+										</div>
+										<div class="time">
+											<div class="time__in">
+												<i class="icon icon-uni69"></i>
+												<span>17:22</span>
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
-							<!-- item -->
-							<a href="#" class="item">
-								<div class="invoice">
-									<div class="invoice__img"><img src="img/svg/alfa.svg" alt="img"></div>
-									<div class="invoice__name">
-										<span>Альфастрахование</span>
+									<div class="item__block js-accord-block">
+										<form action="">
+											<div class="item__text">
+												<div class="item__inf">
+													<div class="numb-tr">Номер транзакции:</div>
+													<p>Описание платежа: </p>
+												</div>
+												<div class="item__check">
+													<div class="numb-tr">1234567890</div>
+													<p>Оплата авиабилетов Москва-Барселона-Москва, 25 июня 2016 - 30 июля 2016. Класс: Премиум</p>
+												</div>
+											</div>
+											<div class="item__text">
+												<div class="item__row">
+													<div class="item__inf">Всего к оплате:</div>
+													<div class="item__check">
+														<div class="sum">
+															<div class="sum__bal">25 000.00 ₽<span class="sum__res">, с учётом комиссии 0% </span></div>
+														</div>
+													</div>
+												</div>
+												<div class="item__row">
+													<div class="item__inf is-mod">
+														<span>Способ оплаты:</span>
+													</div>
+													<div class="item__check">
+														<div class="select js-select">
+															<div class="select__icon">
+																<img src="img/svg/purse.svg" alt="img">
+															</div>
+															<input type="text" value="123123123 — 10 000 ₽" class="input js-input" readonly="">
+															<select>
+																<option value="item1">item1</option>
+																<option value="item2">item2</option>
+																<option value="item3">item3</option>
+															</select>			
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="item__text">
+												<div class="item__check">
+													<button class="btn" type="submit">Оплатить</button>
+													<button class="btn-text btn-text_blue" type="button">Отказаться</button>
+												</div>
+											</div>
+										</form>
 									</div>
-									<div class="price">850.<sub>12</sub> <sub>₽</sub></div>
-									<div class="time">
-										<i class="icon icon-uni69"></i>
-										<span>23.08.15</span>
+								</div>
+								<!-- item -->
+								<div class="item js-accord">
+									<div class="invoice js-accord-but">
+										<div class="invoice__img"><img src="img/svg/alfa.svg" alt="img"></div>
+										<div class="invoice__name">
+											<span>Альфастрахование</span>
+										</div>
+										<div class="price">850.<sub>12</sub> <sub>₽</sub></div>
+										<div class="time">
+											<i class="icon icon-uni69"></i>
+											<span>23.08.15</span>
+										</div>
+									</div>
+									<div class="item__block js-accord-block">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla culpa dolor quaerat voluptatibus cum debitis dicta explicabo laudantium mollitia qui voluptatem repellat voluptates dolore, aut? Voluptatibus praesentium ut ratione nesciunt!
 									</div>
 								</div>
-							</a>
+							</div>
 						</div>
 					</div>
 					<!-- wind -->
