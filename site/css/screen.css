@@ -539,6 +539,10 @@ a { text-decoration: none; }
 .logo { position: relative; float: left; padding-left: 5px; width: 70px; line-height: 50px; display: inline-block; vertical-align: top; }
 .logo .icon { vertical-align: middle; }
 
+.login { float: right; padding: 5px 0 5px 125px; border-left: 1px solid #38474f; }
+.login .btn { margin-left: 24px; }
+.login .btn:first-child { margin-left: 0; }
+
 .menu { float: right; height: 50px; width: -webkit-calc(100% - 70px); width: calc(100% - 70px); font-size: 14px; *zoom: 1; }
 .menu:after { content: " "; display: table; clear: both; }
 .menu > li { position: relative; float: left; vertical-align: top; border-right: 1px solid #38474f; }
@@ -1056,6 +1060,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
  .transfer__item{ width: 33.3%; } }
 @media only screen and (max-width: 960px){
  .center{ width: -webkit-calc(100% - 246px); width: calc(100% - 246px); }
+ .login{ padding-left: 24px; }
  .user{ float: none; -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; -webkit-box-flex: 1; -webkit-flex: 1 100%; -ms-flex: 1 100%; flex: 1 100%; text-align: right; }
  .user__in{ border: none; display: inline-block; }
  .cont__text{ margin-right: 0; }
