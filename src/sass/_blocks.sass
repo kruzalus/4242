@@ -381,6 +381,9 @@ a.item
 	h1, h2, h3, h4, h5, h6
 		+rl
 		font-weight: normal
+	&_nobord
+		padding-bottom: 0
+		border-bottom: none
 	&__list
 		margin-top: 5px
 		color: $c_numb
@@ -960,7 +963,8 @@ a.translations__wrap
 		+clr
 		& + .form__field
 			margin-top: 10px
-	&__checbox
+	&__checbox,
+	&__checkbox
 		margin-bottom: 15px
 	.captcha
 		margin-top: 20px
@@ -1483,6 +1487,7 @@ a.translations__wrap
 // captcha
 .captcha
 	img
+		max-width: 100%
 		display: block
 
 // link
@@ -1494,3 +1499,10 @@ a.translations__wrap
 	display: inline-block
 	&:hover
 		border-color: $c_blue
+
+// reg
+.reg
+	.form
+		padding-left: 0
+	.input
+		max-width: 380px
