@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tamplate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <!-- theme color for android 5.0 -->
+  <meta name="theme-color" content="#fff"> 
+  <!-- <meta name="viewport" content="width=1200"> -->
+  <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+  <link rel="stylesheet" media="all" href="css/screen.css" >
+  <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+		<!-- out --> 
+	<div class="out">
+
+		<!-- header -->
+<header class="header">
+	<div class="header__in">
+		<div class="logo">
+			<i class="icon icon-logo"></i> 
+		</div>
+		<!-- menu -->
+		<ul class="menu js-flex-menu">
+							 
+					<li><a href="#" class="is-active">Кошельки и карты</a></li>
+																<li><a href="#">Оплатить</a></li>
+																<li><a href="#">Перевести</a></li>
+																<li><a href="#">Выйти</a></li>
+																<li><a href="#"><i class='icon icon-uni50'></i>verylongusername@longdomainname.org</a></li>
+									</ul>
+	</div>
+</header>		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- l-col1 -->
+				<div class="l-col1">
+					<!-- wind -->
+					<div class="wind">
+						<div class="wind__top">
+							<span>Кошельки</span>
+							<button class="btn btn_greeen" type="button">Пополнить</button>
+						</div>
+						<div class="wind__in">
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__in">
+									<div class="item__left">
+										<span class="purse">123 456 789</span>
+									</div>
+									<div class="item__right">
+										<div class="sum">
+											<div class="sum__bal">10 000</div>
+											<span class="sum__curr">₽</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__in">
+									<div class="item__left">
+										<span class="purse">123 456 790</span>
+									</div>
+									<div class="item__right">
+										<div class="sum">
+											<div class="sum__bal">25<span class="sum__res">.02</span></div>
+											<span class="sum__curr">$</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__in">
+									<div class="item__left">
+										<span class="purse">123 456 791</span>
+									</div>
+									<div class="item__right">
+										<div class="sum">
+											<div class="sum__bal">15 000<span class="sum__res">.00</span></div>
+											<span class="sum__curr">₽</span>
+										</div>
+									</div>
+									<div class="item__right">
+										<div class="sum is-queue">
+											В очереди: <span>10 000.43</span> 
+											<span class="sum__curr">₽</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__in">
+									<div class="item__left">
+										<span class="purse">123 456 792</span>
+									</div>
+									<div class="item__right">
+										<div class="sum">
+											<div class="sum__bal">60 000<span class="sum__res">.00</span></div>
+											<span class="sum__curr">₽</span>
+										</div>
+									</div>
+									<div class="item__right">
+										<div class="sum is-queue">
+											В очереди: <span class="sum__bal">45 368.94</span> 
+											<span class="sum__curr">₽</span>
+										</div>
+									</div>
+								</div>
+								<div class="item__stat">
+									<div class="stat">Кошелек заблокирован</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item is-active">
+								<div class="btn-text">+ Добавить новый</div>
+							</a>
+						</div>
+					</div>
+					<!-- wind -->
+					<div class="wind">
+						<div class="wind__top">Карты</div>
+						<div class="wind__in">
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__left">Альфа Банк</div>
+								<div class="item__right">
+									<div class="card">
+										<div class="card__numb">**** 4561</div>
+										<div class="card__img">
+											<img src="img/svg/mc.svg" alt="img">
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="item__left">Российский Национальный Коммерческий Банк</div>
+								<div class="item__right">
+									<div class="card">
+										<div class="card__numb">**** 9988</div>
+										<div class="card__img">
+											<img src="img/svg/visa.svg" alt="img">
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="btn-text">+ Привязать новую</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- center -->
+				<div class="center">
+					<!-- wind -->
+					<div class="wind is-gray">
+						<div class="wind__top">
+							<!-- breadcrumbs -->
+							<ul class="breadcrumbs">
+								<li><a href="#">Кошельки и карты</a></li>
+								<li>Добавить новый кошелек</li>
+							</ul>
+						</div>
+						<div class="wind__in">
+							<!-- form -->
+							<form action="" class="form">
+								<div class="form__row">
+									<div class="form__label">
+										<span>Валюта кошелька</span>
+									</div>
+									<div class="form__right">
+										<div class="select is-mod js-select">
+											<input type="text" value="рубли РФ" class="input js-input" readonly="">
+											<select>
+												<option value="рубли РФ ">рубли РФ </option>
+												<option value="item2">item2</option>
+												<option value="item3">item3</option>
+											</select>			
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__field">
+										<div class="form__right">
+											<div class="captcha"><img src="img/captcha.png" alt="img"></div>
+										</div>
+									</div>
+									<div class="form__field">
+										<div class="form__label">
+											<label for="captcha">Введите код с картинки:</label>
+										</div>
+										<div class="form__right">
+											<input type="password" class="input" name="captcha" id="captcha" placeholder="">
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__right">
+										<div class="form__checbox">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span>Я согласен с условиями</span>
+											</label>
+											<a href="#" class="link">Оферты</a>
+										</div>
+										<button class="btn btn_long" type="submit">Добавить кошелек</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- l-col2 -->
+				<div class="l-col2">
+					<!-- slider -->
+					<div class="slider js-slider-wrap">
+						<button class="slider__close js-slider-close" type="button"><i class="icon icon-uniF9"></i></button>
+						<div class="arrows"></div>
+						<div class="slider__wrap js-slider">
+							<div class="slider__slide">
+								<div class="slider__in">
+									<div class="slider__title">Хорошие новости!</div>
+									<div class="slider__img">
+										<img src="img/svg/robot.svg" alt="img">
+									</div>
+									<div class="slider__text">Теперь с помощью Robowallet можно оплачивать счета за коммунальные услуги. А выплату абонентской платы за связь автоматизировать!</div>
+								</div>
+								<a href="#" class="btn btn_blue">Попробовать сейчас</a>
+							</div>
+							<div class="slider__slide">
+								<div class="slider__in">
+									<div class="slider__title">2 Хорошие новости!</div>
+									<div class="slider__img">
+										<img src="img/svg/robot.svg" alt="img">
+									</div>
+									<div class="slider__text">2 Теперь с помощью Robowallet можно оплачивать счета за коммунальные услуги. А выплату абонентской платы за связь автоматизировать!</div>
+								</div>
+								<a href="#" class="btn btn_blue">Попробовать сейчас</a>
+							</div>
+							<div class="slider__slide">
+								<div class="slider__in">
+									<div class="slider__title">3 Хорошие новости!</div>
+									<div class="slider__img">
+										<img src="img/svg/robot.svg" alt="img">
+									</div>
+									<div class="slider__text">3 Теперь с помощью Robowallet можно оплачивать счета за коммунальные услуги. А выплату абонентской платы за связь автоматизировать!</div>
+								</div>
+								<a href="#" class="btn btn_blue">Попробовать сейчас</a>
+							</div>
+						</div>
+					</div>
+					<!-- wind -->
+					<div class="wind">
+						<div class="wind__top">Вы часто оплачиваете</div>
+						<div class="wind__in">
+							<!-- item -->
+							<div class="item">
+								<div class="translations">
+									<a href="#" class="translations__reg is-active">
+										<i class="icon icon-reg"></i>
+									</a>
+									<a href="#" class="translations__wrap">
+										<div class="translations__img">
+											<img src="img/svg/beeline.svg" alt="img">
+										</div>
+										<div class="translations__in">
+											<div class="translations__operator"><span>Билайн</span></div>
+											<div class="translations__numb">+7 (999) 555-55-55</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- item -->
+							<div class="item">
+								<div class="translations">
+									<a href="#" class="translations__reg">
+										<i class="icon icon-reg"></i>
+									</a>
+									<a href="#" class="translations__wrap">
+										<div class="translations__img">
+											<img src="img/svg/beeline.svg" alt="img">
+										</div>
+										<div class="translations__in">
+											<div class="translations__operator"><span>Билайн-Интернет</span></div>
+											<div class="translations__numb">999 999 991</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- item -->
+							<div class="item">
+								<div class="translations">
+									<a href="#" class="translations__reg">
+										<i class="icon icon-reg"></i>
+									</a>
+									<a href="#" class="translations__wrap">
+										<div class="translations__img">
+											<img src="img/svg/mgtc.svg" alt="img">
+										</div>
+										<div class="translations__in">
+											<div class="translations__operator"><span>МГТС</span></div>
+											<div class="translations__numb">+7 (495) 515-00-48</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- item -->
+							<a href="#" class="item">
+								<div class="btn-text">ещё</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	<!-- footer -->
+<footer class="footer">
+	<div class="footer__in">
+		<!-- cont -->
+		<div class="cont">
+			<div class="cont__text">Поддержка</div>
+			<div class="cont__item is-tel">
+				<i class="icon icon-uniC0"></i>
+				<a href="tel:88001005511">8 800 100 55 11</a>
+			</div>
+			<div class="cont__item">
+				<i class="icon icon-uniE0"></i>
+				<a href="mailto:support@robowallet.ru">support@robowallet.ru</a>
+			</div>
+		</div>
+		<!-- copy -->
+		<div class="copy">Robowallet &copy; 2015</div>
+		<!-- lang -->
+		<a href="#" class="lang">in English</a>
+	</div>
+</footer>
+
+</body>
+</html>
