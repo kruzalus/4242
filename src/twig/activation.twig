@@ -1,0 +1,58 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header-no-login.twig" %}
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- breadcrumbs -->
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+				</ul>
+				<!-- registration -->
+				<div class="reg">
+					<!-- title -->
+					<div class="title title_nobord">Активация аккаунта innokentiy.petrov@gmail.com</div>
+					<!-- form -->
+					<form class="form is-mod">
+						<div class="form__row">
+							<div class="form__label">
+								<label for="pass1">Придумайте пароль для входа:</label>
+							</div>
+							<div class="form__right">
+								<input type="password" class="input" id="pass1" name="pass1" placeholder="">
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__label">
+								<label for="pass2">Прилумайте платежный пароль:</label>
+							</div>
+							<div class="form__right">
+								<input type="password" class="input" id="pass2" name="pass2" placeholder="">
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__right">
+								<div class="form__checkbox">
+									<label class="checkbox">
+										<input type="checkbox">
+										<span>Я согласен с условиями</span>
+									</label>
+									<a href="#" class="link">Оферты</a>
+								</div>
+								<button class="btn btn_blue" type="sybmit">Завершить создание кошелька</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}

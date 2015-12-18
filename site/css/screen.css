@@ -889,6 +889,8 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .save .btn { float: right; margin-left: 20px; min-width: 160px; }
 
 .form { padding: 20px; }
+.form.is-mod .form__label { width: 220px; }
+.form.is-mod .form__right { float: right; width: -webkit-calc(100% - 220px); width: calc(100% - 220px); }
 .form .btn { min-width: 180px; }
 .form__row { position: relative; margin-top: 20px; *zoom: 1; }
 .form__row:after { content: " "; display: table; clear: both; }
