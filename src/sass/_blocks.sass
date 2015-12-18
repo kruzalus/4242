@@ -269,6 +269,12 @@ a.item
 	border: 1px solid $bord_form
 	transition: border-color .2s
 	display: block
+	&.is-valid
+		border-color: $green
+	&.is-error
+		border-color: $d_red
+		& + .reg-err-text
+			display: block
 	&:focus
 		border-color: $bord_act_input
 		&::placeholder
@@ -277,6 +283,13 @@ a.item
 	&::placeholder
 		color: $c_form
 		transition: opacity .2s, transform .2s
+
+// reg-err-text
+.reg-err-text
+	margin-top: 7px
+	color: $brown
+	text-outline: $brown
+	display: none
 
 // select
 .select

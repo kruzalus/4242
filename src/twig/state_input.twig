@@ -1,0 +1,63 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header-no-login.twig" %}
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- breadcrumbs -->
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+				</ul>
+				<!-- registration -->
+				<div class="reg">
+					<!-- title -->
+					<div class="title title_nobord">Регистрация</div>
+					<!-- form -->
+					<form class="form">
+						<div class="form__row">
+							<div class="form__field">
+								<div class="form__label">
+									<label for="email">Введите Email:</label>
+								</div>
+								<div class="form__right">
+									<input type="text" class="input" id="email" name="email" placeholder="">
+								</div>
+							</div>
+							<div class="form__field">
+								<div class="form__right">
+									<input type="text" class="input is-valid" id="" name="" placeholder="">
+								</div>
+							</div>
+							<div class="form__field">
+								<div class="form__right">
+									<input type="text" class="input is-error" id="" name="" placeholder="">
+									<div class="reg-err-text">Поле заполнено неверно</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__right">
+								<div class="form__checkbox">
+									<label class="checkbox">
+										<input type="checkbox">
+										<span>Я согласен с условиями</span>
+									</label>
+									<a href="#" class="link">Оферты</a>
+								</div>
+								<button class="btn btn_blue" type="sybmit">Создать кошелек</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}
