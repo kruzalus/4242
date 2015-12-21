@@ -52,13 +52,21 @@ $(document).ready(function() {
 		$('body').toggleClass('is-open-menu');
 	});
 
-	// card number
+	// inputmask
 	$('input[name="passport-id"]').inputmask({
-		mask 			: '9999 999999',
+		mask: '9999 999999'
+	});
+
+	$('input[name="card-numb"]').inputmask({
+		mask: '9999 9999 9999 9999'
+	});
+
+	$('input[name="passport-id"], input[name="card-numb"]').inputmask({
 		showMaskOnHover : false,
 		showMaskOnFocus : false,
 		placeholder  	: ''
 	});
+
 
 	// soc
 	$('.js-social-close').on('click', function(){

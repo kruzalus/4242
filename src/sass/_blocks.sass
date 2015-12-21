@@ -52,6 +52,15 @@
 			position: relative
 		.drop
 			margin: 10px 25px 0 0
+	&__row
+		margin-top: 15px
+		&:first-child
+			margin-top: 0
+	&__but
+		width: 370px
+		padding-left: 20px
+		.btn
+			min-width: 280px
 
 // items
 .items
@@ -269,6 +278,8 @@ a.item
 	border: 1px solid $bord_form
 	transition: border-color .2s
 	display: block
+	&.is-up
+		text-transform: uppercase
 	&.is-valid
 		border-color: $green
 	&.is-error
@@ -1532,3 +1543,67 @@ a.translations__wrap
 		padding-left: 0
 	.input
 		max-width: 380px
+
+// card
+.ticket
+	margin-bottom: 20px
+	padding: 15px 25px 20px 20px
+	max-width: 370px
+	border-radius: 5px
+	box-shadow: 0 0 4px $bg_wing_gray
+	background: $bg_wing_gray
+	&__row
+		margin-top: 15px
+		+clr
+		&:first-child
+			margin-top: 0
+		& > .input
+			float: left
+			width: calc(100% - 35px)
+	&__field
+		+clr
+	&__label
+		line-height: 1
+		user-select: none
+		cursor: pointer
+	&__date
+		float: left
+	&__cvv
+		float: right
+		.ticket__col
+			width: 60px
+	&__col
+		width: 50px
+		vertical-align: top
+		display: inline-block
+	&__text
+		margin: 0 2px
+		line-height: 40px
+		vertical-align: top
+		display: inline-block
+		span
+			line-height: 1.45
+			vertical-align: baseline
+			display: inline-block
+	.info
+		float: right
+		margin: 9px 0 0 13px
+
+// info
+.info
+	position: relative
+	vertical-align: top
+	display: inline-block
+	&__btn
+		width: 22px
+		height: 22px
+		color: $c_numb
+		line-height: 1
+		font-size: 22px
+		overflow: hidden
+		transition: color .2s
+		border-radius: 22px
+		background: $white
+		display: inline-block
+		&:hover
+			color: darken($c_numb, 20%)
