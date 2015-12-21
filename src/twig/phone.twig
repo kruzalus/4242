@@ -1,0 +1,42 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header.twig" %}
+		<!-- l -->
+		<div class="l l_cab">
+			<div class="l__in">
+				<!-- l-col1 -->
+				<div class="l-col1">
+					{% include "./includes/_nav.twig" %}
+				</div>
+				<!-- center -->
+				<div class="center">
+					<!-- wind -->
+					<div class="wind is-gray">
+						<div class="wind__top">Мобильный телефон</div>
+						<div class="wind__in">
+							<!-- save -->
+							<div class="save">
+								<form action="">
+									<div class="save__in">
+										<button class="btn" type="submit">Сохранить</button>
+										<div class="save__input">
+											<input type="text" class="input" name="phone" placeholder="Введите номер мобильного телефона">
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}
