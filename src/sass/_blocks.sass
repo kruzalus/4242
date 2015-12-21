@@ -937,6 +937,8 @@ a.translations__wrap
 		+clr
 		&:first-child
 			margin-top: 0
+		& + p
+			margin-top: 12px
 		.tooltip
 			position: absolute
 			left: 50%
@@ -964,6 +966,9 @@ a.translations__wrap
 		+clr
 		+r(767)
 			width: calc(100% - 172px)
+		.btn
+			& + .btn-text
+				margin-left: 68px
 	&__col
 		margin-left: 20px
 		float: left
@@ -985,6 +990,8 @@ a.translations__wrap
 	&__checbox,
 	&__checkbox
 		margin-bottom: 15px
+	&__link
+		margin-top: 10px
 	.captcha
 		margin-top: 20px
 

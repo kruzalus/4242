@@ -895,6 +895,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .form__row { position: relative; margin-top: 20px; *zoom: 1; }
 .form__row:after { content: " "; display: table; clear: both; }
 .form__row:first-child { margin-top: 0; }
+.form__row + p { margin-top: 12px; }
 .form__row .tooltip { position: absolute; left: 50%; bottom: 100%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); }
 .form__row .forgot { margin-top: 10px; }
 .form__label { float: left; padding-right: 10px; width: 190px; line-height: 38px; }
@@ -902,6 +903,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .form__label label { cursor: pointer; }
 .form__right { float: right; width: -webkit-calc(100% - 190px); width: calc(100% - 190px); *zoom: 1; }
 .form__right:after { content: " "; display: table; clear: both; }
+.form__right .btn + .btn-text { margin-left: 68px; }
 .form__col { margin-left: 20px; float: left; width: 80px; }
 .form__col:first-child { margin-left: 0; }
 .form__text { line-height: 38px; }
@@ -910,6 +912,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .form__field:after { content: " "; display: table; clear: both; }
 .form__field + .form__field { margin-top: 10px; }
 .form__checbox, .form__checkbox { margin-bottom: 15px; }
+.form__link { margin-top: 10px; }
 .form .captcha { margin-top: 20px; }
 
 .checkbox { position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; display: inline-block; }
