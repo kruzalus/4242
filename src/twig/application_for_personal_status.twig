@@ -1,0 +1,132 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header.twig" %}
+		<!-- l -->
+		<div class="l l_cab">
+			<div class="l__in">
+				<!-- l-col1 -->
+				<div class="l-col1">
+					{% include "./includes/_nav.twig" %}
+				</div>
+				<!-- center -->
+				<div class="center">
+					<!-- wind -->
+					<div class="wind is-gray">
+						<div class="wind__top">Заявка на получение Персонального статуса</div>
+						<div class="wind__in">
+							<!-- form -->
+							<form action="" class="form">
+								<div class="form__row">
+									<div class="form__label">
+										<label for="phone">Номер телефона:</label>
+									</div>
+									<div class="form__right">
+										<input type="text" class="input" name="phone" id="phone" placeholder="Например, Москва">
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__label">
+										<label for="surname">Фамилия:</label>
+									</div>
+									<div class="form__right">
+										<input type="text" class="input" name="surname" id="surname" placeholder="Петров">
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__label">
+										<label for="name">Имя:</label>
+									</div>
+									<div class="form__right">
+										<input type="text" class="input" name="name" id="name" placeholder="Иннокентий">
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__label">
+										<label for="patronymic">Отчество:</label>
+									</div>
+									<div class="form__right">
+										<input type="text" class="input" name="patronymic" id="patronymic" placeholder="Рамзаныч">
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__label">
+										<label for="passport-id">Серия и номер паспорта:</label>
+									</div>
+									<div class="form__right">
+										<input type="text" name="passport-id" class="input" id="passport-id" placeholder="Например, 99 99 999999">
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__label">
+										<label for="inn">ИНН:</label>
+									</div>
+									<div class="form__right">
+										<input type="text" class="input" name="inn" id="inn" placeholder="12 цифр">
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__label">
+										<label for="snils">СНИЛС:</label>
+									</div>
+									<div class="form__right">
+										<input type="text" class="input" name="snils" id="snils" placeholder="11 цифр">
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__label">
+										<label for="med-policy">№ мед. полиса:</label>
+									</div>
+									<div class="form__right">
+										<input type="text" class="input" name="med-policy" id="med-policy" placeholder="Количество цифр зависит от страховой компании">
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__right">
+										<button class="btn" type="submit">Сохранить</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- l-col2 -->
+				<div class="l-col2">
+					<!-- status -->
+					<div class="status is-shad">
+						<div class="status__img">
+							<img src="img/svg/personal.svg" alt="img">
+						</div>
+						<div class="status__in">
+							<div class="status__title">Персональный</div>
+							<div class="status__row">
+								<span>Максимальный баланс</span>
+								<div class="price">60 000 <span class="price__cur">₽</span></div>
+							</div>
+							<div class="status__row">
+								<span>Максимальный оборот</span>
+								<div class="price">200 000 <span class="price__cur">₽</span></div>
+							</div>
+							<div class="status__row">
+								<span>Платежи по всему миру</span>
+							</div>
+							<div class="status__row">
+								<span>Переводы разрешены</span>
+							</div>
+							<div class="status__row">
+								<span>Вывод средств разрешен</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}

@@ -873,6 +873,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 
 .status { padding-top: 39px; border-left: 1px solid #eceff1; }
 .status:first-child { border-left: none; }
+.status.is-shad { -webkit-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: 0 0 6px rgba(84, 109, 121, 0.15); box-shadow: 0 0 6px rgba(84, 109, 121, 0.15); background: #fff; }
 .status .icon { font-size: 16px; }
 .status__img { height: 150px; font-size: 0; text-align: center; }
 .status__img img { height: 100%; }
