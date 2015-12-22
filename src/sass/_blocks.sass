@@ -1055,6 +1055,97 @@ a.translations__wrap
 			transition: translate3d(0,0,0)
 			transform: scale(0)
 
+// radio
+.radio
+	position: relative
+	vertical-align: top
+	font-size: 14px
+	display: inline-block
+	&.is-big
+		.radio__in
+			padding-left: 92px
+			height: 80px
+			line-height: 70px
+			border-radius: 80px
+			&:before
+				top: 0
+				left: 0
+				width: 80px
+				height: 80px
+			.radio__wrap
+				line-height: 1.45
+				vertical-align: middle
+				display: inline-block
+			.radio__ico
+				top: 0
+				left: 0
+				height: 80px
+				width: 80px
+				text-align: center
+				line-height: 80px
+				.icon
+					font-size: 40px
+					vertical-align: middle
+	input,
+	&__in:before
+		position: absolute
+		content: ''
+		top: 5px
+		left: 5px
+		height: 19px
+		width: 19px
+	input
+		cursor: pointer
+		z-index: 1
+		opacity: 0
+		&:checked
+			& + .radio__in
+				background: $bg_dots
+				&:before
+					background: $c_blue
+				.icon
+					color: #fff
+				.icon-circle
+					transform: scale(1)
+					background: transparent
+	&__in
+		position: relative
+		padding: 5px 20px 5px 35px
+		line-height: 1.45
+		border-radius: 30px
+		cursor: pointer
+		user-select: none
+		transition: background .2s
+		display: block
+		&:before
+			border-radius: 50%
+			border: 2px solid $c_blue
+	&__ico
+		position: absolute
+		top: 8px
+		left: 8px
+		font-size: 0
+		line-height: 1
+		display: block
+		.icon
+			will-change: color
+			transition: color .2s
+			color: $c_blue
+	&__info
+		color: $c_rad_info
+	.icon-circle
+		width: 13px
+		height: 13px
+		border-radius: 50%
+		border: solid 2px #fff
+		will-change: transform
+		transition: background .4s, transform .3s
+		transform: scale(0)
+		background: #fff
+		display: inline-block
+	&__text
+		display: block
+
 // forgot
 .forgot
 	color: $c_blue
@@ -1611,3 +1702,26 @@ a.translations__wrap
 		display: inline-block
 		&:hover
 			color: darken($c_numb, 20%)
+
+// 
+.pay
+	padding: 25px 20px 20px
+	&__row
+		margin-bottom: 30px
+		font-size: 0
+		&:last-child
+			margin-bottom: 0
+		.btn
+			width: 100%
+	&__title
+		margin-bottom: 10px
+		color: $c_wind_gray
+	.radio
+		width: 49%
+		margin: 20px 0 0 2%
+		&:first-child
+			margin-top: 0
+			& + .radio
+				margin-top: 0
+		&:nth-child(odd)
+			margin-left: 0

@@ -939,6 +939,26 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .checkbox span:before { border: 2px solid #e7ebed; }
 .checkbox span:after { position: absolute; content: ""; top: 4px; left: 3px; color: #263339; font-family: "icomoon" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-transition: -webkit-transform 0.2s; transition: transform 0.2s; -webkit-transition: translate3d(0, 0, 0); transition: translate3d(0, 0, 0); -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); }
 
+.radio { position: relative; vertical-align: top; font-size: 14px; display: inline-block; }
+.radio.is-big .radio__in { padding-left: 92px; height: 80px; line-height: 70px; -webkit-border-radius: 80px; border-radius: 80px; }
+.radio.is-big .radio__in:before { top: 0; left: 0; width: 80px; height: 80px; }
+.radio.is-big .radio__in .radio__wrap { line-height: 1.45; vertical-align: middle; display: inline-block; }
+.radio.is-big .radio__in .radio__ico { top: 0; left: 0; height: 80px; width: 80px; text-align: center; line-height: 80px; }
+.radio.is-big .radio__in .radio__ico .icon { font-size: 40px; vertical-align: middle; }
+.radio input, .radio__in:before { position: absolute; content: ""; top: 5px; left: 5px; height: 19px; width: 19px; }
+.radio input { cursor: pointer; z-index: 1; opacity: 0; }
+.radio input:checked + .radio__in { background: #e3f2fd; }
+.radio input:checked + .radio__in:before { background: #2196f3; }
+.radio input:checked + .radio__in .icon { color: #fff; }
+.radio input:checked + .radio__in .icon-circle { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); background: transparent; }
+.radio__in { position: relative; padding: 5px 20px 5px 35px; line-height: 1.45; -webkit-border-radius: 30px; border-radius: 30px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-transition: background 0.2s; transition: background 0.2s; display: block; }
+.radio__in:before { -webkit-border-radius: 50%; border-radius: 50%; border: 2px solid #2196f3; }
+.radio__ico { position: absolute; top: 8px; left: 8px; font-size: 0; line-height: 1; display: block; }
+.radio__ico .icon { will-change: color; -webkit-transition: color 0.2s; transition: color 0.2s; color: #2196f3; }
+.radio__info { color: #cfd8dc; }
+.radio .icon-circle { width: 13px; height: 13px; -webkit-border-radius: 50%; border-radius: 50%; border: solid 2px #fff; will-change: transform; -webkit-transition: background 0.4s, -webkit-transform 0.3s; transition: background 0.4s, transform 0.3s; -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); background: #fff; display: inline-block; }
+.radio__text { display: block; }
+
 .forgot { color: #2196f3; line-height: 1.4; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; display: inline-block; }
 .forgot:hover { border-color: #2196f3; }
 
@@ -1089,6 +1109,16 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .info { position: relative; vertical-align: top; display: inline-block; }
 .info__btn { width: 22px; height: 22px; color: #90a4ae; line-height: 1; font-size: 22px; overflow: hidden; -webkit-transition: color 0.2s; transition: color 0.2s; -webkit-border-radius: 22px; border-radius: 22px; background: #fff; display: inline-block; }
 .info__btn:hover { color: #5b727d; }
+
+.pay { padding: 25px 20px 20px; }
+.pay__row { margin-bottom: 30px; font-size: 0; }
+.pay__row:last-child { margin-bottom: 0; }
+.pay__row .btn { width: 100%; }
+.pay__title { margin-bottom: 10px; color: #607d8b; }
+.pay .radio { width: 49%; margin: 20px 0 0 2%; }
+.pay .radio:first-child { margin-top: 0; }
+.pay .radio:first-child + .radio { margin-top: 0; }
+.pay .radio:nth-child(odd) { margin-left: 0; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1200px){
