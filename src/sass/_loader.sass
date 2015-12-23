@@ -37,40 +37,44 @@
 	&.is-valid
 		.portal
 			opacity: 0
+		.loader__item
+			opacity: 0
 		&:before
 			transform: scale(1)
 		&:after
 			transform: scale(1)
 			border-color: $d_green
-	// &__item
-	// 	position: absolute
-	// 	top: 50%
-	// 	left: 50%
-	// 	border-radius: 50%
-	// 	box-shadow: 0 0 0 1px $d_green
-	// 	background: transparent 
-	// 	will-change: opacity
-	// 	transition: opacity .5s
-	// 	animation: loader 2.1s infinite linear
+	&.is-error
+		.loader__item
+			opacity: 0
+		&:before
+			background: #fbd2c5
+			transform: scale(1)
+		&:after
+			transform: scale(1)
+			border-color: #fbd2c5
+		.arr
+			margin: -17px 0 0 -17px
+	&__item
+		position: absolute
+		top: 0
+		left: 0
+		width: 118px
+		height: 118px
+		border-radius: 50%
+		box-shadow: 0 0 0 1px $d_green
+		background: transparent 
+		will-change: opacity
+		transition: opacity .5s
+		transform: scale(0)
+		animation: loader 1.5s infinite linear
 
-	// 	$animation-delay: 0s
+		$animation-delay: 0s
 
-	// 	@for $i from 1 through 3
-	// 		&:nth-child(#{$i})
-	// 			animation-delay: $animation-delay
-	// 			$animation-delay: $animation-delay + .7s
-	// 	&:first-child
-	// 		margin: -59px 0 0 -59px
-	// 		width: 118px
-	// 		height: 118px
-	// 	&:nth-child(2)
-	// 		margin: -39px 0 0 -39px
-	// 		width: 78px
-	// 		height: 78px
-	// 	&:nth-child(3)
-	// 		margin: -19px 0 0 -19px
-	// 		width: 38px
-	// 		height: 38px
+		@for $i from 1 through 3
+			&:nth-child(#{$i})
+				animation-delay: $animation-delay
+				$animation-delay: $animation-delay + .5s
 	.arr
 		position: absolute
 		top: 50%
@@ -81,84 +85,51 @@
 		&:before, &:after
 			content: ''
 
-.portal
-	position: relative
-	width: 100%
-	height: 100%
-	transition: opacity .5s
-	display: flex
-	justify-content: center
-	align-self: center
-	& > div
-		position: relative
-		width: 0
-		height: 0
-		align-self: center
-		& > div
-			position: absolute
-			width: 0
-			align-self: center
-			border-width: 0
-			border-style: solid
-			border-color: $d_green
-			// border-color: hsla(0, 0%, 100%, 0)
-			border-radius: 50%
-			animation: zoom 1.5s ease-in infinite
-			&:after
-				display: block
-				padding-top: 100%
-			// &:nth-of-type(2)
-			// 	animation-delay: 0.33s
-			// &:nth-of-type(3)
-			// 	animation-delay: 0.67s
-			$animation-delay: 0s
-
-			@for $i from 1 through 3
-				&:nth-child(#{$i})
-					animation-delay: $animation-delay
-					$animation-delay: $animation-delay + .5s
-
-@keyframes zoom
+@keyframes loader
 	to
-		width: calc(118px + 10px)
-		margin-left: calc(-59px - 5px)
-		margin-top: calc(-59px - 5px)
-		border-width: 5px
-		border-color: hsla(0, 0%, 100%, 1)
+		transform: scale(1)
 
-// @keyframes loader
-// 	0%
-// 		transform: scale(1)
-// 	25%
-// 		transform: scale(.5)
-// 	50%
-// 		transform: scale(1)
-// 	75%
-// 		transform: scale(.5)
-// 	100%
-// 		transform: scale(1)
+// .portal
+// 	position: relative
+// 	width: 100%
+// 	height: 100%
+// 	transition: opacity .5s
+// 	display: flex
+// 	justify-content: center
+// 	align-self: center
+// 	& > div
+// 		position: relative
+// 		width: 0
+// 		height: 0
+// 		align-self: center
+// 		& > div
+// 			position: absolute
+// 			width: 0
+// 			align-self: center
+// 			border-width: 0
+// 			border-style: solid
+// 			border-color: $d_green
+// 			// border-color: hsla(0, 0%, 100%, 0)
+// 			border-radius: 50%
+// 			animation: zoom 1.5s ease-in infinite
+// 			&:after
+// 				display: block
+// 				padding-top: 100%
+// 			// &:nth-of-type(2)
+// 			// 	animation-delay: 0.33s
+// 			// &:nth-of-type(3)
+// 			// 	animation-delay: 0.67s
+// 			$animation-delay: 0s
 
-// @keyframes loaderBg
-// 	0%
-// 		background: rgba($d_green, 0)
-// 	100%
-// 		background: $d_green
+// 			@for $i from 1 through 3
+// 				&:nth-child(#{$i})
+// 					animation-delay: $animation-delay
+// 					$animation-delay: $animation-delay + .5s
 
-// @keyframes loaderShad
-// 	0%
-// 		box-shadow: 0 0 0 1px $d_green
-// 	100%
-// 		box-shadow: 0 0 0 1px rgba($d_green, 0)
-
-// @keyframes loaderBord
-// 	0%
-// 		border-color: $d_green
-// 	100%
-// 		border-color: rgba($d_green, 0)
-
-// @keyframes loaderOpacity
-// 	0%
-// 		opacity: 1
-// 	100%
-// 		opacity: 0
-
+// @keyframes zoom
+// 	to
+// 		width: calc(118px + 10px)
+// 		margin-left: calc(-59px - 5px)
+// 		margin-top: calc(-59px - 5px)
+// 		border-width: 5px
+// 		border-color: hsla(0, 0%, 100%, 1)

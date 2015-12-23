@@ -3917,14 +3917,31 @@ $(document).ready(function() {
 		}
 	}, 3000);
 
+	setTimeout(function(){
+		var loader 	= $('.js-loader.loader_2');
+		if(loader.length){
+			loader.removeClass('is-valid');
+			loader.addClass('is-error');
+			animateValid();
+		}
+	}, 3000);
+
 	function animateValid(){
 		setTimeout(function(){
 			var loader 	= $('.js-loader'),
-				arr 	= loader.find('.js-arr');
+				arrVal 	= loader.find('.js-arr-valid'),
+				arrErr 	= loader.find('.js-arr-error');
 			if ($('.js-loader').hasClass('is-valid')) {
-				arr.show();
-				var svg = arr.drawsvg({
+				arrVal.show();
+				var svg = arrVal.drawsvg({
 					reverse: true
+				});
+				svg.drawsvg('animate');
+			}
+			else if ($('.js-loader').hasClass('is-error')) {
+				arrErr.show();
+				var svg = arrErr.drawsvg({
+					duration: 600
 				});
 				svg.drawsvg('animate');
 			}
