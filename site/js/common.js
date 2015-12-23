@@ -218,8 +218,10 @@ $(document).ready(function() {
 				arr 	= loader.find('.js-arr');
 			if ($('.js-loader').hasClass('is-valid')) {
 				arr.show();
-				var svg = arr.drawsvg();
-				svg.drawsvg('animate', 200);
+				var svg = arr.drawsvg({
+					reverse: true
+				});
+				svg.drawsvg('animate');
 			}
 		}, 100);
 	} animateValid();
