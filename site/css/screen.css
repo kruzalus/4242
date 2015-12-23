@@ -1160,14 +1160,44 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 
 .render { padding-bottom: 15px; }
 
+.preloader { padding: 65px 20px 50px; text-align: center; }
+
+.loader { position: relative; width: 118px; height: 118px; vertical-align: top; display: inline-block; }
+.loader__item { position: absolute; top: 50%; left: 50%; -webkit-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 0 1px #dee4e7; box-shadow: 0 0 0 1px #dee4e7; -webkit-animation: loader 2.1s infinite linear, loader_border 2.1s infinite linear; animation: loader 2.1s infinite linear, loader_border 2.1s infinite linear; }
+.loader__item:nth-child(1) { -webkit-animation-delay: 0s; animation-delay: 0s; }
+.loader__item:nth-child(2) { -webkit-animation-delay: 0.7s; animation-delay: 0.7s; }
+.loader__item:nth-child(3) { -webkit-animation-delay: 1.4s; animation-delay: 1.4s; }
+.loader__item:first-child { margin: -59px 0 0 -59px; width: 118px; height: 118px; }
+.loader__item:nth-child(2) { margin: -39px 0 0 -39px; width: 78px; height: 78px; }
+.loader__item:nth-child(3) { margin: -19px 0 0 -19px; width: 38px; height: 38px; }
+
+@-webkit-keyframes loader { 0% { -webkit-transform: scale(1); transform: scale(1); }
+  25% { -webkit-transform: scale(0.5); transform: scale(0.5); }
+  50% { -webkit-transform: scale(1); transform: scale(1); }
+  75% { -webkit-transform: scale(0.5); transform: scale(0.5); }
+  100% { -webkit-transform: scale(1); transform: scale(1); } }
+
+@keyframes loader { 0% { -webkit-transform: scale(1); transform: scale(1); }
+  25% { -webkit-transform: scale(0.5); transform: scale(0.5); }
+  50% { -webkit-transform: scale(1); transform: scale(1); }
+  75% { -webkit-transform: scale(0.5); transform: scale(0.5); }
+  100% { -webkit-transform: scale(1); transform: scale(1); } }
+@-webkit-keyframes loader_border { 0% { -webkit-box-shadow: 0 0 0 1px #dee4e7; box-shadow: 0 0 0 1px #dee4e7; }
+  25% { border-color: #536873; }
+  50% { -webkit-box-shadow: 0 0 0 1px #dee4e7; box-shadow: 0 0 0 1px #dee4e7; }
+  75% { -webkit-box-shadow: 0 0 0 1px #536873; box-shadow: 0 0 0 1px #536873; }
+  100% { -webkit-box-shadow: 0 0 0 1px #dee4e7; box-shadow: 0 0 0 1px #dee4e7; } }
+@keyframes loader_border { 0% { -webkit-box-shadow: 0 0 0 1px #dee4e7; box-shadow: 0 0 0 1px #dee4e7; }
+  25% { border-color: #536873; }
+  50% { -webkit-box-shadow: 0 0 0 1px #dee4e7; box-shadow: 0 0 0 1px #dee4e7; }
+  75% { -webkit-box-shadow: 0 0 0 1px #536873; box-shadow: 0 0 0 1px #536873; }
+  100% { -webkit-box-shadow: 0 0 0 1px #dee4e7; box-shadow: 0 0 0 1px #dee4e7; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
-
 @media only screen and (max-width: 1200px){
  .l-col2{ display: none; }
  .center{ float: right; width: 73.6%; }
  .item__left{ max-width: 115px; } }
-
 @media only screen and (max-width: 1024px){
  .form__col{ width: 60px; }
  .categories__item:nth-child(4n+4){ margin-right: 2%; }
@@ -1177,7 +1207,6 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
  .transfer__item:nth-child(3n-2){ margin-left: 0; }
  .transfer__item:nth-child(-n+4){ margin-top: -1px; }
  .transfer__item{ width: 33.3%; } }
-
 @media only screen and (max-width: 960px){
  .center{ width: -webkit-calc(100% - 246px); width: calc(100% - 246px); }
  .login{ padding-left: 24px; }
@@ -1190,13 +1219,11 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
  .invoice .time{ width: 15.5%; }
  .operation__date{ width: 19%; }
  .operation__img{ margin-right: 20px; } }
-
 @media only screen and (max-width: 768px){
  .date-picker-wrapper{ margin-left: -15px; }
  .l-col1.is-mod{ display: none; }
  .center.is-mod{ float: none; width: 100%; display: block; }
  .menu a{ padding: 0 10px; } }
-
 @media only screen and (max-width: 767px){
  .out{ padding-bottom: 73px; }
  .l_cab .center{ margin-top: 20px; width: 100%; display: block; }
@@ -1218,7 +1245,6 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
  .transfer__item:nth-child(2n-1){ margin-left: 0; }
  .transfer__item:nth-child(-n+3){ margin-top: -1px; }
  .transfer__item{ width: 50%; } }
-
 @media screen and (-webkit-min-device-pixel-ratio: 0){
  .select select{ height: 40px; line-height: 40px; background: #f4f4f4; } }
 
