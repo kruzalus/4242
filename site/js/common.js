@@ -204,36 +204,37 @@ $(document).ready(function() {
 		}
 	} accord();
 
+	// preloader
 	setTimeout(function(){
-		var loader 	= $('.js-loader');
+		var loader 	= $('.js-preloader');
 		if(loader.length){
 			loader.addClass('is-valid');
-			animateValid();
+			animateLoad();
 		}
 	}, 3000);
 
 	setTimeout(function(){
-		var loader 	= $('.js-loader.loader_2');
+		var loader 	= $('.js-preloader.preloader2');
 		if(loader.length){
 			loader.removeClass('is-valid');
 			loader.addClass('is-error');
-			animateValid();
+			animateLoad();
 		}
 	}, 3000);
 
-	function animateValid(){
+	function animateLoad(){
 		setTimeout(function(){
-			var loader 	= $('.js-loader'),
+			var loader 	= $('.js-preloader'),
 				arrVal 	= loader.find('.js-arr-valid'),
 				arrErr 	= loader.find('.js-arr-error');
-			if ($('.js-loader').hasClass('is-valid')) {
+			if ($('.js-preloader').hasClass('is-valid')) {
 				arrVal.show();
 				var svg = arrVal.drawsvg({
 					reverse: true
 				});
 				svg.drawsvg('animate');
 			}
-			else if ($('.js-loader').hasClass('is-error')) {
+			else if ($('.js-preloader').hasClass('is-error')) {
 				arrErr.show();
 				var svg = arrErr.drawsvg({
 					duration: 600
@@ -241,6 +242,6 @@ $(document).ready(function() {
 				svg.drawsvg('animate');
 			}
 		}, 100);
-	} animateValid();
+	} animateLoad();
 
 });
