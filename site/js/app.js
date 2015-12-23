@@ -3942,7 +3942,8 @@ $(document).ready(function() {
 			else if ($('.js-preloader').hasClass('is-error')) {
 				arrErr.show();
 				var svg = arrErr.drawsvg({
-					duration: 600
+					stagger: 500,
+					duration: 800
 				});
 				svg.drawsvg('animate');
 			}
