@@ -1169,7 +1169,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .loader.is-valid .loader__item { opacity: 0; }
 .loader.is-valid:before { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
 .loader.is-valid:after { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); border-color: #8bc34a; }
-.loader__item { position: absolute; top: 50%; left: 50%; -webkit-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 0 1px #8bc34a; box-shadow: 0 0 0 1px #8bc34a; background: transparent; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; -webkit-animation: loader 2.1s infinite linear; animation: loader 2.1s infinite linear; }
+.loader__item { position: absolute; top: 50%; left: 50%; -webkit-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 0 1px #8bc34a; box-shadow: 0 0 0 1px #8bc34a; background: transparent; will-change: opacity; -webkit-transition: opacity 0.5s; transition: opacity 0.5s; -webkit-animation: loader 2.1s infinite linear; animation: loader 2.1s infinite linear; }
 .loader__item:nth-child(1) { -webkit-animation-delay: 0s; animation-delay: 0s; }
 .loader__item:nth-child(2) { -webkit-animation-delay: 0.7s; animation-delay: 0.7s; }
 .loader__item:nth-child(3) { -webkit-animation-delay: 1.4s; animation-delay: 1.4s; }
