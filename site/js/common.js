@@ -204,4 +204,24 @@ $(document).ready(function() {
 		}
 	} accord();
 
+	setTimeout(function(){
+		var loader 	= $('.js-loader');
+		if(loader.length){
+			loader.addClass('is-valid');
+			animateValid();
+		}
+	}, 3000);
+
+	function animateValid(){
+		setTimeout(function(){
+			var loader 	= $('.js-loader'),
+				arr 	= loader.find('.js-arr');
+			if ($('.js-loader').hasClass('is-valid')) {
+				arr.show();
+				var svg = arr.drawsvg();
+				svg.drawsvg('animate', 200);
+			}
+		}, 100);
+	} animateValid();
+
 });

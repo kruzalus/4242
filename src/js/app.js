@@ -6,4 +6,5 @@
 //= lib/flexmenu.min.js
 //= lib/moment.min.js
 //= lib/jquery.daterangepicker.js
+//= lib/jquery.drawsvg.min.js
 //= common.js

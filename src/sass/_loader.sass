@@ -8,14 +8,49 @@
 	height: 118px
 	vertical-align: top
 	display: inline-block
+	&:before,
+	&:after
+		position: absolute
+		content: ''
+		border-radius: 50%
+	&:before
+		top: 50%
+		left: 50%
+		width: 80px
+		height: 80px
+		margin: -40px 0 0 -40px
+		will-change: transform
+		transition: transform 1s
+		transform: translate3d(0,0,0)
+		transform: scale(0)
+		background: $d_green
+	&:after
+		top: 0
+		left: 0
+		width: 118px
+		height: 118px
+		transform: translate3d(0,0,0)
+		will-change: transform
+		transform: scale(.5)
+		transition: border-color 1s, transform 1s
+		border: 1px dashed transparent
+	&.is-valid
+		.loader__item
+			animation: loaderOpacity .5s linear
+			opacity: 0
+		&:before
+			transform: scale(1)
+		&:after
+			transform: scale(1)
+			border-color: $d_green
 	&__item
 		position: absolute
 		top: 50%
 		left: 50%
 		border-radius: 50%
-		// border: 1px solid #dee4e7
-		box-shadow: 0 0 0 1px #dee4e7
-		animation: loader 2.1s infinite linear, loader_border 2.1s infinite linear
+		box-shadow: 0 0 0 1px $d_green
+		background: transparent 
+		animation: loader 2.1s infinite linear
 
 		$animation-delay: 0s
 
@@ -35,7 +70,12 @@
 			margin: -19px 0 0 -19px
 			width: 38px
 			height: 38px
-
+	.arr
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -15px 0 0 -14px
+		display: none
 
 @keyframes loader
 	0%
@@ -49,19 +89,26 @@
 	100%
 		transform: scale(1)
 
-@keyframes loader_border
+@keyframes loaderBg
 	0%
-		// border-color: #dee4e7
-		box-shadow: 0 0 0 1px #dee4e7
-	25%
-		border-color: darken(#dee4e7, 50%)
-		// box-shadow: 0 0 0 1px darken(#dee4e7, 50%)
-	50%
-		// border-color: #dee4e7
-		box-shadow: 0 0 0 1px #dee4e7
-	75%
-		// border-color: darken(#dee4e7, 50%)
-		box-shadow: 0 0 0 1px darken(#dee4e7, 50%)
+		background: rgba($d_green, 0)
 	100%
-		// border-color: #dee4e7
-		box-shadow: 0 0 0 1px #dee4e7
+		background: $d_green
+
+@keyframes loaderShad
+	0%
+		box-shadow: 0 0 0 1px $d_green
+	100%
+		box-shadow: 0 0 0 1px rgba($d_green, 0)
+
+@keyframes loaderBord
+	0%
+		border-color: $d_green
+	100%
+		border-color: rgba($d_green, 0)
+
+@keyframes loaderOpacity
+	0%
+		opacity: 1
+	100%
+		opacity: 0
