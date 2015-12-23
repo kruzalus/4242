@@ -1166,10 +1166,10 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .loader:before, .loader:after { position: absolute; content: ""; -webkit-border-radius: 50%; border-radius: 50%; }
 .loader:before { top: 50%; left: 50%; width: 80px; height: 80px; margin: -40px 0 0 -40px; will-change: transform; -webkit-transition: -webkit-transform 1s; transition: transform 1s; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); background: #8bc34a; }
 .loader:after { top: 0; left: 0; width: 118px; height: 118px; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); will-change: transform; -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5); -webkit-transition: border-color 1s, -webkit-transform 1s; transition: border-color 1s, transform 1s; border: 1px dashed transparent; }
-.loader.is-valid .loader__item { -webkit-animation: loaderOpacity 0.5s linear; animation: loaderOpacity 0.5s linear; opacity: 0; }
+.loader.is-valid .loader__item { opacity: 0; }
 .loader.is-valid:before { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
 .loader.is-valid:after { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); border-color: #8bc34a; }
-.loader__item { position: absolute; top: 50%; left: 50%; -webkit-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 0 1px #8bc34a; box-shadow: 0 0 0 1px #8bc34a; background: transparent; -webkit-animation: loader 2.1s infinite linear; animation: loader 2.1s infinite linear; }
+.loader__item { position: absolute; top: 50%; left: 50%; -webkit-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 0 1px #8bc34a; box-shadow: 0 0 0 1px #8bc34a; background: transparent; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; -webkit-animation: loader 2.1s infinite linear; animation: loader 2.1s infinite linear; }
 .loader__item:nth-child(1) { -webkit-animation-delay: 0s; animation-delay: 0s; }
 .loader__item:nth-child(2) { -webkit-animation-delay: 0.7s; animation-delay: 0.7s; }
 .loader__item:nth-child(3) { -webkit-animation-delay: 1.4s; animation-delay: 1.4s; }

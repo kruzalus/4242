@@ -36,7 +36,6 @@
 		border: 1px dashed transparent
 	&.is-valid
 		.loader__item
-			animation: loaderOpacity .5s linear
 			opacity: 0
 		&:before
 			transform: scale(1)
@@ -50,6 +49,7 @@
 		border-radius: 50%
 		box-shadow: 0 0 0 1px $d_green
 		background: transparent 
+		transition: opacity .2s
 		animation: loader 2.1s infinite linear
 
 		$animation-delay: 0s
