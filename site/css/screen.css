@@ -24,6 +24,8 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 *, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
 
 .icon-logo { background: url("../img/svg/logo.svg") no-repeat 0 0; background-size: 40px 34px; width: 40px; height: 34px; display: inline-block; }
+.icon_svg { width: 25px; }
+.icon_svg img { width: 100%; display: block; }
 
 @font-face { font-family: "icomoon"; src: url("fonts/icomoon.eot?veqfhj"); src: url("fonts/icomoon.eot?veqfhj#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?veqfhj") format("truetype"), url("fonts/icomoon.woff?veqfhj") format("woff"), url("fonts/icomoon.svg?veqfhj#icomoon") format("svg"); font-weight: normal; font-style: normal; }
 [class^="icon-"], [class*=" icon-"] { font-family: "icomoon" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -1064,7 +1066,8 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .payment__new:before { position: absolute; content: ""; top: 50%; left: 0; margin-top: -8px; background: url("../img/svg/plus.svg") no-repeat 0 0; background-size: 15px 15px; width: 15px; height: 15px; display: inline-block; }
 .payment__new span { -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 .payment__text { color: #90a4ae; line-height: 1.4; vertical-align: middle; display: inline-block; }
-.payment__text .price { color: #263238; }
+.payment__text .price, .payment__text .score { color: #263238; }
+.payment__text .icon { margin-right: 3px; vertical-align: middle; }
 .payment__inf { margin-top: 20px; line-height: 40px; }
 .payment__inf span { line-height: 1.45; display: inline-block; }
 .payment__sms { position: relative; width: 380px; }
