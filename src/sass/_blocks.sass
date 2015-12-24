@@ -270,8 +270,6 @@ div.btn
 
 .btn-text
 	position: relative
-	left: 50%
-	transform: translate(-50%,0)
 	color: $c_btn_text
 	line-height: 1.4
 	+rl
@@ -280,6 +278,9 @@ div.btn
 	&:hover
 		span
 			border-color: $c_btn_text
+	&_center
+		left: 50%
+		transform: translate(-50%,0)
 	&_blue
 		left: auto
 		transform: translate(0,0)

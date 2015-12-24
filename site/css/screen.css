@@ -691,8 +691,9 @@ a.item:hover { background: #f1eccf; }
 
 div.btn_white:hover, div.btn_white:active { color: #263238; background: #fff; }
 
-.btn-text { position: relative; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); color: #607d8b; line-height: 1.4; font-family: "Roboto Light", Arial, sans-serif; background: transparent; display: inline-block; }
+.btn-text { position: relative; color: #607d8b; line-height: 1.4; font-family: "Roboto Light", Arial, sans-serif; background: transparent; display: inline-block; }
 .btn-text:hover span { border-color: #607d8b; }
+.btn-text_center { left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); }
 .btn-text_blue { left: auto; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); color: #2196f3; font-size: 14px; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 .btn-text_blue:hover { border-color: #2196f3; }
 .btn-text_blue:hover span { border-color: #2196f3; }
