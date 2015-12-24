@@ -3703,6 +3703,168 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 }));
 /*! jQuery DrawSVG v1.0.1 (2015-11-05) - git.io/vGFa5 - Copyright (c) 2015 Leonardo Santos - MIT License */
 !function(t){"use strict";var a="drawsvg",e={duration:1e3,stagger:200,easing:"swing",reverse:!1,callback:t.noop},n=function(){var n=function(n,s){var i=this,r=t.extend(e,s);i.$elm=t(n),i.$elm.is("svg")&&(i.options=r,i.$paths=i.$elm.find("path"),i.totalDuration=r.duration+r.stagger*i.$paths.length,i.duration=r.duration/i.totalDuration,i.$paths.each(function(t,a){var e=a.getTotalLength();a.pathLen=e,a.delay=r.stagger*t/i.totalDuration,a.style.strokeDasharray=[e,e].join(" "),a.style.strokeDashoffset=e}),i.$elm.attr("class",function(t,e){return[e,a+"-initialized"].join(" ")}))};return n.prototype.getVal=function(a,e){return 1-t.easing[e](a,a,0,1,1)},n.prototype.progress=function(t){var a=this,e=a.options,n=(a.$paths.length,a.duration);e.stagger;a.$paths.each(function(s,i){var r=i.style;if(1===t)r.strokeDashoffset=0;else if(0===t)r.strokeDashoffset=i.pathLen+"px";else if(t>=i.delay&&t<=n+i.delay){var o=(t-i.delay)/n;r.strokeDashoffset=a.getVal(o,e.easing)*i.pathLen*(e.reverse?-1:1)+"px"}})},n.prototype.animate=function(){var e=this;e.$elm.attr("class",function(t,e){return[e,a+"-animating"].join(" ")}),t({len:0}).animate({len:1},{easing:"linear",duration:e.totalDuration,step:function(t,a){e.progress.call(e,t/a.end)},complete:function(){e.options.callback.call(this),e.$elm.attr("class",function(t,e){return e.replace(a+"-animating","")})}})},n}();t.fn[a]=function(e,s){return this.each(function(){var i=t.data(this,a);i&&""+e===e&&i[e]?i[e](s):t.data(this,a,new n(this,e))})}}(jQuery);
+/*!
+ * jQuery Countdown plugin v1.0
+ * http://www.littlewebthings.com/projects/countdown/
+ *
+ * Copyright 2010, Vassilis Dourdounis
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+(function($){
+
+	$.fn.countDown = function (options) {
+
+		config = {};
+
+		$.extend(config, options);
+
+		diffSecs = this.setCountDown(config);
+	
+		if (config.onComplete)
+		{
+			$.data($(this)[0], 'callback', config.onComplete);
+		}
+		if (config.omitWeeks)
+		{
+			$.data($(this)[0], 'omitWeeks', config.omitWeeks);
+		}
+
+		$('#' + $(this).attr('id') + ' .digit').html('<div class="top"></div><div class="bottom"></div>');
+		$(this).doCountDown($(this).attr('id'), diffSecs, 500);
+
+		return this;
+
+	};
+
+	$.fn.stopCountDown = function () {
+		clearTimeout($.data(this[0], 'timer'));
+	};
+
+	$.fn.startCountDown = function () {
+		this.doCountDown($(this).attr('id'),$.data(this[0], 'diffSecs'), 500);
+	};
+
+	$.fn.setCountDown = function (options) {
+		var targetTime = new Date();
+
+		if (options.targetDate)
+		{
+			targetTime = new Date(options.targetDate.month + '/' + options.targetDate.day + '/' + options.targetDate.year + ' ' + options.targetDate.hour + ':' + options.targetDate.min + ':' + options.targetDate.sec + (options.targetDate.utc ? ' UTC' : ''));
+		}
+		else if (options.targetOffset)
+		{
+			targetTime.setFullYear(options.targetOffset.year + targetTime.getFullYear());
+			targetTime.setMonth(options.targetOffset.month + targetTime.getMonth());
+			targetTime.setDate(options.targetOffset.day + targetTime.getDate());
+			targetTime.setHours(options.targetOffset.hour + targetTime.getHours());
+			targetTime.setMinutes(options.targetOffset.min + targetTime.getMinutes());
+			targetTime.setSeconds(options.targetOffset.sec + targetTime.getSeconds());
+		}
+
+		var nowTime = new Date();
+
+		diffSecs = Math.floor((targetTime.valueOf()-nowTime.valueOf())/1000);
+
+		$.data(this[0], 'diffSecs', diffSecs);
+
+		return diffSecs;
+	};
+
+	$.fn.doCountDown = function (id, diffSecs, duration) {
+		$this = $('#' + id);
+		if (diffSecs <= 0)
+		{
+			diffSecs = 0;
+			if ($.data($this[0], 'timer'))
+			{
+				clearTimeout($.data($this[0], 'timer'));
+			}
+		}
+
+		secs = diffSecs % 60;
+		mins = Math.floor(diffSecs/60)%60;
+		hours = Math.floor(diffSecs/60/60)%24;
+		if ($.data($this[0], 'omitWeeks') == true)
+		{
+			days = Math.floor(diffSecs/60/60/24);
+			weeks = Math.floor(diffSecs/60/60/24/7);
+		}
+		else 
+		{
+			days = Math.floor(diffSecs/60/60/24)%7;
+			weeks = Math.floor(diffSecs/60/60/24/7);
+		}
+
+		$this.dashChangeTo(id, 'seconds_dash', secs, duration ? duration : 800);
+		$this.dashChangeTo(id, 'minutes_dash', mins, duration ? duration : 1200);
+		$this.dashChangeTo(id, 'hours_dash', hours, duration ? duration : 1200);
+		$this.dashChangeTo(id, 'days_dash', days, duration ? duration : 1200);
+		$this.dashChangeTo(id, 'weeks_dash', weeks, duration ? duration : 1200);
+
+		$.data($this[0], 'diffSecs', diffSecs);
+		if (diffSecs > 0)
+		{
+			e = $this;
+			t = setTimeout(function() { e.doCountDown(id, diffSecs-1) } , 1000);
+			$.data(e[0], 'timer', t);
+		} 
+		else if (cb = $.data($this[0], 'callback')) 
+		{
+			$.data($this[0], 'callback')();
+		}
+
+	};
+
+	$.fn.dashChangeTo = function(id, dash, n, duration) {
+		  $this = $('#' + id);
+		 
+		  for (var i=($this.find('.' + dash + ' .digit').length-1); i>=0; i--)
+		  {
+				var d = n%10;
+				n = (n - d) / 10;
+				$this.digitChangeTo('#' + $this.attr('id') + ' .' + dash + ' .digit:eq('+i+')', d, duration);
+		  }
+	};
+
+	$.fn.digitChangeTo = function (digit, n, duration) {
+		if (!duration)
+		{
+			duration = 800;
+		}
+		if ($(digit + ' div.top').html() != n + '')
+		{
+
+			$(digit + ' div.top').css({'display': 'none'});
+			$(digit + ' div.top').html((n ? n : '0')).slideDown(duration);
+
+			$(digit + ' div.bottom').animate({'height': ''}, duration, function() {
+				$(digit + ' div.bottom').html($(digit + ' div.top').html());
+				$(digit + ' div.bottom').css({'display': 'block', 'height': ''});
+				$(digit + ' div.top').hide().slideUp(10);
+
+			
+			});
+		}
+	};
+
+})(jQuery);
 $(document).ready(function() {
 	
 	// preloader
@@ -3959,5 +4121,24 @@ $(document).ready(function() {
 			block.show();
 		}
 	} accord();
+
+	// timer
+	$('.js-timer').each(function(){
+		var timer 	= $(this),
+			sec 	= $(this).data('seconds'),
+			min 	= $(this).data('munute'),
+			timeId 	= timer.attr('id');
+		$('#' + timeId).countDown({
+			targetOffset: {
+				'day': 0,
+				'month': 0,
+				'year': 0,
+				'hour': 0,
+				'min': min,
+				'sec': sec
+			},
+			animation: false
+		});
+	});
 
 });

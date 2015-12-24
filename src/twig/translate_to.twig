@@ -46,26 +46,26 @@
 						<div class="payment">
 							<form action="">
 								<div class="payment__row">
-									<div class="select is-from js-select">
+									<div class="select is-stat is-from js-select">
 										<span class="select__arr"></span>
 										<div class="select__text">с</div>
 										<div class="select__icon">
 											<img src="img/svg/purse.svg" alt="img">
 										</div>
-										<input type="text" value="123123123 — 10 000 ₽" class="input js-input" readonly="">
+										<input type="text" value="123123123 — 10 000 ₽" class="input js-input" readonly>
 										<select>
 											<option value="item1">item1</option>
 											<option value="item2">item2</option>
 											<option value="item3">item3</option>
 										</select>			
 									</div>
-									<div class="select is-to js-select">
+									<div class="select is-stat is-to js-select">
 										<span class="select__arr"></span>
 										<div class="select__text">на</div>
 										<div class="select__icon">
 											<img src="img/svg/purse.svg" alt="img">
 										</div>
-										<input type="text" class="input js-input" readonly="" placeholder="выберите кошелек">
+										<input type="text" value="123123123 — 10 000 ₽" class="input js-input" readonly placeholder="выберите кошелек">
 										<select>
 											<option value="item1">item1</option>
 											<option value="item2">item2</option>
@@ -105,7 +105,9 @@
 									<div class="payment__right">
 										<div class="payment__sms">
 											<input type="text" class="input" name="sms" id="sms" placeholder="Не менее 6 символов">
-											<button class="btn-text btn-text_blue" type="button">Выслать еще раз</button>
+											<div class="payment__block">
+												<button class="btn-text btn-text_blue" type="button">Выслать еще раз</button>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -114,7 +116,7 @@
 										<a href="#" class="prev">Назад</a>
 									</div>
 									<div class="payment__right">
-										<button class="btn btn_big" type="sybmit">Продолжить</button>
+										<button class="btn btn_big" type="sybmit">Подтвердить</button>
 										<button class="btn-text btn-text_blue" type="button">Отмена</button>
 									</div>
 								</div>

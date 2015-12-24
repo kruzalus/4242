@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Tamplate</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  <!-- theme color for android 5.0 -->
-  <meta name="theme-color" content="#fff"> 
-  <!-- <meta name="viewport" content="width=1200"> -->
-  <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-  <link rel="stylesheet" media="all" href="css/screen.css" >
-  <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
-  <script src="js/app.js"></script>
-</head>
-<body>
+{% extends "./includes/_layout.twig" %}
 
-		<!-- out --> 
+{% block content %}
+	<!-- out --> 
 	<div class="out">
 
-		<!-- header -->
-<header class="header">
-	<div class="header__in">
-		<div class="logo">
-			<i class="icon icon-logo"></i> 
-		</div>
-		<!-- menu -->
-		<ul class="menu js-flex-menu">
-							 
-					<li><a href="#" class="is-active">Кошельки и карты</a></li>
-																<li><a href="#">Оплатить</a></li>
-																<li><a href="#">Перевести</a></li>
-																<li><a href="#">Выйти</a></li>
-																<li><a href="#"><i class='icon icon-uni50'></i>verylongusername@longdomainname.org</a></li>
-									</ul>
-	</div>
-</header>		<!-- search -->
+		{% include "./includes/_header.twig" %}
+		<!-- search -->
 		<div class="search is-white">
 			<div class="search__in">
 				<a href="#" class="location">
@@ -142,6 +113,31 @@
 								</div>
 								<div class="payment__row">
 									<div class="payment__label">
+									<label for="sms2">SMS-код:</label>
+									</div>
+									<div class="payment__right">
+										<div class="payment__sms">
+											<input type="text" class="input" name="sms2" id="sms2" placeholder="Не менее 6 символов">
+											<div class="payment__block">
+												<div id="timer" class="timer js-timer" data-seconds="57" data-munute="10">
+													<i class="icon icon-uni69"></i>
+													<div class="dash minutes_dash">
+														<div class="digit"></div>
+														<div class="digit"></div>
+													</div>
+													<span>:</span>
+													<div class="dash seconds_dash">
+														<div class="digit"></div>
+														<div class="digit"></div>
+													</div>
+													<span>сек...</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
 										<a href="#" class="prev">Назад</a>
 									</div>
 									<div class="payment__right">
@@ -162,42 +158,21 @@
 						</div>
 						<h4 class="title-small">Частые вопросы:</h4>
 						<ul class="list">
-														<li><a href="#">Что делать, если я ошибся числом при вводе номера лицевого счёта?</a></li>
-														<li><a href="#">Когда заработает интернет?</a></li>
-													</ul>
+							{% for a in list%}
+							<li><a href="#">{{a.item}}</a></li>
+							{% endfor %}
+						</ul>
 						<h4 class="title-small">Оплатите также:</h4>
-													<p><a href="#">Мобильный телефон</a></p>
-													<p><a href="#">Мосэнергосбыт</a></p>
-													<p><a href="#">Мосводоканал</a></p>
-													<p><a href="#">МГТС</a></p>
-											</div>
+						{% for a in also %}
+							<p><a href="#">{{a.item}}</a></p>
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 		</div>
 
 	</div>
  
-	<!-- footer -->
-<footer class="footer">
-	<div class="footer__in">
-		<!-- cont -->
-		<div class="cont">
-			<div class="cont__text">Поддержка</div>
-			<div class="cont__item is-tel">
-				<i class="icon icon-uniC0"></i>
-				<a href="tel:88001005511">8 800 100 55 11</a>
-			</div>
-			<div class="cont__item">
-				<i class="icon icon-uniE0"></i>
-				<a href="mailto:support@robowallet.ru">support@robowallet.ru</a>
-			</div>
-		</div>
-		<!-- copy -->
-		<div class="copy">Robowallet &copy; 2015</div>
-		<!-- lang -->
-		<a href="#" class="lang">in English</a>
-	</div>
-</footer>
+	{% include "./includes/_footer.twig" %}
 
-</body>
-</html>
+{% endblock %}

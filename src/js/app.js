@@ -7,5 +7,6 @@
 //= lib/moment.min.js
 //= lib/jquery.daterangepicker.js
 //= lib/jquery.drawsvg.min.js
+//= lib/jquery.lwtCountdown-1.0.js
 //= loader.js
 //= common.js

@@ -732,6 +732,9 @@ div.btn_white:hover, div.btn_white:active { color: #263238; background: #fff; }
 .select.is-to .select__text { left: 20px; }
 .select.is-to .input { padding-left: 86px; }
 .select.is-mod .input { padding-left: 8px; }
+.select.is-stat:before { display: none; }
+.select.is-stat select { z-index: -1; }
+.select.is-stat .input:focus { border-color: #cfd8dc; }
 .select__arr { position: absolute; top: 0; }
 .select__arr:before, .select__arr:after { position: absolute; content: ""; left: 0; top: 0; }
 .select__arr:before { width: 0px; height: 0px; border-style: solid; border-width: 20px 0 20px 11px; border-color: transparent transparent transparent #cfd8dc; }
@@ -1065,7 +1068,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .payment__inf { margin-top: 20px; line-height: 40px; }
 .payment__inf span { line-height: 1.45; display: inline-block; }
 .payment__sms { position: relative; width: 380px; }
-.payment__sms .btn-text { position: absolute; top: 10px; right: 10px; z-index: 1; }
+.payment__block { position: absolute; top: 10px; right: 10px; line-height: 1; z-index: 1; }
 .payment .select { width: 100%; max-width: 280px; vertical-align: top; display: inline-block; }
 .payment .select.is-from { float: left; width: -webkit-calc(50% - 10px); width: calc(50% - 10px); max-width: 100%; }
 .payment .select.is-to { float: right; width: 50%; max-width: 100%; }
@@ -1173,6 +1176,14 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .opper__in { line-height: 1.45; vertical-align: middle; display: inline-block; }
 
 .render { padding-bottom: 15px; }
+
+.timer { font-size: 14px; color: #607d8b; line-height: 20px; vertical-align: top; display: inline-block; }
+.timer span { vertical-align: top; display: inline-block; }
+.timer .icon { margin-right: 10px; font-size: 20px; vertical-align: top; display: inline-block; }
+
+.dash { vertical-align: top; display: inline-block; }
+
+.digit { vertical-align: top; display: inline-block; }
 
 .preloader { padding: 65px 20px 50px; text-align: center; }
 .preloader.is-valid .loader__item { opacity: 0; }

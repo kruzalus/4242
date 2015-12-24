@@ -204,4 +204,23 @@ $(document).ready(function() {
 		}
 	} accord();
 
+	// timer
+	$('.js-timer').each(function(){
+		var timer 	= $(this),
+			sec 	= $(this).data('seconds'),
+			min 	= $(this).data('munute'),
+			timeId 	= timer.attr('id');
+		$('#' + timeId).countDown({
+			targetOffset: {
+				'day': 0,
+				'month': 0,
+				'year': 0,
+				'hour': 0,
+				'min': min,
+				'sec': sec
+			},
+			animation: false
+		});
+	});
+
 });
