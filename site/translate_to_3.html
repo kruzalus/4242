@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tamplate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <!-- theme color for android 5.0 -->
+  <meta name="theme-color" content="#fff"> 
+  <!-- <meta name="viewport" content="width=1200"> -->
+  <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+  <link rel="stylesheet" media="all" href="css/screen.css" >
+  <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+		<!-- out --> 
+	<div class="out">
+
+		<!-- header -->
+<header class="header">
+	<div class="header__in">
+		<div class="logo">
+			<i class="icon icon-logo"></i> 
+		</div>
+		<!-- menu -->
+		<ul class="menu js-flex-menu">
+							 
+					<li><a href="#" class="is-active">Кошельки и карты</a></li>
+																<li><a href="#">Оплатить</a></li>
+																<li><a href="#">Перевести</a></li>
+																<li><a href="#">Выйти</a></li>
+																<li><a href="#"><i class='icon icon-uni50'></i>verylongusername@longdomainname.org</a></li>
+									</ul>
+	</div>
+</header>		<!-- search -->
+		<div class="search is-white">
+			<div class="search__in">
+				<a href="#" class="location">
+					<span class="icon icon-uni24"></span>
+					<span class="location__text">в Москве</span>
+				</a>
+				<div class="search__form">
+					<form action="">
+						<input type="text" placeholder="Поиск по услугам и компаниям">
+						<button class="search__btn" type="button">
+							<i class="icon icon-uni4B"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- breadcrumbs -->
+				<ul class="breadcrumbs">
+					<li><a href="#">Переводы</a></li>
+				</ul>
+				<!-- wrap -->
+				<div class="wrap">
+					<!-- leftbar -->
+					<div class="leftbar">
+						<!-- title -->
+						<div class="title">
+							<h3>Перевод между своими кошельками</h3>
+							<ul class="title__list">
+								<li class="title__item">15 — 15 000 ₽ можно внести</li>
+								<li class="title__item">Моментально — срок зачисления</li>
+								<li class="title__item">0,5 % комиссия, но не менее 50 ₽</li>
+							</ul>
+						</div>
+						<!-- payment -->
+						<div class="payment">
+							<form action="">
+								<div class="payment__row">
+									<div class="select is-from js-select">
+										<span class="select__arr"></span>
+										<div class="select__text">с</div>
+										<div class="select__icon">
+											<img src="img/svg/purse.svg" alt="img">
+										</div>
+										<input type="text" value="123123123 — 10 000 ₽" class="input js-input" readonly>
+										<select>
+											<option value="item1">item1</option>
+											<option value="item2">item2</option>
+											<option value="item3">item3</option>
+										</select>			
+									</div>
+									<div class="select is-stat is-to js-select">
+										<span class="select__arr"></span>
+										<div class="select__text">на</div>
+										<div class="select__icon">
+											<img src="img/svg/purse.svg" alt="img">
+										</div>
+										<input type="text" class="input js-input" placeholder="укажите номер кошелька">
+										<select>
+											<option value="item1">item1</option>
+											<option value="item2">item2</option>
+											<option value="item3">item3</option>
+										</select>			
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<label for="price">Сумма:</label>
+									</div>
+									<div class="payment__right">
+										<input type="text" class="input" value="10" id="price" placeholder="Минимум — 15, максимум — 15 000">
+										<div class="payment__icon"><i class="icon icon-ruble"></i></div>
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<span>Сумма перевода:</span>
+									</div>
+									<div class="payment__right">
+										<div class="payment__text"><span class="price">10,00 ₽</span></div>
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<span>Будет списано:</span>
+									</div>
+									<div class="payment__right">
+										<div class="payment__text"><span class="price">60,00 ₽</span>, с учётом комиссии 0,5% (но не менее 50 ₽)</div>
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<a href="#" class="prev">Назад</a>
+									</div>
+									<div class="payment__right">
+										<button class="btn btn_big" type="sybmit">Продолжить</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- rightbar -->
+					<div class="rightbar">
+						<!-- fasten -->
+						<div class="fasten">
+							<div class="fasten__img">
+								<img src="img/svg/between.svg" alt="img">
+							</div>
+						</div>
+						<h4 class="title-small">Частые вопросы:</h4>
+						<ul class="list">
+														<li><a href="#">Что делать, если я ошибся числом при вводе номера лицевого счёта?</a></li>
+														<li><a href="#">Когда заработает интернет?</a></li>
+													</ul>
+						<h4 class="title-small">Оплатите также:</h4>
+													<p><a href="#">Мобильный телефон</a></p>
+													<p><a href="#">Мосэнергосбыт</a></p>
+													<p><a href="#">Мосводоканал</a></p>
+													<p><a href="#">МГТС</a></p>
+											</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	<!-- footer -->
+<footer class="footer">
+	<div class="footer__in">
+		<!-- cont -->
+		<div class="cont">
+			<div class="cont__text">Поддержка</div>
+			<div class="cont__item is-tel">
+				<i class="icon icon-uniC0"></i>
+				<a href="tel:88001005511">8 800 100 55 11</a>
+			</div>
+			<div class="cont__item">
+				<i class="icon icon-uniE0"></i>
+				<a href="mailto:support@robowallet.ru">support@robowallet.ru</a>
+			</div>
+		</div>
+		<!-- copy -->
+		<div class="copy">Robowallet &copy; 2015</div>
+		<!-- lang -->
+		<a href="#" class="lang">in English</a>
+	</div>
+</footer>
+
+</body>
+</html>
