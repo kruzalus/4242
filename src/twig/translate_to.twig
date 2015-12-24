@@ -105,8 +105,21 @@
 									<div class="payment__right">
 										<div class="payment__sms">
 											<input type="text" class="input" name="sms" id="sms" placeholder="Не менее 6 символов">
-											<div class="payment__block">
-												<button class="btn-text btn-text_blue" type="button">Выслать еще раз</button>
+											<div class="payment__block js-parent-timer">
+												<button class="btn-text btn-text_blue js-open-timer" type="button">Выслать еще раз</button>
+												<div id="timer" class="timer is-hide js-timer" data-seconds="57" data-munute="10">
+													<i class="icon icon-uni69"></i>
+													<div class="dash minutes_dash">
+														<div class="digit"></div>
+														<div class="digit"></div>
+													</div>
+													<span>:</span>
+													<div class="dash seconds_dash">
+														<div class="digit"></div>
+														<div class="digit"></div>
+													</div>
+													<span>сек...</span>
+												</div>
 											</div>
 										</div>
 									</div>

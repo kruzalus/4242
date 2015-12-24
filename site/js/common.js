@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	
+	$('.is-hide').hide();
+
 	// slider
 	$('.js-slider').each(function(){
 		var slider 	= $(this),
@@ -205,22 +207,37 @@ $(document).ready(function() {
 	} accord();
 
 	// timer
-	$('.js-timer').each(function(){
-		var timer 	= $(this),
-			sec 	= $(this).data('seconds'),
-			min 	= $(this).data('munute'),
-			timeId 	= timer.attr('id');
-		$('#' + timeId).countDown({
-			targetOffset: {
-				'day': 0,
-				'month': 0,
-				'year': 0,
-				'hour': 0,
-				'min': min,
-				'sec': sec
-			},
-			animation: false
+	function timerCount(){
+		$('.js-timer').each(function(){
+			var timer 	= $(this),
+				sec 	= $(this).data('seconds'),
+				min 	= $(this).data('munute'),
+				timeId 	= timer.attr('id');
+			$('#' + timeId).countDown({
+				targetOffset: {
+					'day'	: 0,
+					'month'	: 0,
+					'year'	: 0,
+					'hour'	: 0,
+					'min' 	: min,
+					'sec' 	: sec
+				},
+				animation 	: false
+			});
+			if (timer.hasClass('is-hide')){
+				$('#' + timeId).countDown('destroy');
+			}
 		});
+	} timerCount();
+	
+	$('.js-open-timer').on('click', function(){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-parent-timer'),
+			timer 	= parent.find('.js-timer'),
+			timeId 	= timer.attr('id');
+		this_.hide();
+		timer.fadeIn(500).removeClass('is-hide');
+		timerCount();
 	});
-
+	
 });
