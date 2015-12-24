@@ -1,0 +1,151 @@
+{% extends "./includes/_layout.twig" %}
+
+{% block content %}
+	<!-- out --> 
+	<div class="out">
+
+		{% include "./includes/_header.twig" %}
+		<!-- search -->
+		<div class="search is-white">
+			<div class="search__in">
+				<a href="#" class="location">
+					<span class="icon icon-uni24"></span>
+					<span class="location__text">в Москве</span>
+				</a>
+				<div class="search__form">
+					<form action="">
+						<input type="text" placeholder="Поиск по услугам и компаниям">
+						<button class="search__btn" type="button">
+							<i class="icon icon-uni4B"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- l -->
+		<div class="l">
+			<div class="l__in">
+				<!-- breadcrumbs -->
+				<ul class="breadcrumbs">
+					<li><a href="#">Переводы</a></li>
+				</ul>
+				<!-- wrap -->
+				<div class="wrap">
+					<!-- leftbar -->
+					<div class="leftbar">
+						<!-- title -->
+						<div class="title">
+							<h3>Перевод между своими кошельками</h3>
+							<ul class="title__list">
+								<li class="title__item">15 — 15 000 ₽ можно внести</li>
+								<li class="title__item">Моментально — срок зачисления</li>
+								<li class="title__item">0,5 % комиссия, но не менее 50 ₽</li>
+							</ul>
+						</div>
+						<!-- payment -->
+						<div class="payment">
+							<form action="">
+								<div class="payment__row">
+									<div class="select is-from js-select">
+										<span class="select__arr"></span>
+										<div class="select__text">с</div>
+										<div class="select__icon">
+											<img src="img/svg/purse.svg" alt="img">
+										</div>
+										<input type="text" value="123123123 — 10 000 ₽" class="input js-input" readonly="">
+										<select>
+											<option value="item1">item1</option>
+											<option value="item2">item2</option>
+											<option value="item3">item3</option>
+										</select>			
+									</div>
+									<div class="select is-to js-select">
+										<span class="select__arr"></span>
+										<div class="select__text">на</div>
+										<div class="select__icon">
+											<img src="img/svg/purse.svg" alt="img">
+										</div>
+										<input type="text" class="input js-input" readonly="" placeholder="выберите кошелек">
+										<select>
+											<option value="item1">item1</option>
+											<option value="item2">item2</option>
+											<option value="item3">item3</option>
+										</select>			
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<span>Сумма перевода:</span>
+									</div>
+									<div class="payment__right">
+										<div class="payment__text"><span class="price">10,00 ₽</span></div>
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<span>Будет списано:</span>
+									</div>
+									<div class="payment__right">
+										<div class="payment__text"><span class="price">60,00 ₽</span>, с учётом комиссии 0,5% (но не менее 50 ₽)</div>
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<span>Будет зачислено:</span>
+									</div>
+									<div class="payment__right">
+										<div class="payment__text"><span class="price">10,00 ₽</span></div>
+									</div>
+								</div>
+								<div class="payment__inf"><span>На ваш номер +7909***3856 отправлен SMS-код подтверждения операции, введите его в поле ниже.</span></div>
+								<div class="payment__row">
+									<div class="payment__label">
+									<label for="sms">SMS-код:</label>
+									</div>
+									<div class="payment__right">
+										<div class="payment__sms">
+											<input type="text" class="input" name="sms" id="sms" placeholder="Не менее 6 символов">
+											<button class="btn-text btn-text_blue" type="button">Выслать еще раз</button>
+										</div>
+									</div>
+								</div>
+								<div class="payment__row">
+									<div class="payment__label">
+										<a href="#" class="prev">Назад</a>
+									</div>
+									<div class="payment__right">
+										<button class="btn btn_big" type="sybmit">Продолжить</button>
+										<button class="btn-text btn-text_blue" type="button">Отмена</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- rightbar -->
+					<div class="rightbar">
+						<!-- fasten -->
+						<div class="fasten">
+							<div class="fasten__img">
+								<img src="img/svg/between.svg" alt="img">
+							</div>
+						</div>
+						<h4 class="title-small">Частые вопросы:</h4>
+						<ul class="list">
+							{% for a in list%}
+							<li><a href="#">{{a.item}}</a></li>
+							{% endfor %}
+						</ul>
+						<h4 class="title-small">Оплатите также:</h4>
+						{% for a in also %}
+							<p><a href="#">{{a.item}}</a></p>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+ 
+	{% include "./includes/_footer.twig" %}
+
+{% endblock %}

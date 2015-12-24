@@ -1522,6 +1522,20 @@ a.translations__wrap
 		display: inline-block
 		.price
 			color: $black
+	&__inf
+		margin-top: 20px
+		line-height: 40px
+		span
+			line-height: 1.45
+			display: inline-block
+	&__sms
+		position: relative
+		width: 380px
+		.btn-text
+			position: absolute
+			top: 10px
+			right: 10px
+			z-index: 1
 	.select
 		width: 100%
 		max-width: 280px
@@ -1538,6 +1552,8 @@ a.translations__wrap
 	.btn
 		width: 100%
 		max-width: 280px
+		& + .btn-text
+			margin-left: 30px
 
 
 // fasten

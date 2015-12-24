@@ -1062,10 +1062,15 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .payment__new span { -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 .payment__text { color: #90a4ae; line-height: 1.4; vertical-align: middle; display: inline-block; }
 .payment__text .price { color: #263238; }
+.payment__inf { margin-top: 20px; line-height: 40px; }
+.payment__inf span { line-height: 1.45; display: inline-block; }
+.payment__sms { position: relative; width: 380px; }
+.payment__sms .btn-text { position: absolute; top: 10px; right: 10px; z-index: 1; }
 .payment .select { width: 100%; max-width: 280px; vertical-align: top; display: inline-block; }
 .payment .select.is-from { float: left; width: -webkit-calc(50% - 10px); width: calc(50% - 10px); max-width: 100%; }
 .payment .select.is-to { float: right; width: 50%; max-width: 100%; }
 .payment .btn { width: 100%; max-width: 280px; }
+.payment .btn + .btn-text { margin-left: 30px; }
 
 .fasten__img { margin-right: 9px; width: 60px; vertical-align: top; display: inline-block; }
 .fasten__img img { width: 100%; display: block; }
