@@ -1938,6 +1938,15 @@ a.translations__wrap
 			float: left
 			margin: 0 0 3.4% 3.4%
 			width: 31%
+			+r(560)
+				width: 48%
+				&:nth-child(3n+4)
+					margin-left: 3.4%
+				&:nth-last-of-type(3)
+					margin-bottom: 3.4%
+				&:nth-child(2n+3)
+					margin-left: 0
+
 			&:first-child
 				margin-left: 0
 			&:nth-child(3n+4)
