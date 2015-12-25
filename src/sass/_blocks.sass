@@ -282,8 +282,6 @@ div.btn
 		left: 50%
 		transform: translate(-50%,0)
 	&_blue
-		left: auto
-		transform: translate(0,0)
 		color: $c_blue
 		font-size: 14px
 		transition: border-color .2s
@@ -1549,6 +1547,22 @@ a.translations__wrap
 		right: 10px
 		line-height: 1
 		z-index: 1
+	&__card
+		max-width: 410px
+		background: $bg_item
+	&__wrap
+		padding: 12px 18px 18px 21px
+		line-height: 1.5
+		.ticket
+			margin-bottom: 0
+			background: rgba(#eceff1, .5)
+			.ticket__row
+				margin-top: 10px
+				&:first-child
+					margin-top: 0
+	&__field
+		.select + .btn-text
+			margin-left: 24px
 	.select
 		width: 100%
 		max-width: 280px
@@ -1856,6 +1870,7 @@ a.translations__wrap
 	.info
 		float: right
 		margin: 9px 0 0 13px
+		line-height: 1
 
 // info
 .info
