@@ -3977,7 +3977,7 @@ $(document).ready(function() {
 		mask: '9999 999999'
 	});
 
-	$('input[name="card-numb"]').inputmask({
+	$('.js-card-numb').inputmask({
 		mask: '9999 9999 9999 9999'
 	});
 

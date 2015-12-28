@@ -434,6 +434,45 @@ div.btn
 	.input
 		padding-left: 45px
 
+// drop
+.dip
+	&__text
+		position: relative
+		padding: 0 8px 
+		height: 40px
+		line-height: 38px
+		width: 100%
+		font-size: 14px
+		+rl
+		border: 1px solid $bord_form
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+		transition: border-color .2s
+		background: $white
+		display: block
+		&.is-up
+			text-transform: uppercase
+		&.is-valid
+			border-color: $green
+		&.is-error
+			border-color: $d_red
+			& + .reg-err-text
+				display: block
+	&__icon,
+	&__val,
+	&__sum
+		line-height: 1.45
+		vertical-align: baseline
+		display: inline-block
+	&__icon
+		line-height: 1
+		vertical-align: middle
+		img
+			display: block
+	&__block
+		display: none
+
 // title
 .title
 	padding-bottom: 15px

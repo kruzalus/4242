@@ -751,6 +751,16 @@ div.btn_white:hover, div.btn_white:active { color: #263238; background: #fff; }
 @-moz-document url-prefix() { .select select { padding: 15px 0 !important; } }
 .select .input { padding-left: 45px; }
 
+.dip__text { position: relative; padding: 0 8px; height: 40px; line-height: 38px; width: 100%; font-size: 14px; font-family: "Roboto Light", Arial, sans-serif; border: 1px solid #cfd8dc; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; background: #fff; display: block; }
+.dip__text.is-up { text-transform: uppercase; }
+.dip__text.is-valid { border-color: #9ccc65; }
+.dip__text.is-error { border-color: #ff5722; }
+.dip__text.is-error + .reg-err-text { display: block; }
+.dip__icon, .dip__val, .dip__sum { line-height: 1.45; vertical-align: baseline; display: inline-block; }
+.dip__icon { line-height: 1; vertical-align: middle; }
+.dip__icon img { display: block; }
+.dip__block { display: none; }
+
 .title { padding-bottom: 15px; font-family: "Roboto Light", Arial, sans-serif; font-size: 18px; line-height: 1.4; font-weight: normal; border-bottom: 1px solid #eceff1; }
 .title h1, .title h2, .title h3, .title h4, .title h5, .title h6 { font-family: "Roboto Light", Arial, sans-serif; font-weight: normal; }
 .title_nobord { padding-bottom: 0; border-bottom: none; }
