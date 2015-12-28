@@ -63,7 +63,7 @@ $(document).ready(function() {
 		mask: '9999 9999 9999 9999'
 	});
 
-	$('input[name="passport-id"], .js-card-numb"]').inputmask({
+	$('input[name="passport-id"], .js-card-numb').inputmask({
 		showMaskOnHover : false,
 		showMaskOnFocus : false,
 		placeholder  	: ''
