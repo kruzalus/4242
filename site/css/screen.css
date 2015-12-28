@@ -620,7 +620,7 @@ a { text-decoration: none; }
 
 .items.is-invoice .item__block { padding: 10px 12px 12px 8px; }
 .items.is-invoice .sum__res { color: #90a4ae; }
-.items.is-invoice .select { width: 280px; }
+.items.is-invoice .select, .items.is-invoice .dip { width: 280px; }
 .items.is-invoice .btn + .btn-text { margin-left: 28px; }
 
 .item { padding: 8px 10px; border-top: 1px solid #edeff1; display: block; *zoom: 1; }
@@ -751,15 +751,28 @@ div.btn_white:hover, div.btn_white:active { color: #263238; background: #fff; }
 @-moz-document url-prefix() { .select select { padding: 15px 0 !important; } }
 .select .input { padding-left: 45px; }
 
-.dip__text { position: relative; padding: 0 8px; height: 40px; line-height: 38px; width: 100%; font-size: 14px; font-family: "Roboto Light", Arial, sans-serif; border: 1px solid #cfd8dc; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; background: #fff; display: block; }
-.dip__text.is-up { text-transform: uppercase; }
-.dip__text.is-valid { border-color: #9ccc65; }
-.dip__text.is-error { border-color: #ff5722; }
-.dip__text.is-error + .reg-err-text { display: block; }
-.dip__icon, .dip__val, .dip__sum { line-height: 1.45; vertical-align: baseline; display: inline-block; }
-.dip__icon { line-height: 1; vertical-align: middle; }
+.dip { position: relative; }
+.dip.is-active .dip__block { display: block; }
+.dip.is-up .dip__text { text-transform: uppercase; }
+.dip.is-valid .dip__text, .dip.is-valid .dip__block { border-color: #9ccc65; }
+.dip.is-error .dip__text, .dip.is-error .dip__block { border-color: #ff5722; }
+.dip.is-error + .reg-err-text { display: block; }
+.dip__text { position: relative; padding: 0 8px; height: 40px; line-height: 38px; width: 100%; font-size: 14px; font-family: "Roboto Light", Arial, sans-serif; border: 1px solid #cfd8dc; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; background: #fff; display: block; }
+.dip__text:before { position: absolute; content: ""; top: 50%; right: 10px; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 7px 5px 0 5px; border-color: #263238 transparent transparent transparent; }
+.dip__icon, .dip__val, .dip__sum, .dip__name, .dip__numb, .dip__icon { line-height: 1.45; vertical-align: baseline; display: inline-block; }
+.dip__icon { margin-right: 5px; line-height: 1; vertical-align: middle; }
 .dip__icon img { display: block; }
-.dip__block { display: none; }
+.dip__name { width: 105px; vertical-align: top; }
+.dip__title { margin-bottom: 5px; padding: 0 12px 0 10px; }
+.dip__block { position: absolute; top: 100%; left: 0; right: 0; padding: 4px 0 10px; z-index: 10; border: 1px solid #cfd8dc; border-top: none; background: #fff; display: none; }
+.dip__item { margin-top: 2px; padding: 5px 12px 5px 10px; cursor: pointer; -webkit-transition: background 0.2s; transition: background 0.2s; *zoom: 1; }
+.dip__item:after { content: " "; display: table; clear: both; }
+.dip__item:hover { background: #f1eccf; }
+.dip__left { float: left; }
+.dip__right { float: right; }
+.dip__right .dip__icon { margin: 0 0 0 5px; }
+.dip__group { margin-top: 10px; }
+.dip__group:first-child { margin-top: 0; }
 
 .title { padding-bottom: 15px; font-family: "Roboto Light", Arial, sans-serif; font-size: 18px; line-height: 1.4; font-weight: normal; border-bottom: 1px solid #eceff1; }
 .title h1, .title h2, .title h3, .title h4, .title h5, .title h6 { font-family: "Roboto Light", Arial, sans-serif; font-weight: normal; }
@@ -978,7 +991,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .checkbox input:checked + span:after { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
 .checkbox span { position: relative; padding-left: 30px; }
 .checkbox span:before { border: 2px solid #e7ebed; }
-.checkbox span:after { position: absolute; content: ""; top: 4px; left: 3px; color: #263339; font-family: "icomoon" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-transition: -webkit-transform 0.2s; transition: transform 0.2s; -webkit-transition: translate3d(0, 0, 0); transition: translate3d(0, 0, 0); -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); }
+.checkbox span:after { position: absolute; content: ""; top: 4px; left: 4px; color: #263339; font-family: "icomoon" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-transition: -webkit-transform 0.2s; transition: transform 0.2s; -webkit-transition: translate3d(0, 0, 0); transition: translate3d(0, 0, 0); -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); }
 
 .radio { position: relative; vertical-align: top; font-size: 14px; display: inline-block; }
 .radio.is-big .radio__in { padding-left: 92px; height: 80px; line-height: 70px; -webkit-border-radius: 80px; border-radius: 80px; }

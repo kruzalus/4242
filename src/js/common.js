@@ -238,5 +238,19 @@ $(document).ready(function() {
 		timer.fadeIn(500).removeClass('is-hide');
 		timerCount();
 	});
+
+	// 
+	$('.js-dip-text').on('click', function(){
+		var this_ = $(this),
+			parent = this_.parents('.js-dip'),
+			input = parent.find('.js-dip-input'),
+			block = parent.find('.js-dip-block'),
+			item = parent.find('.')
+	});
+	
+	
+	
+	
+	
 	
 });

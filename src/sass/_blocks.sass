@@ -80,7 +80,8 @@
 			padding: 10px 12px 12px 8px
 		.sum__res
 			color: $c_numb
-		.select
+		.select,
+		.dip
 			width: 280px
 		.btn + .btn-text
 			margin-left: 28px
@@ -436,6 +437,23 @@ div.btn
 
 // drop
 .dip
+	position: relative
+	&.is-active
+		.dip__block
+			display: block
+	&.is-up
+		.dip__text
+			text-transform: uppercase
+	&.is-valid
+		.dip__text,
+		.dip__block
+			border-color: $green
+	&.is-error
+		.dip__text,
+		.dip__block
+			border-color: $d_red
+		& + .reg-err-text
+			display: block
 	&__text
 		position: relative
 		padding: 0 8px 
@@ -448,30 +466,68 @@ div.btn
 		white-space: nowrap
 		text-overflow: ellipsis
 		overflow: hidden
+		cursor: pointer
+		user-select: none
 		transition: border-color .2s
 		background: $white
 		display: block
-		&.is-up
-			text-transform: uppercase
-		&.is-valid
-			border-color: $green
-		&.is-error
-			border-color: $d_red
-			& + .reg-err-text
-				display: block
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 10px
+			margin-top: -3px
+			+arr(10,7,$black,b)
 	&__icon,
 	&__val,
-	&__sum
+	&__sum,
+	&__name,
+	&__numb,
+	&__icon
 		line-height: 1.45
 		vertical-align: baseline
 		display: inline-block
 	&__icon
+		margin-right: 5px
 		line-height: 1
 		vertical-align: middle
 		img
 			display: block
+	&__name
+		width: 105px
+		vertical-align: top
+	&__title
+		margin-bottom: 5px
+		padding: 0 12px 0 10px
 	&__block
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		padding: 4px 0 10px
+		z-index: 10
+		border: 1px solid $bord_form
+		border-top: none
+		background: $white
 		display: none
+	&__item
+		margin-top: 2px
+		padding: 5px 12px 5px 10px
+		cursor: pointer
+		transition: background .2s
+		+clr
+		&:hover
+			background: $bg_item
+	&__left
+		float: left
+	&__right
+		float: right
+		.dip__icon
+			margin: 0 0 0 5px
+	&__group
+		margin-top: 10px
+		&:first-child
+			margin-top: 0
 
 // title
 .title
@@ -1164,9 +1220,9 @@ a.translations__wrap
 			border: 2px solid $bord_checkbox
 		&:after
 			position: absolute
-			content: "\e995"
+			content: "\e9a1"
 			top: 4px
-			left: 3px
+			left: 4px
 			color: $d_gray
 			font-family: 'icomoon' !important
 			speak: none
