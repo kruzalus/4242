@@ -3987,7 +3987,6 @@ $(document).ready(function() {
 		placeholder  	: ''
 	});
 
-
 	// soc
 	$('.js-social-close').on('click', function(){
 		$(this).parents('.js-social-item').remove();
