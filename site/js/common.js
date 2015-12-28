@@ -239,18 +239,39 @@ $(document).ready(function() {
 		timerCount();
 	});
 
-	// 
-	$('.js-dip-text').on('click', function(){
-		var this_ = $(this),
-			parent = this_.parents('.js-dip'),
-			input = parent.find('.js-dip-input'),
-			block = parent.find('.js-dip-block'),
-			item = parent.find('.')
+	// ----------- dip -----------
+	$('.js-dip-text').on('click', function(event){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-dip'),
+			block 	= parent.find('.js-dip-block');
+
+		if (!parent.hasClass('is-active')){
+			$('.js-dip').removeClass('is-active');
+			$('.js-dip-block').slideUp(300);
+			parent.addClass('is-active');
+			block.slideDown(300);
+		}
+		else {
+			$('.js-dip').removeClass('is-active');
+			$('.js-dip-block').slideUp(300);
+		}
+		event.stopPropagation();
 	});
 	
-	
-	
-	
-	
+	$('.js-dip-item').on('click', function(){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-dip'),
+			input 	= parent.find('.js-dip-input'),
+			text 	= parent.find('.js-dip-text'),
+			val 	= this_.find('.js-dip-val').text(),
+			html 	= this_.html();
+		text.html(html);
+		input.val(val);
+	});
+
+	$('body').on('click', function(){
+		$('.js-dip').removeClass('is-active');
+		$('.js-dip-block').slideUp(300);
+	});
 	
 });

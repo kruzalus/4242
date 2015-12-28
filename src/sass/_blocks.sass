@@ -438,9 +438,6 @@ div.btn
 // drop
 .dip
 	position: relative
-	&.is-active
-		.dip__block
-			display: block
 	&.is-up
 		.dip__text
 			text-transform: uppercase
@@ -454,9 +451,72 @@ div.btn
 			border-color: $d_red
 		& + .reg-err-text
 			display: block
+	&.is-from
+		margin-right: 10px
+		.dip__ind
+			position: absolute
+			top: 0
+			line-height: 40px
+			z-index: 1
+			left: 8px
+		.dip__text
+			padding-left: 22px
+			border-right: none
+			&:before
+				right: 0
+		.dip__arr
+			right: 1px
+			z-index: 1
+			&:after
+				left: 1px
+				+arr(10,39,$white,r)
+			&:before
+				left: 1px
+		.dip__item
+			padding-left: 22px
+	&.is-to
+		.dip__arr
+			left: 0
+			z-index: 1
+		.dip__ind
+			position: absolute
+			top: 0
+			line-height: 40px
+			z-index: 1
+			left: 20px
+		.dip__text
+			padding-left: 44px
+	&__arr
+		position: absolute
+		top: 0
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			left: 0
+			top: 0
+		&:before
+			+arr(11,40,$bord_form,r)
+		&:after
+			top: 1px
+			+arr(10,39,$bg_body,r)
+	&__arr
+		position: absolute
+		top: 0
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			left: 0
+			top: 0
+		&:before
+			+arr(11,40,$bord_form,r)
+		&:after
+			top: 1px
+			+arr(10,39,$bg_body,r)
 	&__text
 		position: relative
-		padding: 0 8px 
+		padding: 0 25px 0 8px
 		height: 40px
 		line-height: 38px
 		width: 100%
@@ -478,12 +538,17 @@ div.btn
 			right: 10px
 			margin-top: -3px
 			+arr(10,7,$black,b)
+		.dip__name
+			vertical-align: middle
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
 	&__icon,
 	&__val,
 	&__sum,
 	&__name,
 	&__numb,
-	&__icon
+	&__placeholder
 		line-height: 1.45
 		vertical-align: baseline
 		display: inline-block
@@ -499,6 +564,9 @@ div.btn
 	&__title
 		margin-bottom: 5px
 		padding: 0 12px 0 10px
+	&__placeholder
+		color: $c_form
+		transition: opacity .2s, transform .2s
 	&__block
 		position: absolute
 		top: 100%
@@ -513,6 +581,7 @@ div.btn
 	&__item
 		margin-top: 2px
 		padding: 5px 12px 5px 10px
+		line-height: 1.45
 		cursor: pointer
 		transition: background .2s
 		+clr
@@ -1658,7 +1727,8 @@ a.translations__wrap
 	&__field
 		.select + .btn-text
 			margin-left: 24px
-	.select
+	.select,
+	.dip
 		width: 100%
 		max-width: 280px
 		vertical-align: top
