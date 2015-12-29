@@ -22,8 +22,9 @@
 	display: inline-block
 	+r(767)
 		width: 100%
-		text-align: left
+		text-align: center
 		display: block
+		+clr
 	&__text,
 	&__item
 		vertical-align: top
@@ -44,15 +45,21 @@
 		margin-right: 122px
 		+r(960)
 			margin-right: 0
+		+r(767)
+			float: left
 	&__item
 		margin-left: 72px
 		+r(960)
 			margin-left: 30px
+		+r(767)
+			float: right
 		&.is-tel
+			+r(767)
+				float: none
 			a
 				color: $l_gray
 				border-bottom: none
-				+r(767)
+				+r(1024)
 					color: $c_mail
 					border-bottom: 1px solid transparent
 					&:hover

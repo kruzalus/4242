@@ -1104,7 +1104,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .payment__label label { cursor: pointer; }
 .payment__label .prev { margin-top: 8px; }
 .payment__right { float: right; position: relative; line-height: 40px; width: -webkit-calc(100% - 200px); width: calc(100% - 200px); }
-.payment__icon { position: absolute; top: 50%; right: 9px; min-width: 22px; font-size: 22px; line-height: 1; color: #90a4ae; z-index: 1; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); text-align: center; }
+.payment__icon { position: absolute; top: 50%; right: 9px; padding-left: 5px; min-width: 22px; font-size: 22px; line-height: 1; color: #90a4ae; z-index: 1; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); text-align: center; background: #fff; }
 .payment__icon .icon-ruble { font-size: 14px; }
 .payment__new { position: relative; margin: 9px 0 0 20px; padding-left: 28px; color: #2196f3; line-height: 1.4; vertical-align: top; display: inline-block; }
 .payment__new:hover span { border-color: #2196f3; }
@@ -1292,6 +1292,8 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
  .item__left{ max-width: 115px; } }
 
 @media only screen and (max-width: 1024px){
+ .cont__item.is-tel a{ color: #2196f3; border-bottom: 1px solid transparent; }
+ .cont__item.is-tel a:hover{ border-color: #2196f3; }
  .form__col{ width: 60px; }
  .categories__item:nth-child(4n+4){ margin-right: 2%; }
  .categories__item:nth-child(3n+3){ margin-right: 0; }
@@ -1328,9 +1330,11 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
  .leftbar{ padding-right: 0; width: 100%; border-right: none; }
  .rightbar{ display: none; }
  .footer{ margin-top: -73px; }
- .cont{ width: 100%; text-align: left; display: block; }
- .cont__item.is-tel a{ color: #2196f3; border-bottom: 1px solid transparent; }
- .cont__item.is-tel a:hover{ border-color: #2196f3; }
+ .cont{ width: 100%; text-align: center; display: block; zoom: 1; }
+ .cont:after{ content: " "; display: table; clear: both; }
+ .cont__text{ float: left; }
+ .cont__item{ float: right; }
+ .cont__item.is-tel{ float: none; }
  .nav{ margin: 0 10px; }
  .form__label{ width: 172px; }
  .form__right{ width: -webkit-calc(100% - 172px); width: calc(100% - 172px); }

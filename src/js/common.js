@@ -273,5 +273,25 @@ $(document).ready(function() {
 		$('.js-dip').removeClass('is-active');
 		$('.js-dip-block').slideUp(300);
 	});
+
+	// tell href
+	function tellHref(){
+		$('.js-tell').each(function(){
+			var this_ 	= $(this),
+				wind 	= $(window).width(),
+				text 	= this_.text().replace(/\s+/g, '');
+			if(wind <= 1024) {
+				this_.attr('href', 'tel:' + text);
+			}
+			else {
+				this_.removeAttr('href');
+			}
+		});
+		
+	} tellHref();
+
+	$(window).resize(function() {
+		tellHref();
+	});
 	
 });

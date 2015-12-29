@@ -149,13 +149,13 @@
 			$(digit + ' div.top').css({'display': 'none'});
 			$(digit + ' div.top').html((n ? n : '0')).slideDown(duration);
 
-			$(digit + ' div.bottom').animate({'height': ''}, duration, function() {
+			// $(digit + ' div.bottom').animate({'height': ''}, duration, function() {
 				$(digit + ' div.bottom').html($(digit + ' div.top').html());
-				$(digit + ' div.bottom').css({'display': 'block', 'height': ''});
+				// $(digit + ' div.bottom').css({'display': 'block', 'height': ''});
 				$(digit + ' div.top').hide().slideUp(10);
 
 			
-			});
+			// });
 		}
 	};
 
