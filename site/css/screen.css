@@ -767,6 +767,7 @@ div.btn_white:hover, div.btn_white:active { color: #263238; background: #fff; }
 .dip.is-to .dip__arr { left: 0; z-index: 1; }
 .dip.is-to .dip__ind { position: absolute; top: 0; line-height: 40px; z-index: 1; left: 20px; }
 .dip.is-to .dip__text { padding-left: 44px; }
+.dip + .btn-text { margin-left: 23px; }
 .dip__arr { position: absolute; top: 0; }
 .dip__arr:before, .dip__arr:after { position: absolute; content: ""; left: 0; top: 0; }
 .dip__arr:before { width: 0px; height: 0px; border-style: solid; border-width: 20px 0 20px 11px; border-color: transparent transparent transparent #cfd8dc; }
@@ -1209,6 +1210,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .ticket__text { margin: 0 2px; line-height: 40px; vertical-align: top; display: inline-block; }
 .ticket__text span { line-height: 1.45; vertical-align: baseline; display: inline-block; }
 .ticket .info { float: right; margin: 9px 0 0 13px; line-height: 1; }
+.ticket .alert__inf { width: 160px; }
 
 .info { position: relative; vertical-align: top; display: inline-block; }
 .info__btn { width: 22px; height: 22px; color: #90a4ae; line-height: 1; font-size: 22px; overflow: hidden; -webkit-transition: color 0.2s; transition: color 0.2s; -webkit-border-radius: 22px; border-radius: 22px; background: #fff; display: inline-block; }
@@ -1238,7 +1240,8 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .render__wrap .banker:nth-child(3n+4) { margin-left: 0; }
 .render__wrap .banker:last-child, .render__wrap .banker:nth-last-of-type(2), .render__wrap .banker:nth-last-of-type(3) { margin-bottom: 0; }
 
-.banker { position: relative; padding-bottom: 15px; text-align: center; color: #263238; -webkit-border-radius: 6px; border-radius: 6px; border: 1px solid #90a4ae; vertical-align: top; display: inline-block; }
+.banker { position: relative; padding-bottom: 15px; text-align: center; color: #263238; -webkit-border-radius: 6px; border-radius: 6px; -webkit-transition: border-color 0.2s, -webkit-box-shadow 0.2s; transition: border-color 0.2s, box-shadow 0.2s; border: 1px solid #90a4ae; -webkit-box-shadow: inset 0 0 0 1px transparent; box-shadow: inset 0 0 0 1px transparent; vertical-align: top; display: inline-block; }
+.banker:hover { border-color: #9ccc65; -webkit-box-shadow: inset 0 0 0 1px #9ccc65; box-shadow: inset 0 0 0 1px #9ccc65; }
 .banker__prog { position: absolute; top: 10px; right: -12px; padding: 0 2px; line-height: 1.3; -webkit-border-radius: 6px; border-radius: 6px; border: 1px solid #90a4ae; background: #fff; }
 .banker__img { height: 125px; line-height: 125px; }
 .banker__ico { vertical-align: middle; display: inline-block; }
@@ -1252,6 +1255,15 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .dash { vertical-align: top; display: inline-block; }
 
 .digit { vertical-align: top; display: inline-block; }
+
+.alert { cursor: pointer; width: 22px; height: 22px; -webkit-border-radius: 50%; border-radius: 50%; background: #fff; }
+.alert:hover .alert__inf { visibility: visible; opacity: 1; z-index: 1; }
+.alert:hover .icon { color: #5b727d; }
+.alert__inf { position: absolute; right: -9px; bottom: 100%; width: 280px; text-align: left; font-size: 14px; line-height: 1.3; margin-bottom: 20px; padding: 10px; color: #b0bec5; opacity: 0; visibility: hidden; z-index: -1; will-change: opacity; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: visibility 0.2s, opacity 0.2s; transition: visibility 0.2s, opacity 0.2s; border: 1px solid #cfd8dc; background: #37474D; }
+.alert__inf:before, .alert__inf:after { position: absolute; content: ""; top: 100%; }
+.alert__inf:before { right: 10px; margin-top: -1px; z-index: 1; width: 0px; height: 0px; border-style: solid; border-width: 16px 10px 0 10px; border-color: #37474D transparent transparent transparent; }
+.alert__inf:after { right: 9px; width: 0px; height: 0px; border-style: solid; border-width: 17px 11px 0 11px; border-color: #cfd8dc transparent transparent transparent; }
+.alert .icon { color: #90a4ae; font-size: 22px; -webkit-transition: color 0.2s; transition: color 0.2s; }
 
 .preloader { padding: 65px 20px 50px; text-align: center; }
 .preloader.is-valid .loader__item { opacity: 0; }
