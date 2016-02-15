@@ -608,6 +608,9 @@ div.btn
 	line-height: 1.4
 	font-weight: normal
 	border-bottom: 1px solid $bord_gray
+	&.is-gray
+		color: $c_reg
+		border-bottom: none 
 	h1, h2, h3, h4, h5, h6
 		+rl
 		font-weight: normal
@@ -1193,6 +1196,8 @@ a.translations__wrap
 			margin-top: 0
 		& + p
 			margin-top: 12px
+		& + .form__text
+			margin-top: 18px
 		.tooltip
 			position: absolute
 			left: 50%

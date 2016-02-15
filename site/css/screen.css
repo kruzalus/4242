@@ -796,6 +796,7 @@ div.btn_white:hover, div.btn_white:active { color: #263238; background: #fff; }
 .dip__group:first-child { margin-top: 0; }
 
 .title { padding-bottom: 15px; font-family: "Roboto Light", Arial, sans-serif; font-size: 18px; line-height: 1.4; font-weight: normal; border-bottom: 1px solid #eceff1; }
+.title.is-gray { color: #607d8b; border-bottom: none; }
 .title h1, .title h2, .title h3, .title h4, .title h5, .title h6 { font-family: "Roboto Light", Arial, sans-serif; font-weight: normal; }
 .title_nobord { padding-bottom: 0; border-bottom: none; }
 .title__list { margin-top: 5px; color: #90a4ae; font-size: 14px; }
@@ -985,6 +986,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .form__row:after { content: " "; display: table; clear: both; }
 .form__row:first-child { margin-top: 0; }
 .form__row + p { margin-top: 12px; }
+.form__row + .form__text { margin-top: 18px; }
 .form__row .tooltip { position: absolute; left: 50%; bottom: 100%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); }
 .form__row .forgot { margin-top: 10px; }
 .form__label { float: left; padding-right: 10px; width: 190px; line-height: 38px; }
