@@ -442,7 +442,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .in, .l, .header__in, .footer__in, .search__in { margin: 0 auto; padding: 0 10px; max-width: 1200px; *zoom: 1; }
 .in:after, .l:after, .header__in:after, .footer__in:after, .search__in:after { content: " "; display: table; clear: both; }
 
-body { min-width: 480px; font-family: "Roboto Light", Arial, sans-serif; font-size: 14px; line-height: 1.7; font-size: 14px; background: #fafbfc; }
+body { min-width: 480px; font-family: "Roboto Light", Arial, sans-serif; font-size: 14px; line-height: 1.7; background: #fafbfc; }
 body.is-open-menu .header__block { visibility: visible; opacity: 1; z-index: 100; }
 body.is-open-menu .header__btn { z-index: 101; }
 body.is-open-menu .logo { z-index: 101; }
@@ -977,6 +977,9 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .form { padding: 20px; }
 .form.is-mod .form__label { width: 220px; }
 .form.is-mod .form__right { float: right; width: -webkit-calc(100% - 220px); width: calc(100% - 220px); }
+.form.is-done { padding-bottom: 30px; }
+.form.is-done .ticket { margin: -22px 0 25px -22px; }
+.form.is-done .form__row:last-child { margin-top: 25px; }
 .form .btn { min-width: 180px; }
 .form__row { position: relative; margin-top: 20px; *zoom: 1; }
 .form__row:after { content: " "; display: table; clear: both; }
@@ -1004,6 +1007,9 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .form__icon { position: absolute; top: 50%; right: 9px; min-width: 23px; font-size: 22px; line-height: 1; color: #90a4ae; z-index: 1; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); text-align: center; }
 .form__icon .icon-ruble { font-size: 14px; }
 .form__icon .icon { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.form__price { float: left; margin-left: 10px; width: 50px; }
+.form__price:first-child { margin-left: 0; }
+.form__price + .form__text { margin-left: 10px; float: left; }
 .form .captcha { margin-top: 20px; }
 
 .checkbox { position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; display: inline-block; }
@@ -1209,6 +1215,7 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .ticket__col { width: 50px; vertical-align: top; display: inline-block; }
 .ticket__text { margin: 0 2px; line-height: 40px; vertical-align: top; display: inline-block; }
 .ticket__text span { line-height: 1.45; vertical-align: baseline; display: inline-block; }
+.ticket__data { margin-top: 15px; padding-left: 8px; color: #90a4ae; }
 .ticket .info { float: right; margin: 9px 0 0 13px; line-height: 1; }
 .ticket .alert__inf { width: 160px; }
 

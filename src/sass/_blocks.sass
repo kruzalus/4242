@@ -1176,6 +1176,13 @@ a.translations__wrap
 		.form__right
 			float: right
 			width: calc(100% - 220px)
+	&.is-done
+		padding-bottom: 30px
+		.ticket
+			margin: -22px 0 25px -22px
+		.form__row
+			&:last-child
+				margin-top: 25px
 	.btn
 		min-width: 180px
 	&__row
@@ -1261,6 +1268,15 @@ a.translations__wrap
 			font-size: 14px
 		.icon
 			transform: translate3d(0,0,0)
+	&__price
+		float: left
+		margin-left: 10px
+		width: 50px
+		&:first-child
+			margin-left: 0
+		& + .form__text
+			margin-left: 10px
+			float: left
 	.captcha
 		margin-top: 20px
 
@@ -2036,6 +2052,10 @@ a.translations__wrap
 			line-height: 1.45
 			vertical-align: baseline
 			display: inline-block
+	&__data
+		margin-top: 15px
+		padding-left: 8px
+		color: $c_numb 
 	.info
 		float: right
 		margin: 9px 0 0 13px
