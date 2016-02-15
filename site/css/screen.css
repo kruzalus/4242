@@ -1012,6 +1012,8 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .form__price { float: left; margin-left: 10px; width: 50px; }
 .form__price:first-child { margin-left: 0; }
 .form__price + .form__text { margin-left: 10px; float: left; }
+.form__sms { position: relative; }
+.form__block { position: absolute; top: 10px; right: 10px; line-height: 1; z-index: 1; }
 .form .captcha { margin-top: 20px; }
 
 .checkbox { position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; display: inline-block; }
