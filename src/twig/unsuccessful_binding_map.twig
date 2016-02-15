@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Tamplate</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  <!-- theme color for android 5.0 -->
-  <meta name="theme-color" content="#fff"> 
-  <!-- <meta name="viewport" content="width=1200"> -->
-  <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-  <link rel="stylesheet" media="all" href="css/screen.css" >
-  <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
-  <script src="js/app.js"></script>
-</head>
-<body>
+{% extends "./includes/_layout.twig" %}
 
-		<!-- out --> 
+{% block content %}
+	<!-- out --> 
 	<div class="out">
 
-		<!-- header -->
-<header class="header">
-	<div class="header__in">
-		<div class="logo">
-			<i class="icon icon-logo"></i> 
-		</div>
-		<!-- menu -->
-		<ul class="menu js-flex-menu">
-							 
-					<li><a href="#" class="is-active">Кошельки и карты</a></li>
-																<li><a href="#">Оплатить</a></li>
-																<li><a href="#">Перевести</a></li>
-																<li><a href="#">Выйти</a></li>
-																<li><a href="#"><i class='icon icon-uni50'></i>verylongusername@longdomainname.org</a></li>
-									</ul>
-	</div>
-</header>		<!-- l -->
+		{% include "./includes/_header.twig" %}
+		<!-- l -->
 		<div class="l">
 			<div class="l__in">
 				<!-- l-col1 -->
@@ -163,50 +134,67 @@
 					<!-- wind -->
 					<div class="wind is-gray">
 						<div class="wind__top">
+							<!-- breadcrumbs -->
 							<ul class="breadcrumbs">
 								<li><a href="#">Кошельки и карты</a></li>
-								<li><span>Подтверждение привязки карты</span></li>
+								<li>Пополнение кошелька 123 456 789</li>
 							</ul>
+							<button class="wind__close" type="button">
+								<i class="icon icon-uniF9"></i>
+							</button>
 						</div>
 						<div class="wind__in">
-							<div class="wind__wrap">
-								<form action="" class="form is-done">
-									<!-- ticket -->
-									<div class="ticket"> 
-										<div class="ticket__row">
-											<div class="ticket__label">Номер карты</div>
-											<div class="ticket__data">1632 53XX XXXX 4374</div>
-										</div>
-										<div class="ticket__row">
-											<div class="ticket__label">Имя и фамилия владельца:</div>
-											<div class="ticket__data">SHARAPOV TIMUR</div>
-										</div>
+							<!-- preloader -->
+							<div class="preloader preloader2 js-preloader">
+								<!-- loader -->
+								<div class="loader">
+									<div class="loader__item"></div>
+									<div class="loader__item"></div>
+									<div class="loader__item"></div>
+									<!-- arr -->
+									<svg class="arr js-arr-valid" width="34px" height="27px" viewBox="0 0 34 27">
+										<g id="Page-1" stroke="none" stroke-width="1" fill="none">
+											<path d="M32.4,1.4 L10.4,23.4 L1.4,14.4" id="XMLID_68_" stroke="#FFFFFF" stroke-width="4"></path>
+										</g>
+									</svg>
+									<!-- arr -->
+									<svg class="arr js-arr-error" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
+									    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+									        <g id="Shape-+-Shape" transform="translate(1.000000, 1.000000)" stroke="#F1592B" stroke-width="4">
+									            <path d="M33,0.4 L0.5,32.9" id="Shape" sketch:type="MSShapeGroup"></path>
+									            <path d="M0.5,0.4 L33,32.9" id="Shape" sketch:type="MSShapeGroup"></path>
+									        </g>
+									    </g>
+									</svg>
+								</div>
+								<div class="preloader__load js-loader-load">
+									<div class="preloader__title">Идет процесс пополнения</div>
+									<div class="preloader__info">Пожалуйста, подождите...</div>
+									<div class="preloader__row">
+										<a href="#" class="btn-text btn-text_blue">Отмена</a>
 									</div>
-									<p>На вашей карте временно заблокирована случайная сумма от 1 до 5 рублей. Укажите эту сумму в поле ниже.</p>
-									<div class="form__row">
-										<label for="price1" class="form__label">
-											<span>Списанная сумма:</span>
-										</label>
-										<div class="form__right">
-											<div class="form__price">
-												<input type="text" class="input" name="price1" id="price1" placeholder="2">
-											</div>
-											<div class="form__text"><span>руб.</span></div>
-											<div class="form__price">
-												<input type="text" class="input" name="price2" id="price2" placeholder="07">
-											</div>
-											<div class="form__text"><span>коп.</span></div>
-										</div>
+								</div>
+								<div class="preloader__valid js-loader-valid">
+									<div class="preloader__title">Полный успех!</div>
+									<div class="preloader__info">Кошелёк 12345678900 успешно пополнен на сумму 100 ₽ .</div>
+									<div class="preloader__row">
+										<a href="#" class="btn-text btn-text_icon btn-text_blue"><i class="icon icon-uni61"></i> <span>Квитанция</span></a>
+										<a href="#" class="btn-text btn-text_icon btn-text_blue"><i class="icon icon-uni5A"></i> <span>Повторить</span></a>
 									</div>
-									<div class="form__row">
-										<div class="form__label is-mod">
-											<a href="#" class="prev">Назад</a>
-										</div>
-										<div class="form__right">
-											<button class="btn btn_big btn_width" type="submit">Пополнить</button>
-										</div>
+								</div>
+								<div class="preloader__valid js-loader-error">
+									<div class="preloader__title">Не удалось привязать карту!</div>
+									<div class="preloader__info">
+										<p>Вы 3 раза неправильно указали заблокированную на карте сумму.</p>
+										<p>Вы сможете попробовать снова спустя некоторое время.</p>
 									</div>
-								</form>
+									<div class="preloader__row">
+										<a href="#" class="btn-text btn-text_icon btn-text_blue"><i class="icon icon-uni5A"></i> <span>Попробовать снова</span></a>
+									</div>
+								</div>
+								<div class="preloader__but">
+									<a href="#" class="btn btn_gray-dark btn_big">Закрыть</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -215,9 +203,7 @@
 				<div class="l-col2">
 					<!-- slider -->
 					<div class="slider js-slider-wrap">
-						<button class="slider__close js-slider-close" type="button">
-							<i class="icon icon-uniF9"></i>
-						</button>
+						<button class="slider__close js-slider-close" type="button"><i class="icon icon-uniF9"></i></button>
 						<div class="arrows"></div>
 						<div class="slider__wrap js-slider">
 							<div class="slider__slide">
@@ -319,27 +305,6 @@
 
 	</div>
  
-	<!-- footer -->
-<footer class="footer">
-	<div class="footer__in">
-		<!-- cont -->
-		<div class="cont">
-			<div class="cont__text">Поддержка</div>
-			<div class="cont__item is-tel">
-				<i class="icon icon-uniC0"></i>
-				<a class="js-tell">8 800 100 55 11</a>
-			</div>
-			<div class="cont__item">
-				<i class="icon icon-uniE0"></i>
-				<a href="mailto:support@robowallet.ru">support@robowallet.ru</a>
-			</div>
-		</div>
-		<!-- copy -->
-		<div class="copy">Robowallet &copy; 2015</div>
-		<!-- lang -->
-		<a href="#" class="lang">in English</a>
-	</div>
-</footer>
+	{% include "./includes/_footer.twig" %}
 
-</body>
-</html>
+{% endblock %}
