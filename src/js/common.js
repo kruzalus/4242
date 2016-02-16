@@ -293,5 +293,36 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		tellHref();
 	});
-	
+
+	// popup
+	$('.js-open-popup').on('click', function (event) {
+		var this_ = $(this),
+			parent = this_.parents('.js-popup-parent');
+			popup = parent.find('.js-popup');
+
+		popup.addClass('is-active');
+		$('body').addClass('is-hidden');
+
+		event.stopPropagation();
+	});
+
+	$('.js-popup').on('click', function() {
+		$(this).removeClass('is-active');
+		$('body').removeClass('is-hidden');
+	});
+
+	$('.js-popup > div').on('click', function (event) {
+		event.stopPropagation();
+	});
+
+	$('.js-close-popup').on('click', function () {
+		$('.js-popup').removeClass('is-active');
+		$('body').removeClass('is-hidden');
+	});
+
+	$('body').on('click', function () {
+		$('.js-popup').removeClass('is-active');
+		$('body').removeClass('is-hidden');
+	});
+		
 });

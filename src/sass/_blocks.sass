@@ -72,6 +72,17 @@
 		padding-left: 20px
 		.btn
 			min-width: 280px
+	&__bot
+		margin-top: 35px
+		text-align: center
+		&.is-mod
+			text-align: left
+			.btn
+				min-width: 280px
+				& + .btn-text
+					margin-left: 130px
+		.btn
+			min-width: 180px
 
 // items
 .items
@@ -2288,3 +2299,27 @@ a.translations__wrap
 		color: $c_numb
 		font-size: 22px
 		transition: color .2s
+
+// inf-to-list
+.inf-to-list
+	margin-top: 98px
+	color: $c_wind_gray 
+	text-align: center
+
+// progress
+.progress
+	position: relative
+	padding: 5px 8px
+	font-size: 14px
+	border: 1px solid $c_numb
+	& + .progress
+		margin-top: 28px
+	&__sing
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		background: $pink 
+	&__text
+		position: relative
+		z-index: 1

@@ -1,0 +1,43 @@
+// popup
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	padding: 15px
+	visibility: hidden
+	z-index: -1
+	transform: translate3d(0,0,0)
+	will-chenge: opacity
+	background: rgba($black, .6)
+	+vertical
+	overflow-y: auto
+	transition: opacity .4s linear, z-index .4s linear, visibility .4s linear
+	background: $black
+	background: rgba($black, .9)  
+	+vertical
+	&.is-active
+		opacity: 1
+		visibility: visible
+		z-index: 100
+		.popup__in
+			transform: scale(1) 
+	&__in
+		max-width: 620px
+		width: 100%
+		font-size: 18px
+		transform: translate3d(0,0,0)
+		transition: transform .4s
+		transform: scale(0.4)
+		vertical-align: middle
+		display: inline-block
+	.wind
+		text-align: left
+		&__top
+			font-size: 14px
+		&__in
+			padding: 44px 20px 16px
+	.link
+		font-size: 14px
