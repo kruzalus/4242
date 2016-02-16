@@ -8,5 +8,6 @@
 //= lib/jquery.daterangepicker.js
 //= lib/jquery.drawsvg.min.js
 //= lib/jquery.lwtCountdown-1.0.js
+//= lib/chosen.jquery.min.js
 //= loader.js
 //= common.js

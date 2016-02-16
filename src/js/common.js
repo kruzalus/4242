@@ -324,5 +324,40 @@ $(document).ready(function() {
 		$('.js-popup').removeClass('is-active');
 		$('body').removeClass('is-hidden');
 	});
-		
+
+	// chosen
+	// $('.js-chosen-select').chosen();
+
+	// js-location
+	$('.js-location-text').on('click', function (event) {
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-location'),
+			block 	= parent.find('.js-location-block');
+		if (!parent.hasClass('is-open')) {
+			parent.addClass('is-open');
+			block.slideDown(300);
+		}
+		else {
+			parent.removeClass('is-open');
+			block.slideUp(300);
+		}
+		$('.js-chosen-select').chosen();
+		event.stopPropagation();
+	});
+	$('.js-location-block').on('click', function (event) {
+		event.stopPropagation();
+	});
+	$('body').on('click', function () {
+		$('.js-location').removeClass('is-open');
+		$('.js-location-block').slideUp(300);
+	});
+
+	$('.js-location .js-chosen-select.is-town').on('change', function () {
+		var this_ = $(this);
+			locText = this_.parents('.js-location').find('.js-location-text');
+		locText.text('в ' + this_.val());
+		$('.js-location').removeClass('is-open');
+		$('.js-location-block').slideUp(300);
+	});
+
 });

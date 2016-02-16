@@ -38,11 +38,62 @@
 		<div class="search is-white is-big">
 			<div class="search__in">
 				<div class="search__right">
-					<a href="#" class="dotted">Все категории</a>
-					<a href="#" class="location">
+					<div class="drop js-drop">
+						<input type="text" class="js-drop-input" hidden="">
+						<button class="drop__btn js-grop-btn" type="button">Все категории</button>
+						<div class="drop__block js-drop-block">
+							<ul class="drop__list js-drop-list">
+								<li class="drop__item">
+									<a href="#">Интернет</a>
+								</li>
+								<li class="drop__item">
+									<a href="#">Телефония</a>
+								</li>
+								<li class="drop__item">
+									<a href="#">Телевидение</a>
+								</li>
+								<li class="drop__item">
+									<a href="#">Коммунальные</a>
+								</li>
+								<li class="drop__item">
+									<a href="#">Госуслуги</a>
+								</li>
+								<li class="drop__item">
+									<a href="#">Отдых</a>
+								</li>
+								<li class="drop__item">
+									<a href="#">Благотворительность</a>
+								</li>
+								<li class="drop__item">
+									<a href="#">Штрафы и пошлины</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="location js-location">
 						<span class="icon icon-uni24"></span>
-						<span class="location__text">в Москве</span>
-					</a>
+						<span class="location__text js-location-text">в Москве</span>
+						<div class="location__block js-location-block">
+							<select data-placeholder="Страна" class="chosen-select js-chosen-select" tabindex="7">
+								<option value=""></option>
+								<option selected>Россия</option>
+								<option>Архангельская область</option>
+								<option>Астраханская область</option>
+								<option>Алтайский край</option>
+								<option>Архангельская область</option>
+								<option disabled>Астраханская областьr</option>
+							</select>
+							<select data-placeholder="Найти город" class="chosen-select is-town js-chosen-select" tabindex="7">
+								<option value=""></option>
+								<option>Москве</option>
+								<option>Архангельская область</option>
+								<option>Астраханская область</option>
+								<option>Алтайский край</option>
+								<option>Архангельская область</option>
+								<option disabled>Астраханская областьr</option>
+							</select>
+						</div>
+					</div>
 				</div>
 				<div class="search__form">
 					<form action="">
