@@ -1431,6 +1431,10 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .popup .wind__top { font-size: 14px; }
 .popup .wind__in { padding: 44px 20px 16px; }
 .popup .link { font-size: 14px; }
+
+.graph { width: 100%; }
+.graph .highcharts-input-group { display: none; }
+.graph .highcharts-range-selector-buttons > text { display: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1200px){
