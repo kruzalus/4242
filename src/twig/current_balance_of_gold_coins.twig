@@ -134,7 +134,7 @@
 					<!-- wind -->
 					<div class="wind is-gray">
 						<div class="wind__top">
-							<a href="#" class="link">Кошелек № 123 456 789</a>
+							Кошелек № 123 456 789
 							<div class="wind__right js-popup-parent">
 								<div class="drop js-drop">
 									<input type="text" class="js-drop-input" hidden="">
@@ -172,10 +172,76 @@
 						<div class="wind__in">
 							<!-- form -->
 							<form class="form">
-								<!-- graph -->
-								<div class="graph js-graph">
-									
+								<div class="form__field">
+									<div class="form__col-left">
+										<div class="title is-gray">Текущий баланс:</div>
+									</div>
+									<div class="form__col-right">
+										<span class="balance-gold">25.02 золотых монет</span>
+									</div>
 								</div>
+								<div class="form__row">
+									<div class="form__col-left js-popup-parent">
+										<a href="#" class="link js-open-popup">Описание золотых монет</a>
+										<div class="popup js-popup">
+											<div class="popup__in">
+												<div class="wind is-gray">
+													<div class="wind__top">
+														<span>Описание золотых монет</span>
+														<button class="wind__close js-close-popup" type="button">
+															<i class="icon icon-uniF9"></i>
+														</button>
+													</div>
+													<div class="wind__in">
+														<div class="wind__popup-img">
+															<img src="img/gold.png" alt="img">
+														</div>
+														<div class="wind__popup-text">
+															<p>Официальное название монеты: Червонец (Сеятель)</p>
+															<p>Номинал: 10 рублей</p>
+															<p>Масса монеты: 8,6 грамм </p>
+															<p>Содержание золота: 90 % (900-я проба).</p>
+														</div>
+														<div class="wind__popup-text">
+															<p>Монета «Сеятель» выпускается с 1923 года. </p>
+															<p>С 2007 года стоимость монеты выросла примерно в 4 раза. </p>
+														</div>
+														<div class="wind__popup-text">
+															Золотая монета «Сеятель» неприхотлива в хранении и обращении: ее можно хранить и переносить без капсул.
+														</div>
+														<div class="wind__popup-text">
+															Кроме того, инвестиционные монеты не облагаются налогом на добавленную стоимость (НДС).
+														</div>
+														<div class="wind__bot">
+															<button class="btn btn_big btn_gray" type="button">Понятно</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form__col-right">
+										<button class="btn btn_bord" type="button">Вывести монеты</button>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col-left">
+										<span>Цена покупки: <span class="is-blue">18 503.75</span> рубля / монету</span>
+									</div>
+									<div class="form__col-right">
+										<button class="btn btn_blue" type="button">Вывести монеты</button>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col-left">
+										<span>Цена продажи: <span class="is-green">18 503.75</span> рубля / монету</span>
+									</div>
+									<div class="form__col-right">
+										<button class="btn" type="submit">Продать монеты</button>
+									</div>
+								</div>
+								<!-- graph -->
+								<div class="graph js-graph"></div>
 							</form>
 						</div>
 					</div>

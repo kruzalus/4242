@@ -38,6 +38,14 @@
 			margin-bottom: 0
 			li
 				color: $black
+	&__popup-img
+		text-align: center
+	&__popup-text
+		margin-top: 18px
+		line-height: 1.3
+		color: $c_wind_gray 
+		&:first-child
+			margin-top: 0
 	&__close
 		position: absolute
 		top: 11px
@@ -275,6 +283,15 @@ a.item
 		padding-right: 75px
 	&_width
 		width: 100%
+	&_bord
+		border: 1px solid $bord_graph
+		color: $c_numb 
+		background: transparent 
+		&:hover
+			color: #fff
+			background: darken($bord_graph, 20%)
+		&:active
+			background: darken($bord_graph, 30%)
 
 div.btn
 	&_white
@@ -1285,6 +1302,22 @@ a.translations__wrap
 		.bank
 			float: left
 			margin: 0 17px 17px 0
+	&__col-left
+		float: left
+		padding-right: 10px
+		width: calc(100% - 180px) 
+		line-height: 40px
+		span
+			line-height: 1.3
+			vertical-align: middle
+			display: inline-block
+		.is-blue
+			color: $blue
+		.is-green
+			color: $green
+	&__col-right
+		float: right
+		width: 180px
 	&__col
 		margin-left: 20px
 		float: left
@@ -2377,3 +2410,8 @@ a.translations__wrap
 		margin-top: 25px
 		&:first-child
 			margin-top: 0
+
+// balance-gold
+.balance-gold
+	font-size: 18px
+	color: $c_wind_gray 

@@ -1,7 +1,31 @@
 .graph
-	width: 100%
+	position: relative
+	margin: 41px -8px  0
+	width: calc(100% + 17px)
+	height: 500px
+	&:before,
+	&:after
+		position: absolute
+		content: ""
+		top: 0
+		bottom: 57px
+		width: 1px
+		background: $bord_graph  
+	&:before
+		left: 9px
+		z-index: 1
+	&:after
+		right: 9px
 	.highcharts-input-group
 		display: none
 	.highcharts-range-selector-buttons
+		transform: translate(calc(100% - 10px), 477px)
+		+r(1200)
+			transform: translate(-6px, 477px) !important
 		& > text
 			display: none
+	.highcharts-tooltip + text
+		display: none
+	.highcharts-button
+		text
+			transform: translateY(-2px)
