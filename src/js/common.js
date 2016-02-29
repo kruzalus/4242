@@ -360,4 +360,14 @@ $(document).ready(function() {
 		$('.js-location-block').slideUp(300);
 	});
 
+	// 
+	$('.js-banker').on('click', function () {
+		var this_ = $(this),
+			parent = this_.parents('.js-bankers'),
+			item = parent.find('.js-banker');
+		item.removeClass('is-active');
+		this_.addClass('is-active');
+		return false;
+	});
+
 });

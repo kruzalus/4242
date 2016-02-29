@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Tamplate</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  <!-- theme color for android 5.0 -->
-  <meta name="theme-color" content="#fff"> 
-  <!-- <meta name="viewport" content="width=1200"> -->
-  <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-  <link rel="stylesheet" media="all" href="css/screen.css" >
-  <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
-  <script src="js/app.js"></script>
-</head>
-<body>
+{% extends "./includes/_layout.twig" %}
 
-		<!-- out --> 
+{% block content %}
+	<!-- out --> 
 	<div class="out">
 
-		<!-- header -->
-<header class="header">
-	<div class="header__in">
-		<div class="logo">
-			<i class="icon icon-logo"></i> 
-		</div>
-		<!-- menu -->
-		<ul class="menu js-flex-menu">
-							 
-					<li><a href="#" class="is-active">Кошельки и карты</a></li>
-																<li><a href="#">Оплатить</a></li>
-																<li><a href="#">Перевести</a></li>
-																<li><a href="#">Выйти</a></li>
-																<li><a href="#"><i class='icon icon-uni50'></i>verylongusername@longdomainname.org</a></li>
-									</ul>
-	</div>
-</header>		<!-- l -->
+		{% include "./includes/_header.twig" %}
+		<!-- l -->
 		<div class="l">
 			<div class="l__in">
 				<!-- l-col1 -->
@@ -162,110 +133,15 @@
 				<div class="center is-mod">
 					<!-- wind -->
 					<div class="wind is-gray">
-						<div class="wind__top">
-							<!-- breadcrumbs -->
-							<ul class="breadcrumbs">
-								<li><a href="#">Кошельки и карты</a></li>
-								<li>Пополнение кошелька 123 456 789</li>
-							</ul>
-							<button class="wind__close" type="button">
-								<i class="icon icon-uniF9"></i>
-							</button>
-						</div>
+						<div class="wind__top">Loader</div>
 						<div class="wind__in">
-							<div class="wind__wrap">
-								<!-- opper -->
-								<div class="opper">
-									<div class="opper__ico">
-										<i class="icon icon-int-bank"></i>
-									</div>
-									<div class="opper__in">
-										<div class="opper__name">Интернет-банк</div>
-										<div class="opper__info">
-											<ul class="inf-list">
-												<li>15 — 15 000 ₽ можно внести</li>
-												<li>24 ч. срок зачисления</li>
-												<li>0 % комиссия</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="render">
-								<div class="render__in">
-									<div class="title-small">Выберите банк:</div>
-									<div class="render__wrap js-bankers">
-										<!-- banker -->
-										<a href="#" class="banker js-banker">
-											<div class="banker__prog">5.53 %</div>
-											<div class="banker__img">
-												<div class="banker__ico">
-													<img src="img/svg/alfa-click.svg" alt="img">
-												</div>
-											</div>
-											<div class="banker__name">Альфа Клик</div>
-										</a>
-										<!-- banker -->
-										<a href="#" class="banker js-banker">
-											<div class="banker__prog">5.53 %</div>
-											<div class="banker__img">
-												<div class="banker__ico">
-													<img src="img/svg/alfa-click.svg" alt="img">
-												</div>
-											</div>
-											<div class="banker__name">Альфа Клик</div>
-										</a>
-										<!-- banker -->
-										<a href="#" class="banker js-banker">
-											<div class="banker__prog">5.53 %</div>
-											<div class="banker__img">
-												<div class="banker__ico">
-													<img src="img/svg/alfa-click.svg" alt="img">
-												</div>
-											</div>
-											<div class="banker__name">Альфа Клик</div>
-										</a>
-										<!-- banker -->
-										<a href="#" class="banker js-banker">
-											<div class="banker__prog">5.53 %</div>
-											<div class="banker__img">
-												<div class="banker__ico">
-													<img src="img/svg/alfa-click.svg" alt="img">
-												</div>
-											</div>
-											<div class="banker__name">Альфа Клик</div>
-										</a>
-										<!-- banker -->
-										<a href="#" class="banker js-banker">
-											<div class="banker__prog">5.53 %</div>
-											<div class="banker__img">
-												<div class="banker__ico">
-													<img src="img/svg/alfa-click.svg" alt="img">
-												</div>
-											</div>
-											<div class="banker__name">Альфа Клик</div>
-										</a>
-										<!-- banker -->
-										<a href="#" class="banker js-banker">
-											<div class="banker__prog">5.53 %</div>
-											<div class="banker__img">
-												<div class="banker__ico">
-													<img src="img/svg/alfa-click.svg" alt="img">
-												</div>
-											</div>
-											<div class="banker__name">Альфа Клик</div>
-										</a>
-									</div>
-									<form action="" class="form is-done">
-										<div class="form__row">
-											<div class="form__label is-mod">
-												<a href="#" class="prev">Назад</a>
-											</div>
-											<div class="form__right">
-												<button class="btn btn_big" type="submit">Пополнить</button>
-											</div>
-										</div>
-									</form>
+							<!-- preloader -->
+							<div class="preloader is-cycle js-preloader">
+								<!-- loader -->
+								<div class="loader">
+									<div class="loader__item"></div>
+									<div class="loader__item"></div>
+									<div class="loader__item"></div>
 								</div>
 							</div>
 						</div>
@@ -377,27 +253,6 @@
 
 	</div>
  
-	<!-- footer -->
-<footer class="footer">
-	<div class="footer__in">
-		<!-- cont -->
-		<div class="cont">
-			<div class="cont__text">Поддержка</div>
-			<div class="cont__item is-tel">
-				<i class="icon icon-uniC0"></i>
-				<a class="js-tell">8 800 100 55 11</a>
-			</div>
-			<div class="cont__item">
-				<i class="icon icon-uniE0"></i>
-				<a href="mailto:support@robowallet.ru">support@robowallet.ru</a>
-			</div>
-		</div>
-		<!-- copy -->
-		<div class="copy">Robowallet &copy; 2015</div>
-		<!-- lang -->
-		<a href="#" class="lang">in English</a>
-	</div>
-</footer>
+	{% include "./includes/_footer.twig" %}
 
-</body>
-</html>
+{% endblock %}

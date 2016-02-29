@@ -4547,6 +4547,18 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
 	
+	// price-first, price-two
+	$('.js-price-first').on('keyup', function () {
+		var val = $(this).val();
+		if (val.length > 0) {
+			$('.js-price-two').focus();
+		}
+
+	});
+
+});
+$(document).ready(function() {
+	
 	$('.is-hide').hide();
 
 	// slider
@@ -4905,6 +4917,16 @@ $(document).ready(function() {
 		locText.text('в ' + this_.val());
 		$('.js-location').removeClass('is-open');
 		$('.js-location-block').slideUp(300);
+	});
+
+	// 
+	$('.js-banker').on('click', function () {
+		var this_ = $(this),
+			parent = this_.parents('.js-bankers'),
+			item = parent.find('.js-banker');
+		item.removeClass('is-active');
+		this_.addClass('is-active');
+		return false;
 	});
 
 });

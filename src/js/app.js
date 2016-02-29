@@ -13,4 +13,5 @@
 //= lib/exporting.js
 //= loader.js
 //= graph.js
+//= validation.js
 //= common.js
