@@ -142,12 +142,12 @@
 						</div>
 						<div class="wind__in">
 							<div class="wind__wrap">
-								<form action="">
+								<form action="" class="js-form">
 									<!-- ticket -->
 									<div class="ticket">
 										<div class="ticket__row">
-											<label for="card-numb" class="ticket__label">Номер карты</label>
-											<input type="text" name="card-numb" id="card-numb" placeholder="XXXX XXXX XXXX XXXX" class="input js-card-numb">
+											<label for="card_numb" class="ticket__label">Номер карты</label>
+											<input type="text" name="card_numb" id="card_numb" placeholder="XXXX XXXX XXXX XXXX" class="input js-card-numb"> 
 											<div class="info">
 												<a href="#" class="info__btn">
 													<i class="icon icon-icon-info"></i>
@@ -159,11 +159,11 @@
 												<label for="date" class="ticket__label">Срок действия карты</label>
 												<div class="ticket__field">
 													<div class="ticket__col">
-														<input type="text" name="date" id="date" placeholder="XX" class="input">
+														<input type="text" name="month" id="month" placeholder="XX" class="input js-input-month" maxlength="2">
 													</div>
 													<div class="ticket__text"><span>/</span></div>
 													<div class="ticket__col">
-														<input type="text" name="month" id="month" placeholder="YY" class="input">
+														<input type="text" name="year" id="year" placeholder="YY" class="input js-input-year" maxlength="2">
 													</div>
 													<div class="info">
 														<a href="#" class="info__btn">
@@ -176,7 +176,7 @@
 												<label for="cvv" class="ticket__label">CVC/CVV</label>
 												<div class="ticket__field">
 													<div class="ticket__col">
-														<input type="text" name="cvv" id="cvv" placeholder="123" class="input">
+														<input type="text" name="cvv" id="cvv" placeholder="123" class="input js-svv" maxlength="4">
 													</div>
 													<div class="info">
 														<a href="#" class="info__btn">
@@ -187,8 +187,8 @@
 											</div>
 										</div>
 										<div class="ticket__row">
-											<label for="id" class="ticket__label">Имя и фамилия владельца:</label>
-											<input type="text" name="id" id="id" placeholder="ЛАТИНИЦЕЙ" class="input is-up">
+											<label for="name" class="ticket__label">Имя и фамилия владельца:</label>
+											<input type="text" name="name" id="name" placeholder="ЛАТИНИЦЕЙ" class="input is-up js-input-name">
 											<div class="info">
 												<a href="#" class="info__btn">
 													<i class="icon icon-icon-info"></i>

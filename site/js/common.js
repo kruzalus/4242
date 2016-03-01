@@ -54,20 +54,6 @@ $(document).ready(function() {
 		$('body').toggleClass('is-open-menu');
 	});
 
-	// inputmask
-	$('input[name="passport-id"]').inputmask({
-		mask: '9999 999999'
-	});
-
-	$('.js-card-numb').inputmask({
-		mask: '9999 9999 9999 9999'
-	});
-
-	$('input[name="passport-id"], .js-card-numb').inputmask({
-		showMaskOnHover : false,
-		showMaskOnFocus : false,
-		placeholder  	: ''
-	});
 
 	// soc
 	$('.js-social-close').on('click', function(){

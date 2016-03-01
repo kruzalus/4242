@@ -11,6 +11,8 @@
 //= lib/chosen.jquery.min.js
 //= lib/highstock.js
 //= lib/exporting.js
+//= lib/jquery.liTranslit.js
+//= lib/jquery.validate.min.js
 //= loader.js
 //= graph.js
 //= validation.js
