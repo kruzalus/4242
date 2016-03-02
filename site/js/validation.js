@@ -15,6 +15,20 @@ $(document).ready(function() {
 	$('.js-input-month, .js-input-year').inputmask({
 		mask: '99'
 	}); 
+
+	$('.js-input-month').on('keyup', function () {
+		var val = $(this).val();
+		if (val.length >= 2) {
+			$('.js-input-year').focus();
+		}
+	});
+	$('.js-input-year').on('keyup', function () {
+		var val = $(this).val();
+		if (val.length >= 2) {
+			$('.js-svv').focus();
+		}
+	});
+
 	$('.js-svv').inputmask({
 		mask: '9999'
 	}); 
