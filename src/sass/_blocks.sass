@@ -15,6 +15,11 @@
 			color: $c_wind_gray
 			+rr
 			background: $l_yellow
+	&.is-minheight
+		.wind__in
+			min-height: 375px
+			+r(768)
+				min-height: auto
 	& + .wind
 		margin-top: 20px
 	&__top
@@ -35,6 +40,7 @@
 		.filter
 			margin-left: 15px
 		.breadcrumbs
+			float: left
 			margin-bottom: 0
 			li
 				color: $black
@@ -1334,6 +1340,11 @@ a.translations__wrap
 			line-height: 1.45
 			vertical-align: middle
 			display: inline-block
+			&.is-gray
+				color: $c_numb 
+		& > .icon
+			margin-right: 4px
+			vertical-align: middle
 	&__field
 		+clr
 		& + .form__field
@@ -1378,6 +1389,8 @@ a.translations__wrap
 		z-index: 1
 	.captcha
 		margin-top: 20px
+	.title + .form__row
+		margin-top: 5px
 
 // checkbox
 .checkbox
