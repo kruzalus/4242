@@ -525,6 +525,14 @@ div.btn
 			left: 20px
 		.dip__text
 			padding-left: 44px
+	&.is-selected
+		.dip__text
+			padding-right: 10px
+			background: rgba($bord_foot, .5)
+			border-radius: 2px
+			border: none
+			&:before
+				display: none
 	& + .btn-text
 		margin-left: 23px
 	&__arr
@@ -722,10 +730,11 @@ div.btn
 .inf-list
 	color: $c_numb
 	font-size: 14px
+	letter-spacing: -.2px
 	li
 		position: relative
-		margin-left: 9px
-		padding-left: 15px
+		margin-left: 6px
+		padding-left: 12px
 		vertical-align: top
 		display: inline-block
 		&:before
@@ -2223,6 +2232,9 @@ a.translations__wrap
 	padding-left: 94px
 	min-height: 80px
 	line-height: 80px
+	& + .form
+		margin: 15px 0 -20px
+		padding: 0
 	&__ico
 		position: absolute
 		top: 0
@@ -2235,8 +2247,13 @@ a.translations__wrap
 		border-radius: 50%
 		text-align: center
 		background: $c_blue
+		&.is-mod
+			background: transparent
+		img,
 		.icon
 			vertical-align: middle
+		.icon-cards
+			font-size: 30px
 	&__in
 		line-height: 1.45
 		vertical-align: middle

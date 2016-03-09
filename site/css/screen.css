@@ -873,6 +873,8 @@ div.btn_white:hover, div.btn_white:active { color: #263238; background: #fff; }
 .dip.is-to .dip__arr { left: 0; z-index: 1; }
 .dip.is-to .dip__ind { position: absolute; top: 0; line-height: 40px; z-index: 1; left: 20px; }
 .dip.is-to .dip__text { padding-left: 44px; }
+.dip.is-selected .dip__text { padding-right: 10px; background: rgba(236, 239, 241, 0.5); -webkit-border-radius: 2px; border-radius: 2px; border: none; }
+.dip.is-selected .dip__text:before { display: none; }
 .dip + .btn-text { margin-left: 23px; }
 .dip__arr { position: absolute; top: 0; }
 .dip__arr:before, .dip__arr:after { position: absolute; content: ""; left: 0; top: 0; }
@@ -921,8 +923,8 @@ div.btn_white:hover, div.btn_white:active { color: #263238; background: #fff; }
 .list a { color: #2196f3; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 .list a:hover { border-color: #2196f3; }
 
-.inf-list { color: #90a4ae; font-size: 14px; }
-.inf-list li { position: relative; margin-left: 9px; padding-left: 15px; vertical-align: top; display: inline-block; }
+.inf-list { color: #90a4ae; font-size: 14px; letter-spacing: -0.2px; }
+.inf-list li { position: relative; margin-left: 6px; padding-left: 12px; vertical-align: top; display: inline-block; }
 .inf-list li:before { position: absolute; content: ""; top: 50%; left: 0; height: 4px; width: 4px; margin-top: -2px; -webkit-border-radius: 50%; border-radius: 50%; background: #90a4ae; }
 .inf-list li:first-child { margin-left: 0; padding-left: 0; }
 .inf-list li:first-child:before { display: none; }
@@ -1358,8 +1360,11 @@ a.translations__wrap:hover .translations__operator span { border-color: #90a4ae;
 .pay .radio:nth-child(odd) { margin-left: 0; }
 
 .opper { position: relative; padding-left: 94px; min-height: 80px; line-height: 80px; }
+.opper + .form { margin: 15px 0 -20px; padding: 0; }
 .opper__ico { position: absolute; top: 0; left: 0; width: 80px; height: 80px; color: #fff; font-size: 40px; line-height: 80px; -webkit-border-radius: 50%; border-radius: 50%; text-align: center; background: #2196f3; }
-.opper__ico .icon { vertical-align: middle; }
+.opper__ico.is-mod { background: transparent; }
+.opper__ico img, .opper__ico .icon { vertical-align: middle; }
+.opper__ico .icon-cards { font-size: 30px; }
 .opper__in { line-height: 1.45; vertical-align: middle; display: inline-block; }
 
 .render { padding-bottom: 15px; }
