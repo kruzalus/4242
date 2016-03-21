@@ -4960,7 +4960,7 @@ $(document).ready(function() {
 	};
 	$('.js-select-2').select2(); 
 	$('.js-select-2.is-image').select2({
-		templateResult: formatState,
+		templateResult: formatState
 	});
 
 	// open menu
