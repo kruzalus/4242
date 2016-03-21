@@ -44,7 +44,7 @@ $(document).ready(function() {
 	function formatState (state) {
 		if (!state.id) { return state.text; }
 		var $state 	= $(
-			'<span class="select2-results__text"><img src="/img/svg/' + state.element.getAttribute('data-image') + '.svg" class="select2-results__img" /> ' + state.text + '</span>'
+			'<span class="select2-results__text"><img src="../img/svg/' + state.element.getAttribute('data-image') + '.svg" class="select2-results__img" /> ' + state.text + '</span>'
 		);
 		return $state;
 	};
