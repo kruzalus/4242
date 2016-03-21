@@ -13,6 +13,7 @@
 //= lib/exporting.js
 //= lib/jquery.liTranslit.js
 //= lib/jquery.validate.min.js
+//= lib/select2.min.js
 //= loader.js
 //= graph.js
 //= validation.js

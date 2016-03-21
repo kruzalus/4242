@@ -35,10 +35,22 @@ $(document).ready(function() {
 		$(this).parents('.js-slider-wrap').remove();
 	});
 
-	// select
+	// select 
 	$(".js-select select").on('change', function() {
 		var text = $(this).val();
 		$(this).parents('.js-select').find('.js-input').val(text);
+	}); 
+
+	function formatState (state) {
+		if (!state.id) { return state.text; }
+		var $state 	= $(
+			'<span class="select2-results__text"><img src="/img/svg/' + state.element.getAttribute('data-image') + '.svg" class="select2-results__img" /> ' + state.text + '</span>'
+		);
+		return $state;
+	};
+	$('.js-select-2').select2(); 
+	$('.js-select-2.is-image').select2({
+		templateResult: formatState,
 	});
 
 	// open menu

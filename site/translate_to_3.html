@@ -9,6 +9,7 @@
   <meta name="theme-color" content="#fff"> 
   <!-- <meta name="viewport" content="width=1200"> -->
   <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+  <link rel="stylesheet" media="all" href="css/select2.min.css" >
   <link rel="stylesheet" media="all" href="css/screen.css" >
   <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   <script src="js/app.js"></script>
@@ -52,51 +53,19 @@
 								<li class="title__item">15 — 15 000 ₽ можно внести</li>
 								<li class="title__item">Моментально — срок зачисления</li>
 								<li class="title__item">0,5 % комиссия, но не менее 50 ₽</li>
-							</ul>
+							</ul> 
 						</div>
 						<!-- payment -->
 						<div class="payment">
 							<form action="">
 								<div class="payment__row">
-									<div class="dip is-from js-dip">
-										<div class="dip__ind">c</div>
-										<div class="dip__arr"></div>
-										<input type="text" class="js-dip-input" hidden>
-										<div class="dip__text js-dip-text">
-											<div class="dip__icon">
-												<img src="img/svg/purse.svg" alt="img">
-											</div>
-											<div class="dip__val">123 123 123</div>
-											<div class="dip__sum">— 10 000 ₽</div>
-										</div>
-										<div class="dip__block js-dip-block">
-											<div class="dip__group">
-												<div class="dip__list">
-													<div class="dip__item js-dip-item">
-														<div class="dip__icon">
-															<img src="img/svg/purse.svg" alt="img">
-														</div>
-														<div class="dip__val js-dip-val">123 123 123</div>
-														<div class="dip__sum">— 10 000 ₽</div>
-													</div>
-													<div class="dip__item js-dip-item">
-														<div class="dip__icon">
-															<img src="img/svg/purse.svg" alt="img">
-														</div>
-														<div class="dip__val js-dip-val">123 123 123</div>
-														<div class="dip__sum">— 10 000 ₽</div>
-													</div>
-													<div class="dip__item js-dip-item">
-														<div class="dip__icon">
-															<img src="img/svg/purse.svg" alt="img">
-														</div>
-														<div class="dip__val js-dip-val">123 123 123</div>
-														<div class="dip__sum">— 10 000 ₽</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+									<select class="select2 is-from is-image js-select-2">
+										<option value="123 123 123 — 10 000 ₽" data-image="purse">123 123 123 — 10 000 ₽</option>
+										<option value="item-2" data-image="purse">item-2</option>
+										<option value="item-4" data-image="purse">item-3</option>
+										<option value="item-5" data-image="purse">item-5</option>
+										<option value="item-6" data-image="purse">item-6</option>
+									</select>
 									<div class="select is-stat is-to js-select">
 										<span class="select__arr"></span>
 										<div class="select__text">на</div>
