@@ -49,8 +49,16 @@ $(document).ready(function() {
 		return $state;
 	};
 	$('.js-select-2').select2(); 
-	$('.js-select-2.is-image').select2({
+	$('.js-select-2.is-image')
+	.select2({
 		templateResult: formatState
+	})
+	.on("change", function(e) {
+		var val 	= $(this).val();
+		setTimeout(function() {
+			$(this).find('option[value='+val+']').attr('selected');
+			// console.log($("select option:selected").html());
+		}, 1);
 	});
 
 	// open menu
