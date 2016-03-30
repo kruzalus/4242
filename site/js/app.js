@@ -4914,18 +4914,6 @@ $(document).ready(function() {
 		});
 	};
 
-	$('form button[type="submit"], form input[type="submit"]').on('click', function () {
-		
-		alert();
-		// if (input.is('checked')){
-		// 	
-		// }
-		// else {
-			
-
-		// }
-	});
-
 });
 $(document).ready(function() {
 	
