@@ -4902,10 +4902,29 @@ $(document).ready(function() {
 						required: "",
 						minlength: ""
 					}
-				}
+				},
+				submitHandler: function(form) {
+					$('button[type="sybmit"], input[type="sybmit"]').prop('disabled', true);
+						setTimeout(function () {
+							$('button[type="sybmit"], input[type="sybmit"]').prop('disabled', false);
+							form.submit();
+						}, 1000);
+					}
 			});
 		});
-	}
+	};
+
+	$('form button[type="submit"], form input[type="submit"]').on('click', function () {
+		
+		alert();
+		// if (input.is('checked')){
+		// 	
+		// }
+		// else {
+			
+
+		// }
+	});
 
 });
 $(document).ready(function() {

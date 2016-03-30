@@ -779,6 +779,7 @@ a.item:hover { background: #f1eccf; }
 .btn { padding: 13px 20px; color: #fff; font-family: "Roboto Light", Arial, sans-serif; font-size: 14px; line-height: 1; text-align: center; -webkit-transition: background 0.2s, color 0.2s; transition: background 0.2s, color 0.2s; background: #9ccc65; display: inline-block; }
 .btn:hover { background: #699833; }
 .btn:active { background: #4f7226; }
+.btn:disabled { cursor: default; }
 .btn_blue { background: #42a5f5; }
 .btn_blue:hover { background: #0b72c6; }
 .btn_blue:active { background: #085796; }
