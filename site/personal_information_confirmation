@@ -129,14 +129,6 @@
 								</div>
 								<div class="form__row">
 									<div class="form__label">
-										<span>Дата рождения: </span>
-									</div>
-									<div class="form__right">
-										<div class="form__text"><span>01/02/1990</span></div>
-									</div>
-								</div>
-								<div class="form__row">
-									<div class="form__label">
 										<label for="passnew">Платежный пароль: </label>
 									</div>
 									<div class="form__right">
