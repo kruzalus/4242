@@ -176,6 +176,9 @@
 									</div> -->
 								</div>
 								<div class="form__row">
+									<div class="form__label">
+										<a href="#" class="prev">Назад</a>
+									</div>
 									<div class="form__right">
 										<button class="btn" type="submit">Подтвердить</button>
 										<button class="btn-text btn-text_blue" type="button">Отмена</button>
