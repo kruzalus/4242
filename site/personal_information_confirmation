@@ -63,7 +63,9 @@
 										<div class='form__text">
 											<span>Москва<span>
 										</div>
+										::after
 									</div>
+									::after
 								</div>
 								<div class="form__row">
 									<div class="form__label">
@@ -73,8 +75,9 @@
 										<div class='form__text">
 											<span>Москва<span>
 										</div>
+										::after
 									</div>
-									</div>
+									::after
 								</div>
 								<div class="form__row">
 									<div class="form__label">
@@ -83,8 +86,10 @@
 									<div class="form__right">
 										<div class='form__text">
 											<span>Иванов<span>
-										</div>									</div>
+										</div>
+										::after
 									</div>
+									::after
 								<div class="form__row">
 									<div class="form__label">
 										<label for="name">Имя:</label>
@@ -93,7 +98,9 @@
 										<div class='form__text">
 											<span>Иннокентий<span>
 										</div>
+										::after
 									</div>
+									::after
 								</div>
 								<div class="form__row">
 									<div class="form__label">
