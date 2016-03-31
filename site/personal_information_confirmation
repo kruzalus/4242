@@ -70,8 +70,7 @@
 										<label for="date">Дата рождения:</label>
 									</div>
 									<div class="form__right">
-										<div class='form__text">
-											<span>Москва<span>
+										<div class='form__text"><span>Москва</span>
 										</div>
 									</div>
 								</div>
@@ -80,18 +79,14 @@
 										<label for="surname">Фамилия:</label>
 									</div>
 									<div class="form__right">
-										<div class='form__text">
-											<span>Иванов<span>
-										</div>
+										<div class='form__text"><span>Иванов</span></div>
 									</div>
 								<div class="form__row">
 									<div class="form__label">
 										<label for="name">Имя:</label>
 									</div>
 									<div class="form__right">
-										<div class='form__text">
-											<span>Иннокентий<span>
-										</div>
+										<div class='form__text"><span>Иннокентий</span></div>
 									</div>
 								</div>
 								<div class="form__row">
